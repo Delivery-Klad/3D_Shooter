@@ -45,6 +45,7 @@ TagManager:
   - DropSecondary
   - BotMovementPoint
   - BotSpawn
+  - PolygonTarget
   layers:
   - Default
   - TransparentFX
