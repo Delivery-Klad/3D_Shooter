@@ -146,7 +146,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         CurrentWeapon();
         CurrentPistol();
@@ -159,10 +159,12 @@ public class PlayerStats : MonoBehaviour
         if (PlayerInputManager.instance.Speak)
         {
             PVoice.Transmit = true;
+            InGameUI.instance.MikImg.SetActive(true);
         }
         else
         {
             PVoice.Transmit = false;
+            InGameUI.instance.MikImg.SetActive(false);
         }
     }
 

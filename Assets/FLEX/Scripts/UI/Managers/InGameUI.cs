@@ -90,6 +90,7 @@ public class InGameUI : MonoBehaviour {
 	[Space(10)]
 	[Header("Misc References")]
 	public Image LevelFadeInImage;
+	public GameObject MikImg;
     public bool buy = false;
 
 	void Awake()

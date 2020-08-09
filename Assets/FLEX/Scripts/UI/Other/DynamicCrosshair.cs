@@ -24,7 +24,7 @@ public class DynamicCrosshair : MonoBehaviour
         CrosshairUpdate();
         if (PlayerInputManager.instance.Sprint)
         {
-            CurrentSpread = 60.0f;
+            CurrentSpread = 80.0f;
         }
     }
 
