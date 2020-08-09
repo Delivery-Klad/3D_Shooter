@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -151,6 +150,10 @@ public class ChangeInput : MonoBehaviour
         if (PlayerPrefs.HasKey("Zoom_Keycode"))
         {
             PlayerInputManager.instance.ZoomButton = (KeyCode)PlayerPrefs.GetInt("Zoom_Keycode");
+        }
+        if (PlayerPrefs.HasKey("Voice_Keycode"))
+        {
+            PlayerInputManager.instance.SpeakButton = (KeyCode)PlayerPrefs.GetInt("Voice_Keycode");
         }
         ToggleBools(false);
         FillButtonsText();
@@ -530,6 +533,44 @@ public class ChangeInput : MonoBehaviour
         ThrowButton.GetComponentInChildren<Button>().enabled = true;
         OpenConsole.GetComponentInChildren<Button>().enabled = true;
         ZoomButton.GetComponentInChildren<Button>().enabled = true;
+    }
+
+    public void ResetButtons()
+    {
+        PlayerInputManager.instance.AimButton = KeyCode.Mouse1;
+        PlayerPrefs.SetInt("Aim_Keycode", (int)KeyCode.Mouse1);
+        PlayerInputManager.instance.JumpButton = KeyCode.Space;
+        PlayerPrefs.SetInt("Jump_Keycode", (int)KeyCode.Space);
+        PlayerInputManager.instance.SprintButton = KeyCode.LeftShift;
+        PlayerPrefs.SetInt("Sprint_Keycode", (int)KeyCode.LeftShift);
+        PlayerInputManager.instance.ReloadButton = KeyCode.R;
+        PlayerPrefs.SetInt("Reload_Keycode", (int)KeyCode.R);
+        PlayerInputManager.instance.FireButton = KeyCode.Mouse0;
+        PlayerPrefs.SetInt("Fire_Keycode", (int)KeyCode.Mouse0);
+        PlayerInputManager.instance.NaclonLeftButton = KeyCode.Q;
+        PlayerPrefs.SetInt("LeanLeft_Keycode", (int)KeyCode.Q);
+        PlayerInputManager.instance.NaclonRightButton = KeyCode.E;
+        PlayerPrefs.SetInt("LeanRight_Keycode", (int)KeyCode.E);
+        PlayerInputManager.instance.SuicideButton = KeyCode.P;
+        PlayerPrefs.SetInt("Suicide_Keycode", (int)KeyCode.P);
+        PlayerInputManager.instance.PauseButton = KeyCode.Escape;
+        PlayerPrefs.SetInt("Pause_Keycode", (int)KeyCode.Escape);
+        PlayerInputManager.instance.ScoreButton = KeyCode.Tab;
+        PlayerPrefs.SetInt("Score_Keycode", (int)KeyCode.Tab);
+        PlayerInputManager.instance.SwitchFireButton = KeyCode.Z;
+        PlayerPrefs.SetInt("Switch_Keycode", (int)KeyCode.Z);
+        PlayerInputManager.instance.Use_Button = KeyCode.F;
+        PlayerPrefs.SetInt("Use_Keycode", (int)KeyCode.F);
+        PlayerInputManager.instance.CrouchButton = KeyCode.LeftControl;
+        PlayerPrefs.SetInt("Crouch_Keycode", (int)KeyCode.LeftControl);
+        PlayerInputManager.instance.ThrowButton = KeyCode.G;
+        PlayerPrefs.SetInt("Throw_Keycode", (int)KeyCode.G);
+        PlayerInputManager.instance.OpenConsole = KeyCode.BackQuote;
+        PlayerPrefs.SetInt("Console_Keycode", (int)KeyCode.BackQuote);
+        PlayerInputManager.instance.ZoomButton = KeyCode.Mouse2;
+        PlayerPrefs.SetInt("Zoom_Keycode", (int)KeyCode.Mouse2);
+        PlayerInputManager.instance.SpeakButton = KeyCode.V;
+        PlayerPrefs.SetInt("Voice_Keycode", (int)KeyCode.V);
     }
 
     public void ChangeMoveForward()

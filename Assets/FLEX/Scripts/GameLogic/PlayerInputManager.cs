@@ -31,7 +31,8 @@ public class PlayerInputManager : MonoBehaviour {
     [HideInInspector] public bool SwitchFireMode;
     [HideInInspector] public bool Crouch;
     [HideInInspector] public bool Console;
-    public bool Zoom;
+	[HideInInspector] public bool Speak;
+	public bool Zoom;
     public KeyCode AimButton;
     public KeyCode JumpButton;
     public KeyCode SprintButton;
@@ -48,6 +49,7 @@ public class PlayerInputManager : MonoBehaviour {
     public KeyCode ThrowButton;
     public KeyCode OpenConsole;
     public KeyCode ZoomButton;
+	public KeyCode SpeakButton;
 
     void Awake()
 	{
@@ -149,5 +151,13 @@ public class PlayerInputManager : MonoBehaviour {
         {
             Zoom = false;
         }
+		if (Input.GetKeyDown(SpeakButton))
+		{
+			Speak = true;
+		}
+		if (Input.GetKeyUp(SpeakButton))
+		{
+			Speak = false;
+		}
 	}
 }

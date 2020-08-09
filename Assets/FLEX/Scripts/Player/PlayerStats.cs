@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
 
-public class PlayerStats : MonoBehaviour {
+public class PlayerStats : MonoBehaviour
+{
 
-	[Header("Player Attributes")]
-	public int PlayerHealth = 100;
+    [Header("Player Attributes")]
+    public int PlayerHealth = 100;
     public float PlayerStamina = 100.0f;
-	public bool isAlive = true;
-	public PunTeams.Team PlayerTeam;
+    public bool isAlive = true;
+    public PunTeams.Team PlayerTeam;
     public int CurrentGunId;
     public int CurrentPistolId;
     public int NatoAmmo;
@@ -19,65 +18,64 @@ public class PlayerStats : MonoBehaviour {
     [HideInInspector] public bool GodMode = false;
 
     [Header("Player Sound Effects")]
-	[Range(0f,1f)]
-	public float FootStepVolume = 0.5f;
+    [Range(0f, 1f)]
+    public float FootStepVolume = 0.5f;
     public float WaterStepVolume = 1.0f;
     public float SandStepVolume = 1.0f;
     public float WoodStepVolume = 1.0f;
     public float MetalStepVolume = 1.0f;
     public float StoneStepVolume = 1.0f;
     public AudioSource FootstepAudiosource;
-	public AudioClip[] FootstepSounds;
-	public AudioClip FootStepLandSound;
-	public float StepInterval;
+    public AudioClip[] FootstepSounds;
+    public AudioClip FootStepLandSound;
+    public float StepInterval;
     public float WoodStepInterval;
     public float StoneStepInterval;
     public float SandStepInterval;
     public float MetalStepInterval;
     public float WaterStepInterval;
     public float RunMultiplier = 1;
-	public float StepTimer;
-	public AudioClip[] WaterstepSounds;
-	public AudioClip PlayerWaterEnterSound;
+    public float StepTimer;
+    public AudioClip[] WaterstepSounds;
+    public AudioClip PlayerWaterEnterSound;
     public AudioClip[] SandstepSounds;
     public AudioClip[] WoodstepSounds;
     public AudioClip[] MetalstepSounds;
     public AudioClip[] StonestepSounds;
     [Space(10)]
-	[Range(0f,1f)]
-	public float GearSoundVolume = 0.4f;
-	public AudioClip GearPlayerLandSound;
-	public AudioSource PlayerGearAudioSource;
-	[Space(10)]
-	[Range(0f,1f)]
-	public float BreathSoundVolume = 0.4f;
-	public AudioSource PlayerBreathAudioSource;
-	public AudioClip[] PlayerSprintBreathSounds;
-	[Range(0f,3f)]
-	public float SprintBreathInterval;
-	public float SprintBreathTimer;
+    [Range(0f, 1f)]
+    public float GearSoundVolume = 0.4f;
+    public AudioClip GearPlayerLandSound;
+    public AudioSource PlayerGearAudioSource;
+    [Space(10)]
+    [Range(0f, 1f)]
+    public float BreathSoundVolume = 0.4f;
+    public AudioSource PlayerBreathAudioSource;
+    public AudioClip[] PlayerSprintBreathSounds;
+    [Range(0f, 3f)]
+    public float SprintBreathInterval;
+    public float SprintBreathTimer;
 
-	[Header("Player References")]
-	public Text PlayerNameText;
-	public CharacterController PlayerCharacterController;
-	public PlayerMovementController PlayerMovementController;
-	public PlayerWeaponManager PlayerWeaponManager;
-	public PlayerThirdPersonController PlayerThirdPersonController;
-	public PhotonView PlayerPhotonView;
+    [Header("Player References")]
+    public Text PlayerNameText;
+    public CharacterController PlayerCharacterController;
+    public PlayerMovementController PlayerMovementController;
+    public PlayerWeaponManager PlayerWeaponManager;
+    public PlayerThirdPersonController PlayerThirdPersonController;
+    public PhotonView PlayerPhotonView;
+    public PhotonVoiceRecorder PVoice;
     private float distance = 0;
 
-	void Start()
-	{
+    void Start()
+    {
         GameManager.instance.LocalPlayer = gameObject;
-
         if (PlayerPhotonView.isMine)
         {
-			PhotonNetwork.player.TagObject = this.gameObject; 
-			//InGameUI.instance.PlayerHealthText.text = PlayerHealth.ToString ();
+            PhotonNetwork.player.TagObject = this.gameObject;
             InGameUI.instance.HP.value = PlayerHealth;
-            PlayerNameText.gameObject.SetActive (false);
-			PlayerPhotonView.RPC ("SyncPlayerTeam", PhotonTargets.AllBuffered, PlayerTeam);
-		}
+            PlayerNameText.gameObject.SetActive(false);
+            PlayerPhotonView.RPC("SyncPlayerTeam", PhotonTargets.AllBuffered, PlayerTeam);
+        }
         PlayerPrefs.SetFloat("TotalDistance", 0);
 
         if (PlayerPrefs.HasKey("PostProcessingSetting"))
@@ -119,7 +117,7 @@ public class PlayerStats : MonoBehaviour {
                     {
                         PPL.subpixelMorphologicalAntialiasing.quality = SubpixelMorphologicalAntialiasing.Quality.Medium;
                     }
-                    else if(Quality == 2)
+                    else if (Quality == 2)
                     {
                         PPL.subpixelMorphologicalAntialiasing.quality = SubpixelMorphologicalAntialiasing.Quality.High;
                     }
@@ -158,32 +156,40 @@ public class PlayerStats : MonoBehaviour {
         }
         distance += 1; // не доделано
         PlayerPrefs.SetFloat("TotalDistance", distance);
+        if (PlayerInputManager.instance.Speak)
+        {
+            PVoice.Transmit = true;
+        }
+        else
+        {
+            PVoice.Transmit = false;
+        }
     }
 
     [PunRPC]
-	public void SyncPlayerTeam(PunTeams.Team SyncPlayerTeam)
-	{
-		PlayerTeam = SyncPlayerTeam;
-		SetPlayerNameText ();
-	}
+    public void SyncPlayerTeam(PunTeams.Team SyncPlayerTeam)
+    {
+        PlayerTeam = SyncPlayerTeam;
+        SetPlayerNameText();
+    }
 
-	public void SetPlayerNameText()
-	{
-		if (PlayerTeam == PunTeams.Team.red || PlayerTeam == PunTeams.Team.none)
+    public void SetPlayerNameText()
+    {
+        if (PlayerTeam == PunTeams.Team.red || PlayerTeam == PunTeams.Team.none)
         {
             PlayerNameText.text = " ";
-			this.gameObject.name = PlayerPhotonView.owner.NickName;
-		}
-        else if(PlayerTeam == PunTeams.Team.blue)
+            this.gameObject.name = PlayerPhotonView.owner.NickName;
+        }
+        else if (PlayerTeam == PunTeams.Team.blue)
         {
             PlayerNameText.text = " ";
-			this.gameObject.name = PlayerPhotonView.owner.NickName;
-		}
-	}
+            this.gameObject.name = PlayerPhotonView.owner.NickName;
+        }
+    }
 
-	[PunRPC]
-	public void ApplyPlayerDamage(int dmg, string source, PhotonPlayer attacker, float dmgmod, bool SelfInflicted)
-	{
+    [PunRPC]
+    public void ApplyPlayerDamage(int dmg, string source, PhotonPlayer attacker, float dmgmod, bool SelfInflicted)
+    {
         if (!GodMode)
         {
             if (attacker.GetTeam() == PunTeams.Team.none || GameManager.instance.CurrentTeam != attacker.GetTeam() || attacker == PhotonNetwork.player || source == "RoadKill")
@@ -225,7 +231,7 @@ public class PlayerStats : MonoBehaviour {
                 }
             }
         }
-	}
+    }
 
     public void ApplyPlayerHealth()
     {
@@ -233,29 +239,30 @@ public class PlayerStats : MonoBehaviour {
     }
 
     [PunRPC]
-	public void OnPlayerKilled(string source, PhotonPlayer attacker, bool SelfInflicted)
-	{
-		this.isAlive = false;	
-		if (attacker == PhotonNetwork.player && !SelfInflicted && !this.PlayerPhotonView.isMine)
+    public void OnPlayerKilled(string source, PhotonPlayer attacker, bool SelfInflicted)
+    {
+        this.isAlive = false;
+        if (attacker == PhotonNetwork.player && !SelfInflicted && !this.PlayerPhotonView.isMine)
         {
-			EventManager.TriggerEvent ("OnPlayerKilled");
-		}
-		if (PlayerPhotonView.isMine && GameManager.instance.IsAlive)
+            EventManager.TriggerEvent("OnPlayerKilled");
+        }
+        if (PlayerPhotonView.isMine && GameManager.instance.IsAlive)
         {
-			InGameUI.instance.PlayerUseText.text = "";
-			if (attacker.NickName != PhotonNetwork.player.NickName)
+            InGameUI.instance.PlayerUseText.text = "";
+            if (attacker.NickName != PhotonNetwork.player.NickName)
             {
-				attacker.AddKill (1);
-				if (GameManager.instance.CurrentGameType.GameTypeLoadName != "CTF")
+                attacker.AddKill(1);
+                if (GameManager.instance.CurrentGameType.GameTypeLoadName != "CTF")
                 {
-					if (attacker.GetTeam () == PunTeams.Team.red)
+                    if (attacker.GetTeam() == PunTeams.Team.red)
                     {
-						EventManager.TriggerEvent ("AddRedTeamScore");
-					} else if (attacker.GetTeam () == PunTeams.Team.blue)
+                        EventManager.TriggerEvent("AddRedTeamScore");
+                    }
+                    else if (attacker.GetTeam() == PunTeams.Team.blue)
                     {
-						EventManager.TriggerEvent ("AddBlueTeamScore");
-					}
-				}
+                        EventManager.TriggerEvent("AddBlueTeamScore");
+                    }
+                }
                 int Kills = 0;
                 if (PlayerPrefs.HasKey("TotalKills"))
                 {
@@ -264,44 +271,44 @@ public class PlayerStats : MonoBehaviour {
                 Kills += 1;
                 PlayerPrefs.SetInt("TotalKills", Kills);
             }
-			PhotonNetwork.player.AddDeath (1);
-			PlayerThirdPersonController.EnableWeaponIK(false);
-			GameManager.instance.gameObject.GetComponent<PhotonView> ().RPC ("AddKillFeedEntry", PhotonTargets.All, attacker.NickName, source, PhotonNetwork.playerName);
-			PlayerMovementController.PlayerLegs.SetActive(false);
-			PlayerMovementController.enabled = false;
-			if (!GameManager.instance.InVehicle)
+            PhotonNetwork.player.AddDeath(1);
+            PlayerThirdPersonController.EnableWeaponIK(false);
+            GameManager.instance.gameObject.GetComponent<PhotonView>().RPC("AddKillFeedEntry", PhotonTargets.All, attacker.NickName, source, PhotonNetwork.playerName);
+            PlayerMovementController.PlayerLegs.SetActive(false);
+            PlayerMovementController.enabled = false;
+            if (!GameManager.instance.InVehicle)
             {
-				PlayerWeaponManager.CurrentWeapon.SetActive (false);
-				PlayerWeaponManager.enabled = false;
-				PlayerThirdPersonController.ThirdPersonPlayerKilled ();
-			}
-			InGameUI.instance.PlayerHUDPanel.SetActive (false);
-			GameManager.instance.IsAlive = false;	
-			GameManager.instance.InVehicle = false;
-			Invoke ("PlayerRespawn", GameManager.instance.RespawnDelay);
-		}
-	}
+                PlayerWeaponManager.CurrentWeapon.SetActive(false);
+                PlayerWeaponManager.enabled = false;
+                PlayerThirdPersonController.ThirdPersonPlayerKilled();
+            }
+            InGameUI.instance.PlayerHUDPanel.SetActive(false);
+            GameManager.instance.IsAlive = false;
+            GameManager.instance.InVehicle = false;
+            Invoke("PlayerRespawn", GameManager.instance.RespawnDelay);
+        }
+    }
 
-	void PlayerRespawn()
-	{
-		if (GameManager.instance.MatchActive)
+    void PlayerRespawn()
+    {
+        if (GameManager.instance.MatchActive)
         {
-			EventManager.TriggerEvent ("OnPlayerRespawn");
-			PhotonNetwork.Destroy (this.gameObject);
+            EventManager.TriggerEvent("OnPlayerRespawn");
+            PhotonNetwork.Destroy(this.gameObject);
             //дописать сброс оружия
-		}
-	}
+        }
+    }
 
-	[PunRPC]
-	public void PlayFootstepSoundNetwork(string Type)
-	{
-		if (Type == "Normal")
+    [PunRPC]
+    public void PlayFootstepSoundNetwork(string Type)
+    {
+        if (Type == "Normal")
         {
-			FootstepAudiosource.PlayOneShot (FootstepSounds [Random.Range (0, FootstepSounds.Length)], FootStepVolume);
-		}
-		if (Type == "Water")
+            FootstepAudiosource.PlayOneShot(FootstepSounds[Random.Range(0, FootstepSounds.Length)], FootStepVolume);
+        }
+        if (Type == "Water")
         {
-			FootstepAudiosource.PlayOneShot (WaterstepSounds [Random.Range(0, WaterstepSounds.Length)], WaterStepVolume);
+            FootstepAudiosource.PlayOneShot(WaterstepSounds[Random.Range(0, WaterstepSounds.Length)], WaterStepVolume);
         }
         if (Type == "Wood")
         {
@@ -317,7 +324,7 @@ public class PlayerStats : MonoBehaviour {
         }
         if (Type == "Metal")
         {
-            FootstepAudiosource.PlayOneShot(MetalstepSounds[Random.Range(0, MetalstepSounds.Length)],MetalStepVolume);
+            FootstepAudiosource.PlayOneShot(MetalstepSounds[Random.Range(0, MetalstepSounds.Length)], MetalStepVolume);
         }
         if (Type == "Stone")
         {
@@ -329,13 +336,13 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
-	#region Misc
-	[PunRPC]
-	public void PlayFXAtPosition(int EffectID, Vector3 Position, Vector3 EffectDirection)
-	{
-		Instantiate (GameManager.instance.IngameEffectsReferences[EffectID], Position, Quaternion.FromToRotation (Vector3.forward, EffectDirection));
-	}
-	#endregion
+    #region Misc
+    [PunRPC]
+    public void PlayFXAtPosition(int EffectID, Vector3 Position, Vector3 EffectDirection)
+    {
+        Instantiate(GameManager.instance.IngameEffectsReferences[EffectID], Position, Quaternion.FromToRotation(Vector3.forward, EffectDirection));
+    }
+    #endregion
     void CurrentWeapon()
     {
         CurrentGunId = GameManager.instance.PlayerPrimaryWeapon;

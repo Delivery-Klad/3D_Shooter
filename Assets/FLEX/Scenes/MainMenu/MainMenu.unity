@@ -1256,6 +1256,7 @@ MonoBehaviour:
   SwitchFireMode: 0
   Crouch: 0
   Console: 0
+  Speak: 0
   Zoom: 0
   AimButton: 324
   JumpButton: 32
@@ -1273,6 +1274,7 @@ MonoBehaviour:
   ThrowButton: 103
   OpenConsole: 96
   ZoomButton: 325
+  SpeakButton: 118
 --- !u!114 &715462604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,7 +1302,7 @@ MonoBehaviour:
   WorkInOfflineMode: 0
   AutoConnect: 1
   AutoDisconnect: 0
-  AutoTransmit: 1
+  AutoTransmit: 0
   SamplingRate: 48000
   FrameDuration: 20000
   Bitrate: 30000
