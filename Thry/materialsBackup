@@ -1,4 +1,4 @@
-0000000000000000f000000000000000:=Sprites/Default
+0000000000000000f000000000000000:=Standard
 60403cfc57f56254c8f766ab73098440:=.poiyomi/Toon/Simple/Cutout
 048551a7027c3774882e78dd53e504c7:=Standard
 e9183a63e4627be498c9caad66e320d3:=Legacy Shaders/Particles/Alpha Blended
@@ -35,3 +35,5 @@ efbb367b676b3e14ba6a023ed257f3b7:=Legacy Shaders/Specular
 96592546c2cd2d84c9df428ea0eb884a:=Standard
 0c2f72c6bc6dbc34b87ca8acd88b3455:=Standard Double Sided
 975544c7f0aa2fa488bac6f7cb72bfb2:=Legacy Shaders/Bumped Specular
+527027c8baf2f0540be3104a3ec38a99:=Legacy Shaders/Particles/Additive
+f784b9c31de2a4f4cac1c239fc1c0070:=Standard
