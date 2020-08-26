@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: b81c36916310fc24c8ece102e00083f5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bolt
+    100002: boltCarrier
+    100004: boltCarrier.001
+    100006: ejector
+    100008: gasTube.001
+    100010: handle
+    100012: mag
+    100014: mag_elevator
+    100016: magRelease
+    100018: magStop
+    100020: rearSight
+    100022: rearSightAdjust
+    100024: safety
+    100026: stock
+    100028: stockHinge
+    100030: stockReleaseButton
+    100032: topCoverRelease
+    100034: trigger
+    100036: //RootNode
+    400000: bolt
+    400002: boltCarrier
+    400004: boltCarrier.001
+    400006: ejector
+    400008: gasTube.001
+    400010: handle
+    400012: mag
+    400014: mag_elevator
+    400016: magRelease
+    400018: magStop
+    400020: rearSight
+    400022: rearSightAdjust
+    400024: safety
+    400026: stock
+    400028: stockHinge
+    400030: stockReleaseButton
+    400032: topCoverRelease
+    400034: trigger
+    400036: //RootNode
+    2100000: ak74m
+    2300000: bolt
+    2300002: boltCarrier
+    2300004: boltCarrier.001
+    2300006: ejector
+    2300008: gasTube.001
+    2300010: handle
+    2300012: mag
+    2300014: mag_elevator
+    2300016: magRelease
+    2300018: magStop
+    2300020: rearSight
+    2300022: rearSightAdjust
+    2300024: safety
+    2300026: stock
+    2300028: stockHinge
+    2300030: stockReleaseButton
+    2300032: topCoverRelease
+    2300034: trigger
+    3300000: bolt
+    3300002: boltCarrier
+    3300004: boltCarrier.001
+    3300006: ejector
+    3300008: gasTube.001
+    3300010: handle
+    3300012: mag
+    3300014: mag_elevator
+    3300016: magRelease
+    3300018: magStop
+    3300020: rearSight
+    3300022: rearSightAdjust
+    3300024: safety
+    3300026: stock
+    3300028: stockHinge
+    3300030: stockReleaseButton
+    3300032: topCoverRelease
+    3300034: trigger
+    4300000: topCoverRelease
+    4300002: gasTube.001
+    4300004: handle
+    4300006: mag
+    4300008: magStop
+    4300010: stockHinge
+    4300012: stock
+    4300014: trigger
+    4300016: boltCarrier
+    4300018: bolt
+    4300020: boltCarrier.001
+    4300022: stockReleaseButton
+    4300024: safety
+    4300026: magRelease
+    4300028: ejector
+    4300030: mag_elevator
+    4300032: rearSight
+    4300034: rearSightAdjust
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
