@@ -945,6 +945,14 @@ MonoBehaviour:
       type: 3}
     WeaponIcon: {fileID: 21300000, guid: d79faca133869c8449fe6278b830238e, type: 3}
     WeaponDesc: AWP
+  - WeaponName: AK74m
+    WeaponType: 0
+    FirstPersonPrefab: {fileID: 1124160428307418, guid: 3c1837af486aff344b820738d1aa2b87,
+      type: 3}
+    ThirdPersonPrefab: {fileID: 1625014432639566, guid: 337f1caf2f985d9438eac9b0b37d61ad,
+      type: 3}
+    WeaponIcon: {fileID: 21300000, guid: d79faca133869c8449fe6278b830238e, type: 3}
+    WeaponDesc: AK74m
   WeaponModels:
   - {fileID: 7504930748309825550, guid: e2b53ad02f62f4347acd76110e5d2b66, type: 3}
   - {fileID: 7504930748309825550, guid: 1a2ade92a78734d43a20fdd65b627453, type: 3}
@@ -1019,6 +1027,7 @@ MonoBehaviour:
   - {fileID: 7504930748309825550, guid: efdc959e1b282a04194b69ecbf0357c7, type: 3}
   - {fileID: 7504930748309825550, guid: b8f854cfbd3e1024494635c77feeddd0, type: 3}
   - {fileID: 7504930748309825550, guid: 9e06f18abbc1be448a476a1445c06dd9, type: 3}
+  - {fileID: 7504930748309825550, guid: aa5059ac0b3ec154683336c0ca5d012d, type: 3}
   AmmoPrefabs:
   - {fileID: 4030817427720789682, guid: f5c6a4aa341f4094e8646cef139672ed, type: 3}
   HPPrefabs:
