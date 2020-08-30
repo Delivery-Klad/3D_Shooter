@@ -10118,13 +10118,13 @@ MonoBehaviour:
   bulletType: 0
   BulletHP: 5
   ShootDistance: 100
-  Damage: 49
-  ClipSize: 30
-  Ammoleft: 30
+  Damage: 30
+  ClipSize: 25
+  Ammoleft: 25
   CurrentAmmo: 0
   AmmoLimit: 500
-  FirstModeFireRate: 0.12
-  SecondModeFireRate: 0.12
+  FirstModeFireRate: 0.11
+  SecondModeFireRate: 0.11
   WeaponRange: 3600
   WeaponImpactForce: 55
   FirstMode: 1

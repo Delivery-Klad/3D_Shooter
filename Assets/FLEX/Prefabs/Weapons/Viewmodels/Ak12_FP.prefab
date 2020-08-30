@@ -4877,6 +4877,8 @@ MonoBehaviour:
   WeaponName: Ak12
   WeaponID: 18
   bulletType: 1
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 29
   ClipSize: 30
   Ammoleft: 30
@@ -4904,6 +4906,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.02, y: -0.067, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -9, y: -4, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
