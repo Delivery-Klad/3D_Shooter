@@ -1083,6 +1083,7 @@ MonoBehaviour:
   - edbd8d7f-9abb-4eb7-819f-ca83b72de3b0
   - babdbd9a-7697-4223-9979-a6ff2ceefc65
   - be6923e4-5025-4fe1-a4c9-dcd875a2673a
+  SilSound: {fileID: 8300000, guid: e46deddf79777ea409625d5564865a74, type: 3}
   DeathMatchSpawns: []
   RedTeamSpawns: []
   BlueTeamSpawns: []

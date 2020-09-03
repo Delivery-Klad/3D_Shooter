@@ -87,7 +87,10 @@ public class GameManager : MonoBehaviour {
     private MotionBlur _motionBloor;
     private ColorGrading _colorGrading;
 
-    [HideInInspector] public GameObject[] DeathMatchSpawns;
+	[Header("Настройки PostProcess")]
+	public AudioClip SilSound;
+
+	[HideInInspector] public GameObject[] DeathMatchSpawns;
 	[HideInInspector] public GameObject[] RedTeamSpawns;
 	[HideInInspector] public GameObject[] BlueTeamSpawns;
 	[HideInInspector] public GameObject CurrentVehicle;

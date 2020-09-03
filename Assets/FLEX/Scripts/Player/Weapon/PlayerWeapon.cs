@@ -428,6 +428,7 @@ public class PlayerWeapon : MonoBehaviour {
                 {
                     Muzzle_break = true;
                     Muzzle_br.SetActive(true);
+                    WeaponCurrentFireSound = WeaponFirePrimarySound;
                     PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, true, false, false, false);
                     if (Silencer)
                     {
@@ -499,6 +500,7 @@ public class PlayerWeapon : MonoBehaviour {
                 {
                     Silencer = true;
                     Sil.SetActive(true);
+                    WeaponCurrentFireSound = GameManager.instance.SilSound;
                     PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, false, true);
                     if (Muzzle_break)
                     {
