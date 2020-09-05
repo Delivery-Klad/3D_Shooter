@@ -10103,7 +10103,7 @@ MonoBehaviour:
   HidenScope: {fileID: 0}
   Muzzle_break: 0
   Silencer: 0
-  ACOG: 0
+  ACOG: 1
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 0}
@@ -16427,17 +16427,17 @@ PrefabInstance:
     - target: {fileID: 4556906641280685884, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0679
+      value: 0.107
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1034
+      value: 0.103
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}

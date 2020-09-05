@@ -4877,6 +4877,8 @@ MonoBehaviour:
   WeaponName: UMP-45
   WeaponID: 12
   bulletType: 2
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 15
   ClipSize: 20
   Ammoleft: 20
@@ -4904,6 +4906,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.02, y: -0.056, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -4, y: -5, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
@@ -5048,87 +5051,9 @@ Transform:
   m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
   m_Children:
   - {fileID: 8745960036931393645}
-  - {fileID: 4740051100261984}
   m_Father: {fileID: 4733943905396792}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 67.990585, y: 0.43869257, z: -89.81109}
---- !u!1 &1163145180360222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4740051100261984}
-  - component: {fileID: 33483729392726760}
-  - component: {fileID: 23270659684139216}
-  m_Layer: 9
-  m_Name: AK-74u_clip
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4740051100261984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163145180360222}
-  m_LocalRotation: {x: -0.6963669, y: 0.6963673, z: 0.122770794, w: -0.12277255}
-  m_LocalPosition: {x: -0.000098219156, y: 0.018241432, z: 0.05422475}
-  m_LocalScale: {x: 0.49790713, y: 0.49790737, z: 0.497907}
-  m_Children: []
-  m_Father: {fileID: 4165739404151254}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33483729392726760
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163145180360222}
-  m_Mesh: {fileID: 4300002, guid: 54d17f8a48fa5514cbee3ffe010fad32, type: 3}
---- !u!23 &23270659684139216
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163145180360222}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: e7befdcb97e688d4b9bc5413c882432c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1 &1177075742434052
 GameObject:
   m_ObjectHideFlags: 0

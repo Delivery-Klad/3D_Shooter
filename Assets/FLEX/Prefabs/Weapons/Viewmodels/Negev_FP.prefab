@@ -10116,6 +10116,8 @@ MonoBehaviour:
   WeaponName: Negev
   WeaponID: 8
   bulletType: 0
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 11
   ClipSize: 150
   Ammoleft: 150
@@ -10143,6 +10145,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.021, y: -0.069, z: -0.12}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -14, y: -7, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}

@@ -4877,6 +4877,8 @@ MonoBehaviour:
   WeaponName: Famas
   WeaponID: 13
   bulletType: 0
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 23
   ClipSize: 25
   Ammoleft: 25
@@ -4904,6 +4906,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.02, y: -0.055, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -4, y: -6, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
@@ -16282,7 +16285,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a12cf738358309408258643c954bef2, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16563,7 +16566,7 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.254
+      value: -0.819
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
@@ -16573,7 +16576,7 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}

@@ -10116,6 +10116,8 @@ MonoBehaviour:
   WeaponName: PP19-Bizon
   WeaponID: 25
   bulletType: 1
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 15
   ClipSize: 45
   Ammoleft: 45
@@ -10143,6 +10145,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.021, y: -0.06, z: -0.07}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -11, y: -5, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
@@ -16165,7 +16168,7 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6
+      value: -3.96
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
@@ -16505,16 +16508,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02375098
       objectReference: {fileID: 0}
-    - target: {fileID: 3846677001789767097, guid: fde6fa19833e4654d8cc1ba7305f8772,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3846677001789767099, guid: fde6fa19833e4654d8cc1ba7305f8772,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 3846677001789767101, guid: fde6fa19833e4654d8cc1ba7305f8772,
         type: 3}
       propertyPath: m_IsActive
@@ -16526,6 +16519,16 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3846677001789767103, guid: fde6fa19833e4654d8cc1ba7305f8772,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846677001789767097, guid: fde6fa19833e4654d8cc1ba7305f8772,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846677001789767099, guid: fde6fa19833e4654d8cc1ba7305f8772,
         type: 3}
       propertyPath: m_Layer
       value: 9

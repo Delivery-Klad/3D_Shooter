@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ScopeCamera : MonoBehaviour
 {
-    public GameObject Camera;
-    public GameObject RenderTexture;
+    public GameObject ACOG_FP;
+    public GameObject ACOG_TP;
 }

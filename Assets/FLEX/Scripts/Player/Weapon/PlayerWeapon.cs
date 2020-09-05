@@ -451,6 +451,7 @@ public class PlayerWeapon : MonoBehaviour {
                     }
                     ACOG = true;
                     Acog.SetActive(true);
+                    AimFov = 25;
                     AimPosition = ACOGAimPosition;
                     PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, true, false, false);
                     if (NeedToHide && Scope != null && HidenScope != null)
@@ -478,6 +479,7 @@ public class PlayerWeapon : MonoBehaviour {
                     }
                     Red_dot = true;
                     Red_Dot.SetActive(true);
+                    AimFov = 40;
                     AimPosition = RedDotAimPosition;
                     PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, true, false);
                     if (NeedToHide && Scope != null && HidenScope != null)
@@ -943,8 +945,8 @@ public class PlayerWeapon : MonoBehaviour {
     {
         if (ACOG)
         {
-            Acog.GetComponent<ScopeCamera>().RenderTexture.SetActive(toggle);
-            Acog.GetComponent<ScopeCamera>().Camera.SetActive(toggle);
+            Acog.GetComponent<ScopeCamera>().ACOG_FP.SetActive(toggle);
+            Acog.GetComponent<ScopeCamera>().ACOG_TP.SetActive(!toggle);
         }
     }
 

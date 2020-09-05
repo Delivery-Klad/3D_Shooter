@@ -10194,6 +10194,8 @@ MonoBehaviour:
   WeaponName: G28
   WeaponID: 24
   bulletType: 1
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 30
   ClipSize: 35
   Ammoleft: 35
@@ -10221,6 +10223,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.021, y: -0.06, z: -0.07}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -9, y: -6, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.02}
@@ -16917,7 +16920,7 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.22
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}

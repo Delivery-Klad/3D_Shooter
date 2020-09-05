@@ -322,6 +322,8 @@ MonoBehaviour:
   WeaponName: CZ-805
   WeaponID: 21
   bulletType: 0
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 35
   ClipSize: 30
   Ammoleft: 30
@@ -349,6 +351,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.019, y: -0.056, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -9, y: -4, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.01}
@@ -16265,7 +16268,7 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.47
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
@@ -16275,7 +16278,7 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.91
+      value: 13.51
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
@@ -16708,6 +16711,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783068094547667428, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4783068094547667432, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
         type: 3}

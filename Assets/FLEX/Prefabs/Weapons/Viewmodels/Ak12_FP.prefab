@@ -16329,17 +16329,17 @@ PrefabInstance:
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.1724615
+      value: -7.2
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0055538765
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.487902
+      value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
@@ -16380,6 +16380,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 70.19463
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 70.19463
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280256796, guid: adc30b187fbb14745af22a93128be90b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 70.19463
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685886, guid: adc30b187fbb14745af22a93128be90b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679440621811034099, guid: adc30b187fbb14745af22a93128be90b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833794579300816243, guid: adc30b187fbb14745af22a93128be90b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc30b187fbb14745af22a93128be90b, type: 3}

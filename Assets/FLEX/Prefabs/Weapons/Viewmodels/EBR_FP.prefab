@@ -10194,6 +10194,8 @@ MonoBehaviour:
   WeaponName: EBR
   WeaponID: 16
   bulletType: 1
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 48
   ClipSize: 20
   Ammoleft: 20
@@ -10221,6 +10223,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.021, y: -0.055, z: -0.13}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -12, y: -4, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.02}
