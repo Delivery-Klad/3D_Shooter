@@ -10189,8 +10189,8 @@ MonoBehaviour:
   Acog: {fileID: 357570274625543164}
   Red_Dot: {fileID: 7721840467119046978}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.058, y: -0.0525, z: -0.08}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.059, y: -0.05, z: -0.08}
+  RedDotAimPosition: {x: -0.0598, y: -0.049, z: -0.08}
   WeaponName: EBR
   WeaponID: 16
   bulletType: 1

@@ -10111,8 +10111,8 @@ MonoBehaviour:
   Acog: {fileID: 3189462343944038496}
   Red_Dot: {fileID: 3496809166168965098}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: 0, y: 0, z: 0}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.06115, y: -0.04, z: -0.06}
+  RedDotAimPosition: {x: -0.06115, y: -0.04, z: -0.06}
   WeaponName: Scar
   WeaponID: 14
   bulletType: 0
@@ -10141,7 +10141,7 @@ MonoBehaviour:
   SecondModeBarrel: {fileID: 4736520954304952}
   baseInaccuracyhip: 1.2
   baseInaccuracyaim: 0.3
-  AimPosition: {x: -0.0606, y: -0.035, z: -0.09}
+  AimPosition: {x: -0.06115, y: -0.04, z: -0.06}
   WeaponOffset: {x: -0.021, y: -0.055, z: -0.03}
   AimFov: 30
   AimSpeedModifier: 0.8

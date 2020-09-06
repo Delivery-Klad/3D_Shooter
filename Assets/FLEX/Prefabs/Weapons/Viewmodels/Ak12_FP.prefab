@@ -4872,8 +4872,8 @@ MonoBehaviour:
   Acog: {fileID: 2096905795513588762}
   Red_Dot: {fileID: 934767870148587183}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.0628, y: -0.05, z: -0.09}
-  RedDotAimPosition: {x: -0.0628, y: -0.0315, z: -0.04}
+  ACOGAimPosition: {x: -0.0627, y: -0.05, z: -0.05}
+  RedDotAimPosition: {x: -0.0627, y: -0.05, z: -0.04}
   WeaponName: Ak12
   WeaponID: 18
   bulletType: 1
@@ -16396,20 +16396,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 70.19463
       objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685886, guid: adc30b187fbb14745af22a93128be90b,
+    - target: {fileID: 3833794579300816243, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7679440621811034099, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3833794579300816243, guid: adc30b187fbb14745af22a93128be90b,
+    - target: {fileID: 4556906641280685886, guid: adc30b187fbb14745af22a93128be90b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc30b187fbb14745af22a93128be90b, type: 3}

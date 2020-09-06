@@ -10189,8 +10189,8 @@ MonoBehaviour:
   Acog: {fileID: 5647295044493080544}
   Red_Dot: {fileID: 4400702191761579260}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.06, y: -0.056, z: -0.07}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.0602, y: -0.05, z: -0.06}
+  RedDotAimPosition: {x: -0.06, y: -0.05, z: -0.07}
   WeaponName: G28
   WeaponID: 24
   bulletType: 1

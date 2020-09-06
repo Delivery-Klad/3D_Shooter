@@ -319,7 +319,7 @@ MonoBehaviour:
   Acog: {fileID: 2629718559597430309}
   Red_Dot: {fileID: 5834172133871069653}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.0628, y: -0.058, z: -0.04}
   RedDotAimPosition: {x: -0.0633, y: -0.0555, z: -0.04}
   WeaponName: ARX-160
   WeaponID: 20
@@ -17038,6 +17038,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02396133
       objectReference: {fileID: 0}
+    - target: {fileID: 8526873385790424230, guid: 9ca390e55c4eb1d4885bf38ff680402f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526873385790424228, guid: 9ca390e55c4eb1d4885bf38ff680402f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526873385790424228, guid: 9ca390e55c4eb1d4885bf38ff680402f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8526873385790424240, guid: 9ca390e55c4eb1d4885bf38ff680402f,
         type: 3}
       propertyPath: m_Layer
@@ -17089,16 +17104,6 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8526873385790424226, guid: 9ca390e55c4eb1d4885bf38ff680402f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526873385790424228, guid: 9ca390e55c4eb1d4885bf38ff680402f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526873385790424230, guid: 9ca390e55c4eb1d4885bf38ff680402f,
         type: 3}
       propertyPath: m_Layer
       value: 9

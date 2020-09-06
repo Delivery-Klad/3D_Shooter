@@ -10111,8 +10111,8 @@ MonoBehaviour:
   Acog: {fileID: 3952587432963598092}
   Red_Dot: {fileID: 2791960454574846010}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.06, y: -0.061, z: -0.05}
-  RedDotAimPosition: {x: -0.0605, y: -0.0415, z: -0.04}
+  ACOGAimPosition: {x: -0.0619, y: -0.058, z: -0.04}
+  RedDotAimPosition: {x: -0.0605, y: -0.06, z: -0.06}
   WeaponName: PP19-Bizon
   WeaponID: 25
   bulletType: 1

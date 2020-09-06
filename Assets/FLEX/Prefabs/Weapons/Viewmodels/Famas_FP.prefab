@@ -4872,8 +4872,8 @@ MonoBehaviour:
   Acog: {fileID: 3424011658837142764}
   Red_Dot: {fileID: 3414877873537171549}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.061, y: -0.076, z: -0.04}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.062, y: -0.072, z: -0.03}
+  RedDotAimPosition: {x: -0.062, y: -0.07, z: -0.05}
   WeaponName: Famas
   WeaponID: 13
   bulletType: 0
@@ -4902,7 +4902,7 @@ MonoBehaviour:
   SecondModeBarrel: {fileID: 4018106177260814}
   baseInaccuracyhip: 1.7
   baseInaccuracyaim: 0.3
-  AimPosition: {x: -0.062, y: -0.062, z: -0.03}
+  AimPosition: {x: -0.062, y: -0.062, z: -0.04}
   WeaponOffset: {x: -0.02, y: -0.055, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1

@@ -317,8 +317,8 @@ MonoBehaviour:
   Acog: {fileID: 800433091369616270}
   Red_Dot: {fileID: 7474113028948942666}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.062, y: -0.06, z: -0.04}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.064, y: -0.054, z: -0.02}
+  RedDotAimPosition: {x: -0.064, y: -0.051, z: -0.04}
   WeaponName: CZ-805
   WeaponID: 21
   bulletType: 0
