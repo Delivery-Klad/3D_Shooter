@@ -4873,7 +4873,7 @@ MonoBehaviour:
   Red_Dot: {fileID: 8779160095823166984}
   Fore_Grip: {fileID: 0}
   ACOGAimPosition: {x: 0, y: 0, z: 0}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  RedDotAimPosition: {x: -0.6235, y: -0.0602, z: -0.0602}
   WeaponName: UMP-45
   WeaponID: 12
   bulletType: 2
@@ -4902,7 +4902,7 @@ MonoBehaviour:
   SecondModeBarrel: {fileID: 4018106177260814}
   baseInaccuracyhip: 1.9
   baseInaccuracyaim: 0.3
-  AimPosition: {x: -0.062, y: -0.039, z: -0.03}
+  AimPosition: {x: -0.06235, y: -0.039, z: -0.03}
   WeaponOffset: {x: -0.02, y: -0.056, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1
