@@ -10111,8 +10111,8 @@ MonoBehaviour:
   Acog: {fileID: 3359871859901649481}
   Red_Dot: {fileID: 501152075571089891}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: -0.06, y: -0.068, z: -0.1}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.0602, y: -0.0635, z: -0.12}
+  RedDotAimPosition: {x: -0.0602, y: -0.062, z: -0.15}
   WeaponName: Negev
   WeaponID: 8
   bulletType: 0

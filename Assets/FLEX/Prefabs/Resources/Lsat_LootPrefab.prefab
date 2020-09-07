@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5532794577616017668}
   - component: {fileID: 1722382932039748120}
   m_Layer: 0
-  m_Name: Lsat
+  m_Name: Lsat_LootPrefab
   m_TagString: DropWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7504930748309825550}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 581.3368, y: 17.307312, z: 549.1288}
-  m_LocalScale: {x: 1.7232428, y: 1.2489034, z: 1.0724611}
+  m_LocalScale: {x: 1.3528821, y: 0.9804882, z: 0.841967}
   m_Children:
   - {fileID: 2504949972009821545}
   m_Father: {fileID: 0}
