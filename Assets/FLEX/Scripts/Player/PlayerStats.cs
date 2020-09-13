@@ -301,51 +301,6 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    [PunRPC]
-    public void PlayFootstepSoundNetwork(string Type)
-    {
-        if (Type == "Normal")
-        {
-            FootstepAudiosource.PlayOneShot(FootstepSounds[Random.Range(0, FootstepSounds.Length)], FootStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Normal");
-        }
-        if (Type == "Water")
-        {
-            FootstepAudiosource.PlayOneShot(WaterstepSounds[Random.Range(0, WaterstepSounds.Length)], WaterStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Water");
-        }
-        if (Type == "Wood")
-        {
-            FootstepAudiosource.PlayOneShot(WoodstepSounds[Random.Range(0, WoodstepSounds.Length)], WoodStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Wood");
-        }
-        if (Type == "Wood2")
-        {
-            FootstepAudiosource.PlayOneShot(WoodstepSounds[Random.Range(0, WoodstepSounds.Length)], WoodStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Wood2");
-        }
-        if (Type == "Sand")
-        {
-            FootstepAudiosource.PlayOneShot(SandstepSounds[Random.Range(0, SandstepSounds.Length)], SandStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Sand");
-        }
-        if (Type == "Metal")
-        {
-            FootstepAudiosource.PlayOneShot(MetalstepSounds[Random.Range(0, MetalstepSounds.Length)], MetalStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Metal");
-        }
-        if (Type == "Stone")
-        {
-            FootstepAudiosource.PlayOneShot(StonestepSounds[Random.Range(0, StonestepSounds.Length)], StoneStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Stone");
-        }
-        if (Type == "Stone2")
-        {
-            FootstepAudiosource.PlayOneShot(StonestepSounds[Random.Range(0, StonestepSounds.Length)], StoneStepVolume);
-            PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.All, "Stone2");
-        }
-    }
-
     #region Misc
     [PunRPC]
     public void PlayFXAtPosition(int EffectID, Vector3 Position, Vector3 EffectDirection)

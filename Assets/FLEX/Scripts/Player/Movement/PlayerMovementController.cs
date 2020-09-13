@@ -401,49 +401,49 @@ public class PlayerMovementController : MonoBehaviour
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.StepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.FootstepSounds[Random.Range(0, PlayerStatistics.FootstepSounds.Length)], PlayerStatistics.FootStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Normal");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Normal");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InWater)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.WaterStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.WaterstepSounds[Random.Range(0, PlayerStatistics.WaterstepSounds.Length)], PlayerStatistics.WaterStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Water");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Water");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InWood)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.WoodStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.WoodstepSounds[Random.Range(0, PlayerStatistics.WoodstepSounds.Length)], PlayerStatistics.WoodStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Wood");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Wood");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InWood)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.WoodStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.WoodstepSounds[Random.Range(0, PlayerStatistics.WoodstepSounds.Length)], PlayerStatistics.WoodStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Wood2");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Wood2");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InSand)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.SandStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.SandstepSounds[Random.Range(0, PlayerStatistics.SandstepSounds.Length)], PlayerStatistics.SandStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Sand");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Sand");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InMetal)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.MetalStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.MetalstepSounds[Random.Range(0, PlayerStatistics.MetalstepSounds.Length)], PlayerStatistics.MetalStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Metal");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Metal");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InStone)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.StoneStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.StonestepSounds[Random.Range(0, PlayerStatistics.StonestepSounds.Length)], PlayerStatistics.StoneStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Stone");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Stone");
             }
             else if (grounded && controller.velocity.magnitude > 0.1 && PlayerStatistics.StepTimer <= Time.time && !GameManager.instance.InVehicle && InStone)
             {
                 PlayerStatistics.StepTimer = Time.time + (PlayerStatistics.StoneStepInterval / PlayerMovementSpeed * PlayerStatistics.RunMultiplier);
                 PlayerStatistics.FootstepAudiosource.PlayOneShot(PlayerStatistics.StonestepSounds[Random.Range(0, PlayerStatistics.StonestepSounds.Length)], PlayerStatistics.StoneStepVolume);
-                PlayerPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Stone2");
+                PlayerThirdPersonController.ThirdPersonPhotonView.RPC("PlayFootstepSoundNetwork", PhotonTargets.Others, "Stone2");
             }
 
             if (grounded && controller.velocity.magnitude > 0 && PlayerWalkingState == WalkingState.Running && PlayerStatistics.SprintBreathTimer <= Time.time && !GameManager.instance.InVehicle)

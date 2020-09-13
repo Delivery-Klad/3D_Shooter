@@ -2997,7 +2997,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4547,6 +4547,12 @@ MonoBehaviour:
   ThirdPersonModelCollider: {fileID: 65674514731847990}
   PlayDrawAnimation: 0
   BulletHP: 5
+  FootStepVolume: 0.5
+  WaterStepVolume: 1
+  SandStepVolume: 1
+  WoodStepVolume: 1
+  MetalStepVolume: 1
+  StoneStepVolume: 1
   FootstepAudiosource: {fileID: 82028453590478180}
   FootstepSounds:
   - {fileID: 8300000, guid: 590c646ce5f346f40833d263ed2ed740, type: 3}
