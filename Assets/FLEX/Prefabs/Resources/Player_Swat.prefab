@@ -4547,6 +4547,45 @@ MonoBehaviour:
   ThirdPersonModelCollider: {fileID: 65674514731847990}
   PlayDrawAnimation: 0
   BulletHP: 5
+  FootstepAudiosource: {fileID: 82028453590478180}
+  FootstepSounds:
+  - {fileID: 8300000, guid: 590c646ce5f346f40833d263ed2ed740, type: 3}
+  - {fileID: 8300000, guid: 656db00a5bb89fc43be0b4c3eb305dc0, type: 3}
+  - {fileID: 8300000, guid: df646b6f2f72c01449de3d10d72c1b50, type: 3}
+  - {fileID: 8300000, guid: 6aa3d388292b5b64781671d0cc6b5452, type: 3}
+  SandstepSounds:
+  - {fileID: 8300000, guid: 93c400db062cab548b3c55a863fa46b6, type: 3}
+  - {fileID: 8300000, guid: af974052c4f710c4581d49fd4366e31f, type: 3}
+  - {fileID: 8300000, guid: 1c706b64a692a45488cf98f0e83bcde7, type: 3}
+  - {fileID: 8300000, guid: fe72bf4af854e9947a71111a438f87ed, type: 3}
+  WoodstepSounds:
+  - {fileID: 8300000, guid: 2bbf77c136277ab4e8a1e793623e5178, type: 3}
+  - {fileID: 8300000, guid: 4891099ee1dec0f449c234cf0800ae0d, type: 3}
+  - {fileID: 8300000, guid: 553f917ae2fb2de4aba5dade103305be, type: 3}
+  - {fileID: 8300000, guid: 85d71365e870fc74fafdd906a34b2c9c, type: 3}
+  - {fileID: 8300000, guid: ede7430362c44e04f810bb1ce4004e78, type: 3}
+  - {fileID: 8300000, guid: 262631a3684965743b43461f97e83741, type: 3}
+  MetalstepSounds:
+  - {fileID: 8300000, guid: a0868a4fbfa82e44aa0c7229fef4736f, type: 3}
+  - {fileID: 8300000, guid: 8e8bbb38e493688469c08038bffd01bf, type: 3}
+  - {fileID: 8300000, guid: f3a1cfc0237c97b40b887fb735894047, type: 3}
+  - {fileID: 8300000, guid: c6034b1ded7dc7d4e94bbc30c9864be2, type: 3}
+  StonestepSounds:
+  - {fileID: 8300000, guid: e2dc4ffbc2977cf4a838370b812bfbd2, type: 3}
+  - {fileID: 8300000, guid: d1970b22306a61e4a9ceceb8435a7d38, type: 3}
+  - {fileID: 8300000, guid: d2d090d22995c5d48b45bafcb9a16b39, type: 3}
+  - {fileID: 8300000, guid: 707e498ea7782824ebc71d6c847ee591, type: 3}
+  - {fileID: 8300000, guid: f3c34d2a3561e9646bc689bddc93efa7, type: 3}
+  - {fileID: 8300000, guid: 3bcbe9e947d12b4458280af5347071e0, type: 3}
+  WaterstepSounds:
+  - {fileID: 8300000, guid: baa17a6fda7da3446b8b68bc857bd130, type: 3}
+  - {fileID: 8300000, guid: e11f5916d32c988439a5b4242033669b, type: 3}
+  - {fileID: 8300000, guid: 9b29e522768e7324db1fedd4ab27202c, type: 3}
+  - {fileID: 8300000, guid: 07386b33bc619324a8238b88eb34384a, type: 3}
+  - {fileID: 8300000, guid: 3c4893fbfc149b1469de61920f907da3, type: 3}
+  - {fileID: 8300000, guid: 50a2a0aa18b173d4da057d350e043657, type: 3}
+  - {fileID: 8300000, guid: 7a27a6322ac875c4896d73af341ba076, type: 3}
+  - {fileID: 8300000, guid: 7f1042371a63aa04e9c0676d1053c27e, type: 3}
 --- !u!95 &95187926869195398
 Animator:
   serializedVersion: 3
@@ -5504,26 +5543,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 656db00a5bb89fc43be0b4c3eb305dc0, type: 3}
   - {fileID: 8300000, guid: df646b6f2f72c01449de3d10d72c1b50, type: 3}
   - {fileID: 8300000, guid: 6aa3d388292b5b64781671d0cc6b5452, type: 3}
-  FootStepLandSound: {fileID: 8300000, guid: 101a99bf5492853459618b391cb6ceae, type: 3}
-  StepInterval: 1.3
-  WoodStepInterval: 1.6
-  StoneStepInterval: 1.6
-  SandStepInterval: 1.6
-  MetalStepInterval: 1.6
-  WaterStepInterval: 1.6
-  RunMultiplier: 1
-  StepTimer: 0
-  WaterstepSounds:
-  - {fileID: 8300000, guid: e11f5916d32c988439a5b4242033669b, type: 3}
-  - {fileID: 8300000, guid: baa17a6fda7da3446b8b68bc857bd130, type: 3}
-  - {fileID: 8300000, guid: 9b29e522768e7324db1fedd4ab27202c, type: 3}
-  - {fileID: 8300000, guid: 07386b33bc619324a8238b88eb34384a, type: 3}
-  - {fileID: 8300000, guid: 3c4893fbfc149b1469de61920f907da3, type: 3}
-  - {fileID: 8300000, guid: 50a2a0aa18b173d4da057d350e043657, type: 3}
-  - {fileID: 8300000, guid: 7a27a6322ac875c4896d73af341ba076, type: 3}
-  - {fileID: 8300000, guid: 7f1042371a63aa04e9c0676d1053c27e, type: 3}
-  PlayerWaterEnterSound: {fileID: 8300000, guid: 45b305aa89b0bb04d845d2f137a77154,
-    type: 3}
   SandstepSounds:
   - {fileID: 8300000, guid: 93c400db062cab548b3c55a863fa46b6, type: 3}
   - {fileID: 8300000, guid: af974052c4f710c4581d49fd4366e31f, type: 3}
@@ -5548,6 +5567,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 707e498ea7782824ebc71d6c847ee591, type: 3}
   - {fileID: 8300000, guid: f3c34d2a3561e9646bc689bddc93efa7, type: 3}
   - {fileID: 8300000, guid: 3bcbe9e947d12b4458280af5347071e0, type: 3}
+  WaterstepSounds:
+  - {fileID: 8300000, guid: e11f5916d32c988439a5b4242033669b, type: 3}
+  - {fileID: 8300000, guid: baa17a6fda7da3446b8b68bc857bd130, type: 3}
+  - {fileID: 8300000, guid: 9b29e522768e7324db1fedd4ab27202c, type: 3}
+  - {fileID: 8300000, guid: 07386b33bc619324a8238b88eb34384a, type: 3}
+  - {fileID: 8300000, guid: 3c4893fbfc149b1469de61920f907da3, type: 3}
+  - {fileID: 8300000, guid: 50a2a0aa18b173d4da057d350e043657, type: 3}
+  - {fileID: 8300000, guid: 7a27a6322ac875c4896d73af341ba076, type: 3}
+  - {fileID: 8300000, guid: 7f1042371a63aa04e9c0676d1053c27e, type: 3}
+  FootStepLandSound: {fileID: 8300000, guid: 101a99bf5492853459618b391cb6ceae, type: 3}
+  StepInterval: 1.3
+  WoodStepInterval: 1.6
+  StoneStepInterval: 1.6
+  SandStepInterval: 1.6
+  MetalStepInterval: 1.6
+  WaterStepInterval: 1.6
+  RunMultiplier: 1
+  StepTimer: 0
+  PlayerWaterEnterSound: {fileID: 8300000, guid: 45b305aa89b0bb04d845d2f137a77154,
+    type: 3}
   GearSoundVolume: 0.4
   GearPlayerLandSound: {fileID: 8300000, guid: 0f8c23877bc009c428aecf5742c1672e, type: 3}
   PlayerGearAudioSource: {fileID: 82770124590094594}
@@ -5590,11 +5629,9 @@ MonoBehaviour:
   runSpeed: 5
   InWater: 0
   InWood: 0
-  InWood2: 0
   InSand: 0
   InMetal: 0
   InStone: 0
-  InStone2: 0
   limitDiagonalSpeed: 0
   grounded: 0
   controller: {fileID: 143824335623444862}

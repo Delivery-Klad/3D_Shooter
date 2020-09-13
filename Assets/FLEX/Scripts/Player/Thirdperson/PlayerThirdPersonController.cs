@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class PlayerThirdPersonController : MonoBehaviour {
-
-	[Header("Third Person References")]
-	public PlayerMovementController PlayerMovementManager;		//Reference to the PlayerMovementManager
-	public PhotonView ThirdPersonPhotonView;					//Reference to this playermodel's photonview
-	public Animator PlayerThirdPersonAnimator;					//Reference to the animator of this playermodel
-	public Rigidbody[] PlayerThirdPersonRigidbodies;			//Get all rigidbodies from the thirdperson model
-	public Collider[] PlayerThirdPersonColliders;				//Get all colliders from the thirdperson model
-	public Renderer[] ThirdPersonRenderers;						//Get all renderers from the thirdperson model
-	public Transform ThirdPersonWeaponHolder;					//Get the transform where all thirdpersonweapon models are being spawned and attached to
-	public Transform PlayerCamera;								//Reference to this player's camera
-	public GameObject ThirdPersonWorldWeapon;					//Referene to the current thirdpersonweapon model
-	public float SyncedAimangle;								//Used to smooth out the aim angle on remote players
-	public bool WeaponIK = false;								//Used to determine if the left and right hand's IK need to be enabled
-	public Transform LeftHand;									//The transform of the bone from the left hand
-	public Vector3 Offset;										//Offset used for the lefthand position
+public class PlayerThirdPersonController : MonoBehaviour 
+{
+	[Header("References")]
+	public PlayerMovementController PlayerMovementManager;
+	public PhotonView ThirdPersonPhotonView;
+	public Animator PlayerThirdPersonAnimator;
+	public Rigidbody[] PlayerThirdPersonRigidbodies;
+	public Collider[] PlayerThirdPersonColliders;
+	public Renderer[] ThirdPersonRenderers;
+	public Transform ThirdPersonWeaponHolder;
+	public Transform PlayerCamera;
+	public GameObject ThirdPersonWorldWeapon;
+	public float SyncedAimangle;
+	public bool WeaponIK = false;
+	public Transform LeftHand;
+	public Vector3 Offset;
 	public bool UseTarget = true;
 	public Transform Target;
 	public Transform Chest;
@@ -29,8 +29,22 @@ public class PlayerThirdPersonController : MonoBehaviour {
 	public Collider ThirdPersonModelCollider;
 	public bool PlayDrawAnimation = false;
     public int BulletHP = 5;
+    [Header("Sounds")]
+    public float FootStepVolume = 0.5f;
+    public float WaterStepVolume = 1.0f;
+    public float SandStepVolume = 1.0f;
+    public float WoodStepVolume = 1.0f;
+    public float MetalStepVolume = 1.0f;
+    public float StoneStepVolume = 1.0f;
+    public AudioSource FootstepAudiosource;
+    public AudioClip[] FootstepSounds;
+    public AudioClip[] SandstepSounds;
+    public AudioClip[] WoodstepSounds;
+    public AudioClip[] MetalstepSounds;
+    public AudioClip[] StonestepSounds;
+    public AudioClip[] WaterstepSounds;
 
-	void Start()
+    void Start()
 	{
 		if (ThirdPersonPhotonView.isMine)
         {
@@ -105,17 +119,58 @@ public class PlayerThirdPersonController : MonoBehaviour {
 			Destroy (ThirdPersonWorldWeapon);
 			ThirdPersonWorldWeapon = Instantiate (GameManager.instance.AllGameWeapons[WeaponID].ThirdPersonPrefab, ThirdPersonWeaponHolder);
 			PlayerThirdPersonAnimator.SetInteger ("WeaponType", ThirdPersonWorldWeapon.GetComponent<ThirdPersonWeapon> ().WeaponHoldType);
-			if (ThirdPersonPhotonView.isMine)
-				ThirdPersonWorldWeapon.SetActive (false);
+            if (ThirdPersonPhotonView.isMine)
+            {
+                ThirdPersonWorldWeapon.SetActive(false);
+            }
 		}
         else
         {
 			ThirdPersonWorldWeapon = Instantiate (GameManager.instance.AllGameWeapons[WeaponID].ThirdPersonPrefab, ThirdPersonWeaponHolder);
 			PlayerThirdPersonAnimator.SetInteger ("WeaponType", ThirdPersonWorldWeapon.GetComponent<ThirdPersonWeapon> ().WeaponHoldType);
-			if (ThirdPersonPhotonView.isMine)
-				ThirdPersonWorldWeapon.SetActive (false);
+            if (ThirdPersonPhotonView.isMine)
+            {
+                ThirdPersonWorldWeapon.SetActive(false);
+            }
 		}
 	}
+
+    [PunRPC]
+    public void PlayFootstepSoundNetwork(string Type)
+    {
+        if (Type == "Normal")
+        {
+            FootstepAudiosource.PlayOneShot(FootstepSounds[Random.Range(0, FootstepSounds.Length)], FootStepVolume);
+        }
+        if (Type == "Water")
+        {
+            FootstepAudiosource.PlayOneShot(WaterstepSounds[Random.Range(0, WaterstepSounds.Length)], WaterStepVolume);
+        }
+        if (Type == "Wood")
+        {
+            FootstepAudiosource.PlayOneShot(WoodstepSounds[Random.Range(0, WoodstepSounds.Length)], WoodStepVolume);
+        }
+        if (Type == "Wood2")
+        {
+            FootstepAudiosource.PlayOneShot(WoodstepSounds[Random.Range(0, WoodstepSounds.Length)], WoodStepVolume);
+        }
+        if (Type == "Sand")
+        {
+            FootstepAudiosource.PlayOneShot(SandstepSounds[Random.Range(0, SandstepSounds.Length)], SandStepVolume);
+        }
+        if (Type == "Metal")
+        {
+            FootstepAudiosource.PlayOneShot(MetalstepSounds[Random.Range(0, MetalstepSounds.Length)], MetalStepVolume);
+        }
+        if (Type == "Stone")
+        {
+            FootstepAudiosource.PlayOneShot(StonestepSounds[Random.Range(0, StonestepSounds.Length)], StoneStepVolume);
+        }
+        if (Type == "Stone2")
+        {
+            FootstepAudiosource.PlayOneShot(StonestepSounds[Random.Range(0, StonestepSounds.Length)], StoneStepVolume);
+        }
+    }
 
     [PunRPC]
     public void ThirdPersonEmpty()
