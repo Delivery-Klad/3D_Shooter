@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059615873395260}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4013, y: 0.2521, z: 1.254}
+  m_LocalPosition: {x: 0.4013, y: 0.2521, z: 0.781}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4820974509591214}
@@ -624,6 +624,8 @@ MonoBehaviour:
   WeaponName: Skorpion
   WeaponID: 4
   bulletType: 2
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 27
   ClipSize: 30
   Ammoleft: 30
@@ -651,6 +653,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.025, y: -0.04, z: -0.035}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -3, y: -2, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
@@ -5646,7 +5649,7 @@ ParticleSystem:
 --- !u!199 &199016437588233394
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11606,7 +11609,7 @@ ParticleSystem:
 --- !u!199 &199810775341216572
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16505,7 +16508,7 @@ ParticleSystem:
 --- !u!199 &199938276168236610
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

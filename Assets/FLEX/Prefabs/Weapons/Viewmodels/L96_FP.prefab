@@ -156,7 +156,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967039
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 3c1736f7bb427724093e2cc4ef3188f5, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -421,7 +421,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b28a1da555e6f1b40aac4e8c79615bba, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5364,7 +5364,7 @@ ParticleSystem:
 --- !u!199 &199212152377089050
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5540,7 +5540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258474936370566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.409, y: 0.318, z: 2.847}
+  m_LocalPosition: {x: 0.409, y: 0.318, z: 0.586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4397152131696580}
@@ -10259,7 +10259,7 @@ ParticleSystem:
 --- !u!199 &199594872991431292
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10518,12 +10518,31 @@ MonoBehaviour:
   flash: 0
   flashlight: {fileID: 0}
   flashon: 0
+  NeedToHide: 0
+  Scope: {fileID: 0}
+  HidenScope: {fileID: 0}
+  Muzzle_break: 0
+  Silencer: 0
+  ACOG: 0
+  Red_dot: 0
+  ForeGrip: 0
+  Muzzle_br: {fileID: 0}
+  Sil: {fileID: 0}
+  Acog: {fileID: 0}
+  Red_Dot: {fileID: 0}
+  Fore_Grip: {fileID: 0}
+  ACOGAimPosition: {x: 0, y: 0, z: 0}
+  RedDotAimPosition: {x: 0, y: 0, z: 0}
   WeaponName: L96
   WeaponID: 2
+  bulletType: 0
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 78
   ClipSize: 12
   Ammoleft: 12
-  Clips: 12
+  CurrentAmmo: 0
+  AmmoLimit: 500
   FirstModeFireRate: 0.75
   SecondModeFireRate: 0.75
   WeaponRange: 1800
@@ -10546,15 +10565,15 @@ MonoBehaviour:
   WeaponOffset: {x: -0.021, y: -0.055, z: -0.05}
   AimFov: 40
   AimSpeedModifier: 0.8
-  shotsPerBurst: 3
-  BurstTime: 0.07
-  Bursting: 0
-  pelletsPerShot: 10
-  Projectile: {fileID: 0}
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -8, y: -3, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
   RecoilModifier: 1
+  shotsPerBurst: 3
+  BurstTime: 0.07
+  Bursting: 0
+  pelletsPerShot: 10
   CrosshairFirstMode: {fileID: 0}
   CrosshairSecondMode: {fileID: 0}
   ConcreteImpact: {fileID: 1330844396633182, guid: 1ee67899cc3139844b970ef8e953998c,
@@ -10606,6 +10625,7 @@ MonoBehaviour:
   PlayerWeaponManager: {fileID: 0}
   WeaponHolder: {fileID: 0}
   WeaponPhotonView: {fileID: 0}
+  PlayerStats: {fileID: 0}
 --- !u!111 &111232660154565140
 Animation:
   m_ObjectHideFlags: 0
@@ -15401,7 +15421,7 @@ ParticleSystem:
 --- !u!199 &199675795151250072
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16683,7 +16703,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b28a1da555e6f1b40aac4e8c79615bba, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
