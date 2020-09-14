@@ -10207,8 +10207,8 @@ MonoBehaviour:
   WeaponImpactForce: 50
   FirstMode: 1
   FirstModeFiringType: 1
-  SecondMode: 0
-  SecondModeFiringType: 0
+  SecondMode: 2
+  SecondModeFiringType: 1
   CurrentMode: 3
   CurrentFiringType: 1
   WeaponLayerMask:
@@ -10232,8 +10232,6 @@ MonoBehaviour:
   BurstTime: 0.07
   Bursting: 0
   pelletsPerShot: 10
-  CrosshairFirstMode: {fileID: 0}
-  CrosshairSecondMode: {fileID: 0}
   ConcreteImpact: {fileID: 1330844396633182, guid: 1ee67899cc3139844b970ef8e953998c,
     type: 3}
   WoodImpact: {fileID: 1619005896843622, guid: 16660a6dee4c85342af8356cb055de3e, type: 3}
@@ -10258,7 +10256,8 @@ MonoBehaviour:
     type: 3}
   WeaponReloadSound: {fileID: 8300000, guid: b880127aa975f4a4e882ba03b12ce063, type: 3}
   WeaponEmptySound: {fileID: 8300000, guid: d3591642628792446a598ef8c9975fa8, type: 3}
-  WeaponSwitchModeSound: {fileID: 0}
+  WeaponSwitchModeSound: {fileID: 8300000, guid: cb3ba492e34f2104e97a8bc3abc88609,
+    type: 3}
   WeaponMovementAnimator: {fileID: 0}
   WeaponMovementType: 0
   WeaponAnimationComponent: {fileID: 111232660154565140}

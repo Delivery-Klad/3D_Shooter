@@ -4580,7 +4580,7 @@ ParticleSystem:
 --- !u!199 &199578628374033078
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4724,10 +4724,12 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 5231752515832150963}
   Acog: {fileID: 0}
   Red_Dot: {fileID: 6944425476609038641}
+  Fore_Grip: {fileID: 0}
 --- !u!82 &82672444270058070
 AudioSource:
   m_ObjectHideFlags: 0
