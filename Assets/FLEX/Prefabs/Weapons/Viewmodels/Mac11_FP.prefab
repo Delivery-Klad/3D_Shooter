@@ -972,7 +972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432355309356588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4013, y: 0.2521, z: 1.254}
+  m_LocalPosition: {x: 0.4013, y: 0.2521, z: 0.689}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4150954384699980}
@@ -5741,7 +5741,7 @@ ParticleSystem:
 --- !u!199 &199203324880527906
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6040,6 +6040,8 @@ MonoBehaviour:
   WeaponName: Mac11
   WeaponID: 6
   bulletType: 2
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 12
   ClipSize: 30
   Ammoleft: 30
@@ -6067,6 +6069,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.022, y: -0.04, z: -0.025}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -3, y: -1, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.005}
@@ -11345,7 +11348,7 @@ ParticleSystem:
 --- !u!199 &199099797177348012
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16816,7 +16819,7 @@ ParticleSystem:
 --- !u!199 &199178675012159404
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

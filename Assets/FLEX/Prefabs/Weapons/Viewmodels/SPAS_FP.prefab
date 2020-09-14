@@ -323,6 +323,7 @@ MonoBehaviour:
   WeaponID: 9
   bulletType: 0
   BulletHP: 5
+  ShootDistance: 100
   Damage: 11
   ClipSize: 9
   Ammoleft: 9
@@ -5301,7 +5302,7 @@ ParticleSystem:
 --- !u!199 &199920557529848802
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10093,7 +10094,7 @@ ParticleSystem:
 --- !u!199 &199351394194444266
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11581,7 +11582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826095594831534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.409, y: 0.331, z: 2.596}
+  m_LocalPosition: {x: 0.409, y: 0.416, z: 0.865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4056088487702804}
@@ -16358,7 +16359,7 @@ ParticleSystem:
 --- !u!199 &199104941730864462
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -322,6 +322,8 @@ MonoBehaviour:
   WeaponName: M16
   WeaponID: 1
   bulletType: 0
+  BulletHP: 5
+  ShootDistance: 100
   Damage: 35
   ClipSize: 30
   Ammoleft: 30
@@ -349,6 +351,7 @@ MonoBehaviour:
   WeaponOffset: {x: -0.019, y: -0.06, z: -0.03}
   AimFov: 40
   AimSpeedModifier: 1
+  IsAiming: 0
   WeaponRecoilHolder: {fileID: 0}
   RecoilRotation: {x: -9, y: -3, z: 0}
   RecoilKickback: {x: 0, y: 0, z: -0.01}
@@ -5299,7 +5302,7 @@ ParticleSystem:
 --- !u!199 &199920557529848802
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -10091,7 +10094,7 @@ ParticleSystem:
 --- !u!199 &199351394194444266
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11579,7 +11582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826095594831534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.409, y: 0.331, z: 2.596}
+  m_LocalPosition: {x: 0.409, y: 0.331, z: 0.749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4056088487702804}
@@ -16356,7 +16359,7 @@ ParticleSystem:
 --- !u!199 &199104941730864462
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16514,16 +16517,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4715414823353770}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16593,6 +16586,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.009455999
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14790bf7226ab3246b499bdc9b92c323, type: 3}
