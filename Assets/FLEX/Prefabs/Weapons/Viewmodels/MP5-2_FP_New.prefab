@@ -316,7 +316,7 @@ MonoBehaviour:
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 0}
   Acog: {fileID: 0}
-  Red_Dot: {fileID: 0}
+  Red_Dot: {fileID: 5895915091207274113}
   Fore_Grip: {fileID: 0}
   ACOGAimPosition: {x: 0, y: 0, z: 0}
   RedDotAimPosition: {x: 0, y: 0, z: 0}
@@ -16711,6 +16711,12 @@ PrefabInstance:
 --- !u!4 &699198027244467531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5296064592336331230, guid: 03ae4ed7b9e16de408780a4e1bc33620,
+    type: 3}
+  m_PrefabInstance: {fileID: 4668942302145959061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5895915091207274113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1232039891625470484, guid: 03ae4ed7b9e16de408780a4e1bc33620,
     type: 3}
   m_PrefabInstance: {fileID: 4668942302145959061}
   m_PrefabAsset: {fileID: 0}
