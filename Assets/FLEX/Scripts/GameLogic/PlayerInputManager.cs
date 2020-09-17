@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInputManager : MonoBehaviour {
+public class PlayerInputManager : MonoBehaviour
+{
 
-	[HideInInspector]public static PlayerInputManager instance;
-	[Header("Player Input Manager")]
-	public bool FreezePlayerControls;
-	public float AimSpeedModifier = 1f;
-	public float InputX;			
-	public float InputY;
-	public float MouseX;
-	public float MouseY;
+    [HideInInspector] public static PlayerInputManager instance;
+    [Header("Player Input Manager")]
+    public bool FreezePlayerControls;
+    public float AimSpeedModifier = 1f;
+    public float InputX;
+    public float InputY;
+    public float MouseX;
+    public float MouseY;
     [HideInInspector] public bool Jump;
     [HideInInspector] public bool Sprint;
     [HideInInspector] public bool IsAuto;
@@ -31,8 +32,8 @@ public class PlayerInputManager : MonoBehaviour {
     [HideInInspector] public bool SwitchFireMode;
     [HideInInspector] public bool Crouch;
     [HideInInspector] public bool Console;
-	[HideInInspector] public bool Speak;
-	public bool Zoom;
+    [HideInInspector] public bool Speak;
+    public bool Zoom;
     public KeyCode AimButton;
     public KeyCode JumpButton;
     public KeyCode SprintButton;
@@ -49,100 +50,100 @@ public class PlayerInputManager : MonoBehaviour {
     public KeyCode ThrowButton;
     public KeyCode OpenConsole;
     public KeyCode ZoomButton;
-	public KeyCode SpeakButton;
+    public KeyCode SpeakButton;
 
     void Awake()
-	{
-		if (instance == null)
+    {
+        if (instance == null)
         {
-			instance = this;
-		}
+            instance = this;
+        }
         else if (instance != null)
         {
-			DestroyImmediate (this.gameObject);
-		}
-	}
-	
-	void Update ()
-    {
-		if (GameManager.instance.MatchActive)
-        {
-			HandlePlayerInput ();
-		}
-	}
+            DestroyImmediate(this.gameObject);
+        }
+    }
 
-	void HandlePlayerInput()
-	{
-		if (!FreezePlayerControls && !GameManager.instance.InVehicle)
+    void Update()
+    {
+        if (GameManager.instance.MatchActive)
         {
-			InputX = Input.GetAxis ("Horizontal");
-			InputY = Input.GetAxis ("Vertical");
-			MouseX = Input.GetAxis ("Mouse X") * AimSpeedModifier;
-			MouseY = Input.GetAxis ("Mouse Y") * AimSpeedModifier;
-			Jump = Input.GetKeyDown (JumpButton);
-			Sprint = Input.GetKey (SprintButton);
-			Reload = Input.GetKeyDown (ReloadButton);
-			if (IsAuto)
+            HandlePlayerInput();
+        }
+    }
+
+    void HandlePlayerInput()
+    {
+        if (!FreezePlayerControls && !GameManager.instance.InVehicle)
+        {
+            InputX = Input.GetAxis("Horizontal");
+            InputY = Input.GetAxis("Vertical");
+            MouseX = Input.GetAxis("Mouse X") * AimSpeedModifier;
+            MouseY = Input.GetAxis("Mouse Y") * AimSpeedModifier;
+            Jump = Input.GetKeyDown(JumpButton);
+            Sprint = Input.GetKey(SprintButton);
+            Reload = Input.GetKeyDown(ReloadButton);
+            if (IsAuto)
             {
-				Attack = Input.GetKey (FireButton);
-			}
+                Attack = Input.GetKey(FireButton);
+            }
             else
             {
-				Attack = Input.GetKeyDown (FireButton);
-			}
-			Aim = Input.GetKey (AimButton);
-			NextWeapon = Input.GetAxis("Mouse ScrollWheel") > 0 || Input.GetAxis("Mouse ScrollWheel") < 0;
-			LeanLeft = Input.GetKey (NaclonLeftButton);
-			LeanRight = Input.GetKey (NaclonRightButton);
-			Suicide = Input.GetKeyDown (SuicideButton);
-			Pause = Input.GetKeyDown (PauseButton);
-			UseButton = Input.GetKeyDown (Use_Button);
-			Scoreboard = Input.GetKey (ScoreButton);
-			SwitchFireMode = Input.GetKeyDown (SwitchFireButton);
-			Crouch = Input.GetKey (CrouchButton);
-			FirstSeat = false;
-			SecondSeat = false;
-		}  
-		if (FreezePlayerControls && GameManager.instance.InVehicle && !InGameUI.instance.Paused)
+                Attack = Input.GetKeyDown(FireButton);
+            }
+            Aim = Input.GetKey(AimButton);
+            NextWeapon = Input.GetAxis("Mouse ScrollWheel") > 0 || Input.GetAxis("Mouse ScrollWheel") < 0;
+            LeanLeft = Input.GetKey(NaclonLeftButton);
+            LeanRight = Input.GetKey(NaclonRightButton);
+            Suicide = Input.GetKeyDown(SuicideButton);
+            Pause = Input.GetKeyDown(PauseButton);
+            UseButton = Input.GetKeyDown(Use_Button);
+            Scoreboard = Input.GetKey(ScoreButton);
+            SwitchFireMode = Input.GetKeyDown(SwitchFireButton);
+            Crouch = Input.GetKey(CrouchButton);
+            FirstSeat = false;
+            SecondSeat = false;
+        }
+        if (FreezePlayerControls && GameManager.instance.InVehicle && !InGameUI.instance.Paused)
         {
-			UseButton = Input.GetKeyDown (Use_Button);
-			Pause = Input.GetKeyDown (PauseButton);
-			Scoreboard = Input.GetKey (ScoreButton);
-			InputX = Input.GetAxis ("Horizontal");
-			InputY = Input.GetAxis ("Vertical");
-			MouseX = Input.GetAxis ("Mouse X") * AimSpeedModifier;
-			MouseY = Input.GetAxis ("Mouse Y") * AimSpeedModifier;
-			Jump = Input.GetKeyDown (JumpButton);
-			FirstSeat = Input.GetKeyDown (KeyCode.F1);
-			SecondSeat = Input.GetKeyDown (KeyCode.F2);
-			if (IsAuto)
+            UseButton = Input.GetKeyDown(Use_Button);
+            Pause = Input.GetKeyDown(PauseButton);
+            Scoreboard = Input.GetKey(ScoreButton);
+            InputX = Input.GetAxis("Horizontal");
+            InputY = Input.GetAxis("Vertical");
+            MouseX = Input.GetAxis("Mouse X") * AimSpeedModifier;
+            MouseY = Input.GetAxis("Mouse Y") * AimSpeedModifier;
+            Jump = Input.GetKeyDown(JumpButton);
+            FirstSeat = Input.GetKeyDown(KeyCode.F1);
+            SecondSeat = Input.GetKeyDown(KeyCode.F2);
+            if (IsAuto)
             {
-				Attack = Input.GetKey (FireButton);
-			}
+                Attack = Input.GetKey(FireButton);
+            }
             else
             {
-				Attack = Input.GetKeyDown (FireButton);
-			}
-		}
-		if(FreezePlayerControls && !GameManager.instance.InVehicle || InGameUI.instance.Paused || !GameManager.instance.MatchActive)
+                Attack = Input.GetKeyDown(FireButton);
+            }
+        }
+        if (FreezePlayerControls && !GameManager.instance.InVehicle || InGameUI.instance.Paused || !GameManager.instance.MatchActive)
         {
-			InputX = 0f;
-			InputY = 0f;
-			MouseX = 0;
-			MouseY = 0;
-			Attack = false;
-			ChangeCamera = false;
-			LeanLeft = false;
-			LeanRight = false;
-			Sprint = false;
-			Pause = Input.GetKeyDown (PauseButton);
-			UseButton = false;
-			SwitchFireMode = false;
-			Scoreboard = Input.GetKey (ScoreButton);
-			Crouch = false;
-			FirstSeat = false;
-			SecondSeat = false;
-		}
+            InputX = 0f;
+            InputY = 0f;
+            MouseX = 0;
+            MouseY = 0;
+            Attack = false;
+            ChangeCamera = false;
+            LeanLeft = false;
+            LeanRight = false;
+            Sprint = false;
+            Pause = Input.GetKeyDown(PauseButton);
+            UseButton = false;
+            SwitchFireMode = false;
+            Scoreboard = Input.GetKey(ScoreButton);
+            Crouch = false;
+            FirstSeat = false;
+            SecondSeat = false;
+        }
         if (Input.GetKeyDown(ZoomButton))
         {
             Zoom = true;
@@ -151,13 +152,13 @@ public class PlayerInputManager : MonoBehaviour {
         {
             Zoom = false;
         }
-		if (Input.GetKeyDown(SpeakButton))
-		{
-			Speak = true;
-		}
-		if (Input.GetKeyUp(SpeakButton))
-		{
-			Speak = false;
-		}
-	}
+        if (Input.GetKeyDown(SpeakButton))
+        {
+            Speak = true;
+        }
+        if (Input.GetKeyUp(SpeakButton))
+        {
+            Speak = false;
+        }
+    }
 }

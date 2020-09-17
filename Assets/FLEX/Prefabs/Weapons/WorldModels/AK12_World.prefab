@@ -4610,7 +4610,7 @@ ParticleSystem:
 --- !u!199 &199162840484402926
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4754,10 +4754,12 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 6166184221822521335}
   Sil: {fileID: 3736424326402814545}
   Acog: {fileID: 7386749195857125569}
   Red_Dot: {fileID: 8520539417198587762}
+  Fore_Grip: {fileID: 0}
 --- !u!82 &82949165127986114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5063,21 +5065,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8624786279142510959}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5153,6 +5140,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14790bf7226ab3246b499bdc9b92c323, type: 3}
 --- !u!1 &6166184221822521335 stripped
@@ -5168,16 +5170,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8624786279142510953}
     m_Modifications:
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_Name
-      value: ACOG_TP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5248,6 +5240,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: ACOG_TP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be61f341b6735f43831976b7a48f6ba, type: 3}
 --- !u!1 &7386749195857125569 stripped
@@ -5263,6 +5265,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4959853722662246}
     m_Modifications:
+    - target: {fileID: 1448004367332543603, guid: 634dc58779639dd4abdc8e60fc55f5aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448004367332543611, guid: 634dc58779639dd4abdc8e60fc55f5aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1448004367332543615, guid: 634dc58779639dd4abdc8e60fc55f5aa,
         type: 3}
       propertyPath: m_Name

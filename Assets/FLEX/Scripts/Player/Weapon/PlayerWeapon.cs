@@ -371,7 +371,7 @@ public class PlayerWeapon : MonoBehaviour
         CurrentMode = FirstMode;
         WeaponCurrentFireSound = WeaponFirePrimarySound;
         WeaponAnimationComponent.CrossFade(WeaponPrimaryIdleAnimation.name, 0.2f);
-        Weaponbarrel = FirstModeBarrel;
+        //Weaponbarrel = FirstModeBarrel;
         FireRate = FirstModeFireRate;
         CanSwitchWeaponMode = true;
         if (FirstModeFiringType == WeaponFiringType.auto)
@@ -402,7 +402,7 @@ public class PlayerWeapon : MonoBehaviour
         CurrentMode = SecondMode;
         WeaponCurrentFireSound = WeaponFireSecondarySound;
         WeaponAnimationComponent.CrossFade(WeaponSecondaryIdleAnimation.name, 1f);
-        Weaponbarrel = SecondModeBarrel;
+        //Weaponbarrel = SecondModeBarrel;
         FireRate = SecondModeFireRate;
         CanSwitchWeaponMode = true;
         if (SecondModeFiringType == WeaponFiringType.auto)
@@ -449,6 +449,7 @@ public class PlayerWeapon : MonoBehaviour
                     }
                     ACOG = true;
                     Acog.SetActive(true);
+                    Weaponbarrel = SecondModeBarrel;
                     AimFov = 25;
                     AimPosition = ACOGAimPosition;
                     PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, true, false, false);
@@ -477,6 +478,7 @@ public class PlayerWeapon : MonoBehaviour
                     }
                     Red_dot = true;
                     Red_Dot.SetActive(true);
+                    Weaponbarrel = FirstModeBarrel;
                     AimFov = 40;
                     AimPosition = RedDotAimPosition;
                     PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, true, false);

@@ -10216,7 +10216,7 @@ MonoBehaviour:
     m_Bits: 2099
   Weaponbarrel: {fileID: 4736520954304952}
   FirstModeBarrel: {fileID: 4736520954304952}
-  SecondModeBarrel: {fileID: 4736520954304952}
+  SecondModeBarrel: {fileID: 5487542599691625318}
   baseInaccuracyhip: 0.4
   baseInaccuracyaim: 0.3
   AimPosition: {x: -0.0604, y: -0.045, z: -0.03}
@@ -16781,9 +16781,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba3ea9079062074cbe2c942b03a7ca6, type: 3}
---- !u!4 &101942352326429193 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5203449476021141916, guid: cba3ea9079062074cbe2c942b03a7ca6,
+--- !u!1 &101942352326399493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5203449476020788624, guid: cba3ea9079062074cbe2c942b03a7ca6,
     type: 3}
   m_PrefabInstance: {fileID: 5286225120146410389}
   m_PrefabAsset: {fileID: 0}
@@ -16793,9 +16793,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5286225120146410389}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &101942352326399493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5203449476020788624, guid: cba3ea9079062074cbe2c942b03a7ca6,
+--- !u!4 &101942352326429193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5203449476021141916, guid: cba3ea9079062074cbe2c942b03a7ca6,
     type: 3}
   m_PrefabInstance: {fileID: 5286225120146410389}
   m_PrefabAsset: {fileID: 0}
@@ -16988,6 +16988,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc30b187fbb14745af22a93128be90b, type: 3}
+--- !u!4 &5487542599691625318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4415199398506742714, guid: adc30b187fbb14745af22a93128be90b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8170192309744443612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5647295044493080544 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4556906641280685884, guid: adc30b187fbb14745af22a93128be90b,

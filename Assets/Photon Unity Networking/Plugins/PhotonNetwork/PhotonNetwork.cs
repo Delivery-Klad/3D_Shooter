@@ -61,7 +61,7 @@ public static class PhotonNetwork
     public static string ServerAddress { get { return (networkingPeer != null) ? networkingPeer.ServerAddress : "<not connected>"; } }
 
     /// <summary>Currently used Cloud Region (if any). As long as the client is not on a Master Server or Game Server, the region is not yet defined.</summary>
-    public static CloudRegionCode CloudRegion { get { return (networkingPeer != null && connected && Server!=ServerConnection.NameServer) ? networkingPeer.CloudRegion : CloudRegionCode.none; } }
+    public static CloudRegionCode CloudRegion { get { return (networkingPeer != null && connected && Server != ServerConnection.NameServer) ? networkingPeer.CloudRegion : CloudRegionCode.none; } }
 
     /// <summary>
     /// False until you connected to Photon initially. True in offline mode, while connected to any server and even while switching servers.
@@ -420,7 +420,7 @@ public static class PhotonNetwork
     /// To use a GameObject pool, implement IPunPrefabPool and assign it here.
     /// Prefabs are identified by name.
     /// </remarks>
-    public static IPunPrefabPool PrefabPool { get { return networkingPeer.ObjectPool; } set { networkingPeer.ObjectPool = value; }}
+    public static IPunPrefabPool PrefabPool { get { return networkingPeer.ObjectPool; } set { networkingPeer.ObjectPool = value; } }
 
     /// <summary>
     /// Keeps references to GameObjects for frequent instantiation (out of memory instead of loading the Resources).
@@ -813,14 +813,14 @@ public static class PhotonNetwork
         {
             if (offlineMode)
             {
-                return (int)startupStopwatch.ElapsedMilliseconds;   
+                return (int)startupStopwatch.ElapsedMilliseconds;
             }
 
             return networkingPeer.ServerTimeInMilliSeconds;
         }
     }
 
-	static Stopwatch startupStopwatch;
+    static Stopwatch startupStopwatch;
 
     /// <summary>
     /// Defines how many seconds PUN keeps the connection, after Unity's OnApplicationPause(true) call. Default: 60 seconds.
@@ -1070,7 +1070,7 @@ public static class PhotonNetwork
     /// </summary>
     static PhotonNetwork()
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (PhotonServerSettings == null)
         {
             // create PhotonServerSettings
@@ -1097,12 +1097,12 @@ public static class PhotonNetwork
                 Component.DestroyImmediate(photonHandler);
             }
         }
-        #endif
+#endif
 
-		if (PhotonServerSettings != null)
-		{
-			Application.runInBackground = PhotonServerSettings.RunInBackground;
-		}
+        if (PhotonServerSettings != null)
+        {
+            Application.runInBackground = PhotonServerSettings.RunInBackground;
+        }
 
         // Set up a MonoBehaviour to run Photon, and hide it
         GameObject photonGO = new GameObject();
@@ -1118,9 +1118,9 @@ public static class PhotonNetwork
         networkingPeer.SentCountAllowance = 7;
 
 
-        #if !UNITY_EDITOR && UNITY_XBOXONE
+#if !UNITY_EDITOR && UNITY_XBOXONE
         networkingPeer.AuthMode = AuthModeOption.Auth;
-        #endif
+#endif
 
         startupStopwatch = new Stopwatch();
         startupStopwatch.Start();
@@ -1197,17 +1197,17 @@ public static class PhotonNetwork
             return false;
         }
 
-		// only apply Settings if logLevel is default ( see ServerSettings.cs), else it means it's been set programmatically
-		if (PhotonNetwork.logLevel == PhotonLogLevel.ErrorsOnly)
-		{
-        	PhotonNetwork.logLevel = PhotonServerSettings.PunLogging;
-		}
+        // only apply Settings if logLevel is default ( see ServerSettings.cs), else it means it's been set programmatically
+        if (PhotonNetwork.logLevel == PhotonLogLevel.ErrorsOnly)
+        {
+            PhotonNetwork.logLevel = PhotonServerSettings.PunLogging;
+        }
 
-		// only apply Settings if logLevel is default ( see ServerSettings.cs), else it means it's been set programmatically
-		if (PhotonNetwork.networkingPeer.DebugOut == DebugLevel.ERROR)
-		{
-        	PhotonNetwork.networkingPeer.DebugOut = PhotonServerSettings.NetworkLogging;
-		}
+        // only apply Settings if logLevel is default ( see ServerSettings.cs), else it means it's been set programmatically
+        if (PhotonNetwork.networkingPeer.DebugOut == DebugLevel.ERROR)
+        {
+            PhotonNetwork.networkingPeer.DebugOut = PhotonServerSettings.NetworkLogging;
+        }
 
 
         SwitchToProtocol(PhotonServerSettings.Protocol);
@@ -1272,13 +1272,13 @@ public static class PhotonNetwork
         if (offlineMode)
         {
             offlineMode = false; // Cleanup offline mode
-           Debug.LogWarning("ConnectToMaster() disabled the offline mode. No longer offline.");
+            Debug.LogWarning("ConnectToMaster() disabled the offline mode. No longer offline.");
         }
 
         if (!isMessageQueueRunning)
         {
             isMessageQueueRunning = true;
-           Debug.LogWarning("ConnectToMaster() enabled isMessageQueueRunning. Needs to be able to dispatch incoming messages.");
+            Debug.LogWarning("ConnectToMaster() enabled isMessageQueueRunning. Needs to be able to dispatch incoming messages.");
         }
 
         networkingPeer.SetApp(appID, gameVersion);
@@ -1289,12 +1289,12 @@ public static class PhotonNetwork
         return networkingPeer.Connect(networkingPeer.MasterServerAddress, ServerConnection.MasterServer);
     }
 
-	/// <summary>Can be used to reconnect to the master server after a disconnect.</summary>
-	/// <remarks>
-	/// After losing connection, you can use this to connect a client to the region Master Server again.
-	/// Cache the room name you're in and use ReJoin(roomname) to return to a game.
-	/// Common use case: Press the Lock Button on a iOS device and you get disconnected immediately.
-	/// </remarks>
+    /// <summary>Can be used to reconnect to the master server after a disconnect.</summary>
+    /// <remarks>
+    /// After losing connection, you can use this to connect a client to the region Master Server again.
+    /// Cache the room name you're in and use ReJoin(roomname) to return to a game.
+    /// Common use case: Press the Lock Button on a iOS device and you get disconnected immediately.
+    /// </remarks>
     public static bool Reconnect()
     {
         if (string.IsNullOrEmpty(networkingPeer.MasterServerAddress))
@@ -1945,21 +1945,21 @@ public static class PhotonNetwork
     }
 
 
-	/// <summary>Can be used to return to a room after a disconnect and reconnect.</summary>
-	/// <remarks>
-	/// After losing connection, you might be able to return to a room and continue playing,
-	/// if the client is reconnecting fast enough. Use Reconnect() and this method.
-	/// Cache the room name you're in and use ReJoin(roomname) to return to a game.
-	///
-	/// Note: To be able to ReJoin any room, you need to use UserIDs!
-	/// You also need to set RoomOptions.PlayerTtl.
-	///
-	/// <b>Important: Instantiate() and use of RPCs is not yet supported.</b>
-	/// The ownership rules of PhotonViews prevent a seamless return to a game.
-	/// Use Custom Properties and RaiseEvent with event caching instead.
-	///
-	/// Common use case: Press the Lock Button on a iOS device and you get disconnected immediately.
-	/// </remarks>
+    /// <summary>Can be used to return to a room after a disconnect and reconnect.</summary>
+    /// <remarks>
+    /// After losing connection, you might be able to return to a room and continue playing,
+    /// if the client is reconnecting fast enough. Use Reconnect() and this method.
+    /// Cache the room name you're in and use ReJoin(roomname) to return to a game.
+    ///
+    /// Note: To be able to ReJoin any room, you need to use UserIDs!
+    /// You also need to set RoomOptions.PlayerTtl.
+    ///
+    /// <b>Important: Instantiate() and use of RPCs is not yet supported.</b>
+    /// The ownership rules of PhotonViews prevent a seamless return to a game.
+    /// Use Custom Properties and RaiseEvent with event caching instead.
+    ///
+    /// Common use case: Press the Lock Button on a iOS device and you get disconnected immediately.
+    /// </remarks>
     public static bool ReJoinRoom(string roomName)
     {
         if (offlineMode)
@@ -2299,7 +2299,7 @@ public static class PhotonNetwork
         return networkingPeer.OpRaiseEvent(eventCode, eventContent, sendReliable, options);
     }
 
-    #if PHOTON_LIB_MIN_4_1_2
+#if PHOTON_LIB_MIN_4_1_2
     public static bool RaiseEvent(byte eventCode, object eventContent, RaiseEventOptions raiseEventOptions, SendOptions sendOptions)
     {
         if (!inRoom || eventCode >= 200)
@@ -2310,7 +2310,7 @@ public static class PhotonNetwork
 
         return networkingPeer.OpRaiseEvent(eventCode, eventContent, raiseEventOptions, sendOptions);
     }
-    #endif
+#endif
 
     /// <summary>
     /// Allocates a viewID that's valid for the current/local player.
@@ -2980,7 +2980,7 @@ public static class PhotonNetwork
     {
         HashSet<GameObject> objectsWithComponent = new HashSet<GameObject>();
 
-        Component[] targetComponents = (Component[]) GameObject.FindObjectsOfType(type);
+        Component[] targetComponents = (Component[])GameObject.FindObjectsOfType(type);
         for (int index = 0; index < targetComponents.Length; index++)
         {
             if (targetComponents[index] != null)
@@ -3196,11 +3196,12 @@ public static class PhotonNetwork
     /// </param>
     public static void LoadLevel(int levelNumber)
     {
-		networkingPeer.AsynchLevelLoadCall = false;
+        networkingPeer.AsynchLevelLoadCall = false;
 
-		if (PhotonNetwork.automaticallySyncScene) {
-			networkingPeer.SetLevelInPropsIfSynced (levelNumber,true);
-		}
+        if (PhotonNetwork.automaticallySyncScene)
+        {
+            networkingPeer.SetLevelInPropsIfSynced(levelNumber, true);
+        }
 
         PhotonNetwork.isMessageQueueRunning = false;
         networkingPeer.loadingLevelAndPausedNetwork = true;
@@ -3208,36 +3209,37 @@ public static class PhotonNetwork
     }
 
 
-	/// <summary>Wraps single asynchronous loading of a level to pause the network message-queue. Optionally syncs the loaded level in a room.</summary>
-	/// <remarks>
-	/// To sync the loaded level in a room, set PhotonNetwork.automaticallySyncScene to true.
-	/// The Master Client of a room will then sync the loaded level with every other player in the room.
-	///
-	/// While loading levels, it makes sense to not dispatch messages received by other players.
-	/// This method takes care of that by setting PhotonNetwork.isMessageQueueRunning = false and enabling
-	/// the queue when the level was loaded.
-	///
-	/// You should make sure you don't fire RPCs before you load another scene (which doesn't contain
-	/// the same GameObjects and PhotonViews). You can call this in OnJoinedRoom.
-	///
-	/// This uses Application.LoadLevel in Unity version not yet featuring the SceneManager API.
-	/// </remarks>
-	/// <returns>The async operation.</returns>
-	/// <param name='levelNumber'>
-	/// Number of the level to load. When using level numbers, make sure they are identical on all clients.
-	/// </param>
-	public static AsyncOperation LoadLevelAsync(int levelNumber)
-	{
-		networkingPeer.AsynchLevelLoadCall = true;
+    /// <summary>Wraps single asynchronous loading of a level to pause the network message-queue. Optionally syncs the loaded level in a room.</summary>
+    /// <remarks>
+    /// To sync the loaded level in a room, set PhotonNetwork.automaticallySyncScene to true.
+    /// The Master Client of a room will then sync the loaded level with every other player in the room.
+    ///
+    /// While loading levels, it makes sense to not dispatch messages received by other players.
+    /// This method takes care of that by setting PhotonNetwork.isMessageQueueRunning = false and enabling
+    /// the queue when the level was loaded.
+    ///
+    /// You should make sure you don't fire RPCs before you load another scene (which doesn't contain
+    /// the same GameObjects and PhotonViews). You can call this in OnJoinedRoom.
+    ///
+    /// This uses Application.LoadLevel in Unity version not yet featuring the SceneManager API.
+    /// </remarks>
+    /// <returns>The async operation.</returns>
+    /// <param name='levelNumber'>
+    /// Number of the level to load. When using level numbers, make sure they are identical on all clients.
+    /// </param>
+    public static AsyncOperation LoadLevelAsync(int levelNumber)
+    {
+        networkingPeer.AsynchLevelLoadCall = true;
 
-		if (PhotonNetwork.automaticallySyncScene) {
-			networkingPeer.SetLevelInPropsIfSynced (levelNumber,true);
-		}
+        if (PhotonNetwork.automaticallySyncScene)
+        {
+            networkingPeer.SetLevelInPropsIfSynced(levelNumber, true);
+        }
 
-		PhotonNetwork.isMessageQueueRunning = false;
-		networkingPeer.loadingLevelAndPausedNetwork = true;
-		return SceneManager.LoadSceneAsync(levelNumber,LoadSceneMode.Single);
-	}
+        PhotonNetwork.isMessageQueueRunning = false;
+        networkingPeer.loadingLevelAndPausedNetwork = true;
+        return SceneManager.LoadSceneAsync(levelNumber, LoadSceneMode.Single);
+    }
 
 
     /// <summary>Wraps loading a level to pause the network message-queue. Optionally syncs the loaded level in a room.</summary>
@@ -3259,11 +3261,12 @@ public static class PhotonNetwork
     /// </param>
     public static void LoadLevel(string levelName)
     {
-		networkingPeer.AsynchLevelLoadCall = false;
+        networkingPeer.AsynchLevelLoadCall = false;
 
-		if (PhotonNetwork.automaticallySyncScene) {
-			networkingPeer.SetLevelInPropsIfSynced (levelName,true);
-		}
+        if (PhotonNetwork.automaticallySyncScene)
+        {
+            networkingPeer.SetLevelInPropsIfSynced(levelName, true);
+        }
 
         PhotonNetwork.isMessageQueueRunning = false;
         networkingPeer.loadingLevelAndPausedNetwork = true;
@@ -3271,37 +3274,38 @@ public static class PhotonNetwork
     }
 
 
-	/// <summary>Wraps single asynchronous loading of a level to pause the network message-queue. Optionally syncs the loaded level in a room.</summary>
-	/// <remarks>
-	/// While loading levels, it makes sense to not dispatch messages received by other players.
-	/// This method takes care of that by setting PhotonNetwork.isMessageQueueRunning = false and enabling
-	/// the queue when the level was loaded.
-	///
-	/// To sync the loaded level in a room, set PhotonNetwork.automaticallySyncScene to true.
-	/// The Master Client of a room will then sync the loaded level with every other player in the room.
-	///
-	/// You should make sure you don't fire RPCs before you load another scene (which doesn't contain
-	/// the same GameObjects and PhotonViews). You can call this in OnJoinedRoom.
-	///
-	/// This uses Application.LoadLevel in Unity version not yet featuring the SceneManager API.
-	/// </remarks>
-	/// <returns>The async operation.</returns>
-	/// <param name='levelName'>
-	/// Name of the level to load. Make sure it's available to all clients in the same room.
-	/// </param>
-	/// <param name="mode">LoadSceneMode either single or additive</param>
-	public static AsyncOperation LoadLevelAsync(string levelName)
-	{
-		networkingPeer.AsynchLevelLoadCall = true;
+    /// <summary>Wraps single asynchronous loading of a level to pause the network message-queue. Optionally syncs the loaded level in a room.</summary>
+    /// <remarks>
+    /// While loading levels, it makes sense to not dispatch messages received by other players.
+    /// This method takes care of that by setting PhotonNetwork.isMessageQueueRunning = false and enabling
+    /// the queue when the level was loaded.
+    ///
+    /// To sync the loaded level in a room, set PhotonNetwork.automaticallySyncScene to true.
+    /// The Master Client of a room will then sync the loaded level with every other player in the room.
+    ///
+    /// You should make sure you don't fire RPCs before you load another scene (which doesn't contain
+    /// the same GameObjects and PhotonViews). You can call this in OnJoinedRoom.
+    ///
+    /// This uses Application.LoadLevel in Unity version not yet featuring the SceneManager API.
+    /// </remarks>
+    /// <returns>The async operation.</returns>
+    /// <param name='levelName'>
+    /// Name of the level to load. Make sure it's available to all clients in the same room.
+    /// </param>
+    /// <param name="mode">LoadSceneMode either single or additive</param>
+    public static AsyncOperation LoadLevelAsync(string levelName)
+    {
+        networkingPeer.AsynchLevelLoadCall = true;
 
-		if (PhotonNetwork.automaticallySyncScene) {
-			networkingPeer.SetLevelInPropsIfSynced (levelName,true);
-		}
+        if (PhotonNetwork.automaticallySyncScene)
+        {
+            networkingPeer.SetLevelInPropsIfSynced(levelName, true);
+        }
 
-		PhotonNetwork.isMessageQueueRunning = false;
-		networkingPeer.loadingLevelAndPausedNetwork = true;
-		return SceneManager.LoadSceneAsync(levelName,LoadSceneMode.Single);
-	}
+        PhotonNetwork.isMessageQueueRunning = false;
+        networkingPeer.loadingLevelAndPausedNetwork = true;
+        return SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
+    }
 
 
     /// <summary>
@@ -3341,85 +3345,86 @@ public static class PhotonNetwork
         return networkingPeer.WebRpc(name, parameters);
     }
 
-	public static bool CallEvent(byte eventCode, object content, int senderId)
-	{
-		if (PhotonNetwork.OnEventCall != null)
-		{
-			PhotonNetwork.OnEventCall(eventCode, content, senderId);
-			return true;
-		}
+    public static bool CallEvent(byte eventCode, object content, int senderId)
+    {
+        if (PhotonNetwork.OnEventCall != null)
+        {
+            PhotonNetwork.OnEventCall(eventCode, content, senderId);
+            return true;
+        }
 
-		return false;
-	}
+        return false;
+    }
 
 
 #if UNITY_EDITOR
 
 
-	/// <summary>
-	/// Finds the asset path base on its name or search query: https://docs.unity3d.com/ScriptReference/AssetDatabase.FindAssets.html
-	/// </summary>
-	/// <returns>The asset path.</returns>
-	/// <param name="asset">Asset.</param>
-	public static string FindAssetPath(string asset)
-	{
-		string[] guids = AssetDatabase.FindAssets (asset, null);
-		if (guids.Length != 1)
-		{
-			return string.Empty;
-		} else
-		{
-			return AssetDatabase.GUIDToAssetPath (guids [0]);
-		}
-	}
+    /// <summary>
+    /// Finds the asset path base on its name or search query: https://docs.unity3d.com/ScriptReference/AssetDatabase.FindAssets.html
+    /// </summary>
+    /// <returns>The asset path.</returns>
+    /// <param name="asset">Asset.</param>
+    public static string FindAssetPath(string asset)
+    {
+        string[] guids = AssetDatabase.FindAssets(asset, null);
+        if (guids.Length != 1)
+        {
+            return string.Empty;
+        }
+        else
+        {
+            return AssetDatabase.GUIDToAssetPath(guids[0]);
+        }
+    }
 
 
-	/// <summary>
-	/// Finds the pun asset folder. Something like Assets/Photon Unity Networking/Resources/
-	/// </summary>
-	/// <returns>The pun asset folder.</returns>
-	public static string FindPunAssetFolder()
-	{
-		string _thisPath =	FindAssetPath("PhotonClasses");
-		string _PunFolderPath = string.Empty;
+    /// <summary>
+    /// Finds the pun asset folder. Something like Assets/Photon Unity Networking/Resources/
+    /// </summary>
+    /// <returns>The pun asset folder.</returns>
+    public static string FindPunAssetFolder()
+    {
+        string _thisPath = FindAssetPath("PhotonClasses");
+        string _PunFolderPath = string.Empty;
 
-		_PunFolderPath = GetParent(_thisPath,"Photon Unity Networking");
+        _PunFolderPath = GetParent(_thisPath, "Photon Unity Networking");
 
-		if (_PunFolderPath != null)
-		{
-			return "Assets" + _PunFolderPath.Substring(Application.dataPath.Length)+"/";
-		}
+        if (_PunFolderPath != null)
+        {
+            return "Assets" + _PunFolderPath.Substring(Application.dataPath.Length) + "/";
+        }
 
-		return "Assets/Photon Unity Networking/";
-	}
+        return "Assets/Photon Unity Networking/";
+    }
 
-	/// <summary>
-	/// Gets the parent directory of a path. Recursive Function, will return null if parentName not found
-	/// </summary>
-	/// <returns>The parent directory</returns>
-	/// <param name="path">Path.</param>
-	/// <param name="parentName">Parent name.</param>
-	public static string GetParent(string path, string parentName)
-	{
-		var dir = new DirectoryInfo(path);
+    /// <summary>
+    /// Gets the parent directory of a path. Recursive Function, will return null if parentName not found
+    /// </summary>
+    /// <returns>The parent directory</returns>
+    /// <param name="path">Path.</param>
+    /// <param name="parentName">Parent name.</param>
+    public static string GetParent(string path, string parentName)
+    {
+        var dir = new DirectoryInfo(path);
 
-		if (dir.Parent == null)
-		{
-			return null;
-		}
+        if (dir.Parent == null)
+        {
+            return null;
+        }
 
-		if (string.IsNullOrEmpty(parentName))
-		{
-			return  dir.Parent.FullName;
-		}
+        if (string.IsNullOrEmpty(parentName))
+        {
+            return dir.Parent.FullName;
+        }
 
-		if (dir.Parent.Name == parentName)
-		{
-			return dir.Parent.FullName;
-		}
+        if (dir.Parent.Name == parentName)
+        {
+            return dir.Parent.FullName;
+        }
 
-		return GetParent(dir.Parent.FullName, parentName);
-	}
+        return GetParent(dir.Parent.FullName, parentName);
+    }
 
 
     [Conditional("UNITY_EDITOR")]
@@ -3444,13 +3449,13 @@ public static class PhotonNetwork
         // if still not loaded, create one
         if (PhotonNetwork.PhotonServerSettings == null)
         {
-			string _PunResourcesPath = PhotonNetwork.FindPunAssetFolder();
+            string _PunResourcesPath = PhotonNetwork.FindPunAssetFolder();
 
-			_PunResourcesPath += "Resources/";
+            _PunResourcesPath += "Resources/";
 
 
-			string serverSettingsAssetPath = _PunResourcesPath+ PhotonNetwork.serverSettingsAssetFile + ".asset";
-			string settingsPath = Path.GetDirectoryName(serverSettingsAssetPath);
+            string serverSettingsAssetPath = _PunResourcesPath + PhotonNetwork.serverSettingsAssetFile + ".asset";
+            string settingsPath = Path.GetDirectoryName(serverSettingsAssetPath);
             if (!Directory.Exists(settingsPath))
             {
                 Directory.CreateDirectory(settingsPath);
@@ -3460,7 +3465,7 @@ public static class PhotonNetwork
             PhotonNetwork.PhotonServerSettings = (ServerSettings)ScriptableObject.CreateInstance("ServerSettings");
             if (PhotonNetwork.PhotonServerSettings != null)
             {
-				AssetDatabase.CreateAsset(PhotonNetwork.PhotonServerSettings, serverSettingsAssetPath);
+                AssetDatabase.CreateAsset(PhotonNetwork.PhotonServerSettings, serverSettingsAssetPath);
             }
             else
             {

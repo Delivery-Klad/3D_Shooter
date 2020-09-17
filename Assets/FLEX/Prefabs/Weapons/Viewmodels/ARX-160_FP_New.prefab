@@ -346,7 +346,7 @@ MonoBehaviour:
     m_Bits: 2099
   Weaponbarrel: {fileID: 4965225630708140}
   FirstModeBarrel: {fileID: 4965225630708140}
-  SecondModeBarrel: {fileID: 4965225630708140}
+  SecondModeBarrel: {fileID: 2739931433868628643}
   baseInaccuracyhip: 1.2
   baseInaccuracyaim: 0.3
   AimPosition: {x: -0.0633, y: -0.0555, z: -0.04}
@@ -16858,6 +16858,12 @@ PrefabInstance:
 --- !u!1 &2629718559597430309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4556906641280685884, guid: adc30b187fbb14745af22a93128be90b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1964626525624586521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2739931433868628643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4415199398506742714, guid: adc30b187fbb14745af22a93128be90b,
     type: 3}
   m_PrefabInstance: {fileID: 1964626525624586521}
   m_PrefabAsset: {fileID: 0}

@@ -4915,8 +4915,6 @@ MonoBehaviour:
   BurstTime: 0.07
   Bursting: 0
   pelletsPerShot: 10
-  CrosshairFirstMode: {fileID: 0}
-  CrosshairSecondMode: {fileID: 0}
   ConcreteImpact: {fileID: 1330844396633182, guid: 1ee67899cc3139844b970ef8e953998c,
     type: 3}
   WoodImpact: {fileID: 1619005896843622, guid: 16660a6dee4c85342af8356cb055de3e, type: 3}

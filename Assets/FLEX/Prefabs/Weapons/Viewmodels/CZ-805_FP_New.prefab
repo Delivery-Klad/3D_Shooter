@@ -344,7 +344,7 @@ MonoBehaviour:
     m_Bits: 2099
   Weaponbarrel: {fileID: 4965225630708140}
   FirstModeBarrel: {fileID: 4965225630708140}
-  SecondModeBarrel: {fileID: 4965225630708140}
+  SecondModeBarrel: {fileID: 676427938545653512}
   baseInaccuracyhip: 1.6
   baseInaccuracyaim: 0.3
   AimPosition: {x: -0.0633, y: -0.051, z: -0.025}
@@ -16336,6 +16336,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc30b187fbb14745af22a93128be90b, type: 3}
+--- !u!4 &676427938545653512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4415199398506742714, guid: adc30b187fbb14745af22a93128be90b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3757928251090703538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &800433091369616270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4556906641280685884, guid: adc30b187fbb14745af22a93128be90b,
@@ -16753,9 +16759,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db78a6a4caaa21e4ebf7384c3b65a1d9, type: 3}
---- !u!1 &4525049622557586294 stripped
+--- !u!1 &4525049622557586296 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4783068094547667434, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
+  m_CorrespondingSourceObject: {fileID: 4783068094547667428, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
     type: 3}
   m_PrefabInstance: {fileID: 8983814563200490140}
   m_PrefabAsset: {fileID: 0}
@@ -16765,9 +16771,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8983814563200490140}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4525049622557586296 stripped
+--- !u!1 &4525049622557586294 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4783068094547667428, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
+  m_CorrespondingSourceObject: {fileID: 4783068094547667434, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
     type: 3}
   m_PrefabInstance: {fileID: 8983814563200490140}
   m_PrefabAsset: {fileID: 0}
