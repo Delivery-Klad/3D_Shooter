@@ -82,16 +82,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
       propertyPath: m_Name
-      value: Silencer
+      value: Silencer_LootPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
       propertyPath: m_TagString
       value: Module
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9756400766353c547a562679edc6c0f7, type: 2}
     - target: {fileID: 400000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -136,6 +132,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.035196938
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.035196938
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.035196938
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9756400766353c547a562679edc6c0f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c5bf780cb8eb184582967221ee3b1f1, type: 3}
 --- !u!1 &3202465109757728409 stripped

@@ -7,6 +7,7 @@ public class BotManager : MonoBehaviour
     public static BotManager instance;
     [Header("Точки спавна NPC")]
     public GameObject[] BotSpawns;
+    public List<GameObject> Players;
 
     void Awake()
     {

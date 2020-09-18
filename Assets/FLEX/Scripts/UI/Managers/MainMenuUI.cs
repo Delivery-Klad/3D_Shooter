@@ -608,25 +608,6 @@ public class MainMenuUI : MonoBehaviour {
 	#endregion
 
 	#region Settings Menu
-	//void IndexResolution()
-	//{
-	//	Resolutions = Screen.resolutions;
-	//	ResolutionDropDown.ClearOptions ();
-	//	List<string> ResolutionOptions = new List<string> ();
-	//	int CurrentResolutionIndex = 0;
-
-	//	for (int i = 0; i < Resolutions.Length; i++) {
-	//		string resolutionoption = Resolutions [i].width + " x " + Resolutions [i].height;
-	//		ResolutionOptions.Add (resolutionoption);
-	//		if (Resolutions [i].width == Screen.currentResolution.width && Resolutions [i].height == Screen.currentResolution.height) {
-	//			CurrentResolutionIndex = i;
-	//		}
-	//	}
-	//	ResolutionDropDown.AddOptions (ResolutionOptions);
-	//	ResolutionDropDown.value = CurrentResolutionIndex;
-	//	ResolutionDropDown.RefreshShownValue ();
-	//}
-
 	public void SetResolution(int resolutionindex)
 	{
         Screen.SetResolution(res[dropDown.value].width, res[dropDown.value].height, Screen.fullScreen);

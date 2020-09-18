@@ -42,8 +42,8 @@ public class Move : MonoBehaviour
     {
         if (PhotonNetwork.isMasterClient)
         {
-            PV.RPC("RpcSendTransform", PhotonTargets.All, gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-            PV.RPC("RpcSendRotation", PhotonTargets.All, gameObject.transform.rotation.x, gameObject.transform.rotation.y, gameObject.transform.rotation.z, gameObject.transform.rotation.w);
+            PV.RPC("RpcSendTransform", PhotonTargets.AllBuffered, gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            PV.RPC("RpcSendRotation", PhotonTargets.AllBuffered, gameObject.transform.rotation.x, gameObject.transform.rotation.y, gameObject.transform.rotation.z, gameObject.transform.rotation.w);
         }
         player = GameObject.FindGameObjectsWithTag("Player");
         distance = new float[20];
