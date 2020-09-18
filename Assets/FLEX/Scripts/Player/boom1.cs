@@ -3,11 +3,13 @@
 
 public class boom1 : MonoBehaviour
 {
-    public Transform deton;
+    [SerializeField] Transform deton;
     [Range(0, 15)] public float time = 5f;
-    public bool enter = false;
-    public GameObject[] Players;
-    public float[] Distances;
+    [SerializeField] bool enter = false;
+    [SerializeField] GameObject[] Players;
+    [SerializeField] float[] Distances;
+    [SerializeField] AudioSource _audio;
+    [SerializeField] AudioClip Collision;
 
     void Start()
     {
@@ -34,7 +36,7 @@ public class boom1 : MonoBehaviour
     {
         for (int i = 0; i < Players.Length; i++)
         {
-            if (Distances[i] < 30f)
+            if (Distances[i] < 20f)
             {
                 Players[i].GetComponent<PhotonView>().RPC("ApplyPlayerDamage", PhotonTargets.All, (100 - ((int)Distances[i] * 3)), "Grenade", PhotonNetwork.player, 1.0f, false);
                 Debug.Log(Distances[i]);
@@ -46,5 +48,10 @@ public class boom1 : MonoBehaviour
     public void AddForce(int Force)
     {
         gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * Force);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _audio.PlayOneShot(Collision);
     }
 }

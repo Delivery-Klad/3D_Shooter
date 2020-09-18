@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: ec8ee4183517e6f4a88e9ae99c76f455
+timeCreated: 1464162117
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cable_On_Floor
+    100002: Cardboard_Box_A
+    100004: Cardboard_Box_B
+    100006: Cardboard_Box_C
+    100008: Dumpster
+    100010: //RootNode
+    100012: DumpsterLid_A
+    100014: DumpsterLid_B
+    100016: GarbageBag_A
+    100018: GarbageBag_B
+    100020: MetalPlate_On_Floor
+    100022: MetalPlate_On_Floor01
+    100024: Newspaper_On_Floor
+    100026: Paper_On_Floor
+    100028: Trashcan_A
+    100030: Trashcan_B
+    100032: Trashcan_Lid
+    100034: Wooden_Crate
+    100036: Wooden_Crate01
+    100038: Wooden_Crate02
+    400000: Cable_On_Floor
+    400002: Cardboard_Box_A
+    400004: Cardboard_Box_B
+    400006: Cardboard_Box_C
+    400008: Dumpster
+    400010: //RootNode
+    400012: DumpsterLid_A
+    400014: DumpsterLid_B
+    400016: GarbageBag_A
+    400018: GarbageBag_B
+    400020: MetalPlate_On_Floor
+    400022: MetalPlate_On_Floor01
+    400024: Newspaper_On_Floor
+    400026: Paper_On_Floor
+    400028: Trashcan_A
+    400030: Trashcan_B
+    400032: Trashcan_Lid
+    400034: Wooden_Crate
+    400036: Wooden_Crate01
+    400038: Wooden_Crate02
+    2300000: Cable_On_Floor
+    2300002: Cardboard_Box_A
+    2300004: Cardboard_Box_B
+    2300006: Cardboard_Box_C
+    2300008: Dumpster
+    2300010: DumpsterLid_A
+    2300012: DumpsterLid_B
+    2300014: GarbageBag_A
+    2300016: GarbageBag_B
+    2300018: MetalPlate_On_Floor
+    2300020: MetalPlate_On_Floor01
+    2300022: Newspaper_On_Floor
+    2300024: Paper_On_Floor
+    2300026: Trashcan_A
+    2300028: Trashcan_B
+    2300030: Trashcan_Lid
+    2300032: Wooden_Crate
+    2300034: Wooden_Crate01
+    2300036: Wooden_Crate02
+    3300000: Cable_On_Floor
+    3300002: Cardboard_Box_A
+    3300004: Cardboard_Box_B
+    3300006: Cardboard_Box_C
+    3300008: Dumpster
+    3300010: DumpsterLid_A
+    3300012: DumpsterLid_B
+    3300014: GarbageBag_A
+    3300016: GarbageBag_B
+    3300018: MetalPlate_On_Floor
+    3300020: MetalPlate_On_Floor01
+    3300022: Newspaper_On_Floor
+    3300024: Paper_On_Floor
+    3300026: Trashcan_A
+    3300028: Trashcan_B
+    3300030: Trashcan_Lid
+    3300032: Wooden_Crate
+    3300034: Wooden_Crate01
+    3300036: Wooden_Crate02
+    4300000: Cable_On_Floor
+    4300002: Trashcan_A
+    4300004: Trashcan_Lid
+    4300006: Dumpster
+    4300008: DumpsterLid_B
+    4300010: DumpsterLid_A
+    4300012: MetalPlate_On_Floor
+    4300014: GarbageBag_A
+    4300016: Wooden_Crate
+    4300018: Cardboard_Box_A
+    4300020: Paper_On_Floor
+    4300022: Newspaper_On_Floor
+    4300024: Cardboard_Box_B
+    4300026: Cardboard_Box_C
+    4300028: GarbageBag_B
+    4300030: Trashcan_B
+    4300032: Wooden_Crate01
+    4300034: Wooden_Crate02
+    4300036: MetalPlate_On_Floor01
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
