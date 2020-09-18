@@ -10299,8 +10299,8 @@ MonoBehaviour:
   Acog: {fileID: 5848326406127196131}
   Red_Dot: {fileID: 1206085293639409343}
   Fore_Grip: {fileID: 0}
-  ACOGAimPosition: {x: 0, y: 0, z: 0}
-  RedDotAimPosition: {x: 0, y: 0, z: 0}
+  ACOGAimPosition: {x: -0.0595, y: -0.051, z: -0.11}
+  RedDotAimPosition: {x: -0.0595, y: -0.048, z: -0.12}
   WeaponName: M200
   WeaponID: 17
   bulletType: 1
@@ -10329,7 +10329,7 @@ MonoBehaviour:
   SecondModeBarrel: {fileID: 4736520954304952}
   baseInaccuracyhip: 2
   baseInaccuracyaim: 0
-  AimPosition: {x: -0.06, y: -0.04, z: -0.09}
+  AimPosition: {x: -0.06, y: -0.03, z: -0.09}
   WeaponOffset: {x: -0.021, y: -0.055, z: -0.05}
   AimFov: 40
   AimSpeedModifier: 0.8

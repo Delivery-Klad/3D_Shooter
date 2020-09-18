@@ -1,4 +1,4 @@
-0000000000000000f000000000000000:=Standard
+0000000000000000f000000000000000:=Legacy Shaders/Particles/Alpha Blended Premultiply
 60403cfc57f56254c8f766ab73098440:=.poiyomi/Toon/Simple/Cutout
 048551a7027c3774882e78dd53e504c7:=Standard
 e9183a63e4627be498c9caad66e320d3:=Legacy Shaders/Particles/Alpha Blended
@@ -107,3 +107,8 @@ ddf0abb22be518c4cbab2d4b983cb63d:=Standard
 1b884b21d13804448bd26be3c4fb5353:=Standard
 1505454df07e0e742875016282a1ad2c:=Standard
 337255321d58c184ea0ba7263971e9b9:=Standard
+f06455b167e1b0b428c9af62d7aa6832:=Custom/SurfaceShader_VC
+2062b6d0a7a2d4f46b4689198aedadd9:=Standard (Specular setup)
+776677ab3818fb249adaca05f4e04545:=Legacy Shaders/Particles/Additive
+d7f098ed9997e714193be5e86df013f4:=Particles/Standard Unlit
+f53f1a24bb4ef8f4d879ea7b3a5197e5:=Legacy Shaders/Particles/Additive
