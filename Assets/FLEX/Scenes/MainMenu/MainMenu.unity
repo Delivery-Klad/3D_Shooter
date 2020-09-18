@@ -1026,6 +1026,7 @@ MonoBehaviour:
   - {fileID: 7504930748309825550, guid: b8f854cfbd3e1024494635c77feeddd0, type: 3}
   - {fileID: 7504930748309825550, guid: 9e06f18abbc1be448a476a1445c06dd9, type: 3}
   - {fileID: 7504930748309825550, guid: aa5059ac0b3ec154683336c0ca5d012d, type: 3}
+  - {fileID: 7504930748309825550, guid: db36638748e84434bbf15dc444172163, type: 3}
   AmmoPrefabs:
   - {fileID: 4030817427720789682, guid: f5c6a4aa341f4094e8646cef139672ed, type: 3}
   HPPrefabs:
