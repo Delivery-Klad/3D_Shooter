@@ -3,13 +3,10 @@
 
 public class boom : MonoBehaviour
 {
-    public Transform deton;
+    [SerializeField] Transform deton;
     [Range(0, 15)] public float time = 5f;
-
-    void Start()
-    {
-
-    }
+    [SerializeField] AudioSource _audio;
+    [SerializeField] AudioClip Collision;
 
     void Update()
     {
@@ -25,5 +22,10 @@ public class boom : MonoBehaviour
     public void AddForce(int Force)
     {
         gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * Force);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _audio.PlayOneShot(Collision);
     }
 }

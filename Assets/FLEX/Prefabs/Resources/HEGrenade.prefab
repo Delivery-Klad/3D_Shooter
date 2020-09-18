@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4009265639252922482}
   - component: {fileID: 3998892399066467906}
   m_Layer: 0
-  m_Name: grenade_lowpoly_prefab
+  m_Name: HEGrenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,11 +125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deton: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  Explosion: {fileID: 8300000, guid: 1792989a5a33779428d2dbe9a9430605, type: 3}
   time: 5
   enter: 0
   Players: []
   Distances: []
+  _audio: {fileID: 3998892399066467906}
+  Collision: {fileID: 8300000, guid: f2dbec37899d9684fbb3fd9ba54b1b7b, type: 3}
 --- !u!114 &4009265639252922482
 MonoBehaviour:
   m_ObjectHideFlags: 0
