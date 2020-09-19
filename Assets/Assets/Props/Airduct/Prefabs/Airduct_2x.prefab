@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 419418}
   - component: {fileID: 3303242}
   - component: {fileID: 2390550}
-  - component: {fileID: 6538202}
+  - component: {fileID: 7587845703214035967}
   m_Layer: 0
   m_Name: Airduct_2x
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6538202
-BoxCollider:
+--- !u!64 &7587845703214035967
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.45000005, y: 0.4500001, z: 2.0162678}
-  m_Center: {x: -0.0014751107, y: 0.0016151372, z: 1.0081339}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 45e800cb97d186d4d94a35668fc35357, type: 3}

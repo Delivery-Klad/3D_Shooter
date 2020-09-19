@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 423560}
   - component: {fileID: 3397490}
   - component: {fileID: 2320408}
-  - component: {fileID: 6554572}
+  - component: {fileID: 2881171220091172755}
   m_Layer: 0
   m_Name: Pipe_Small_90deg
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6554572
-BoxCollider:
+--- !u!64 &2881171220091172755
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.28203374, y: 0.11936264, z: 0.26291192}
-  m_Center: {x: -0.07826425, y: 0.0000000018626456, z: 0.12056654}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: be54cc6f24cd30b468a31e0bd83141fa, type: 3}

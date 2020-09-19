@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FLEX/Scenes/Maps/Polygon/Polygon.unity
     guid: 6abd666bd49df3b4b9cbe0ce3e0232d8
+  - enabled: 1
+    path: Assets/FLEX/Scenes/Maps/City/NightStreet.unity
+    guid: bb2c2f09e2f0edc4e93796fdddd41d8d
   m_configObjects: {}

@@ -125,7 +125,7 @@ public class Move : MonoBehaviour
             Dead = true;
             nav.enabled = false;
             AN.enabled = false;
-            foreach(Transform part in colliders)
+            foreach (Transform part in colliders)
             {
                 part.GetComponent<Rigidbody>().isKinematic = false;
             }

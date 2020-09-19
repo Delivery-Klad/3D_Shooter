@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 432416}
   - component: {fileID: 3372792}
   - component: {fileID: 2387756}
-  - component: {fileID: 6575924}
+  - component: {fileID: 6679920842062121319}
   m_Layer: 0
   m_Name: Window_MetalBars_B
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6575924
-BoxCollider:
+--- !u!64 &6679920842062121319
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.912416, y: 1.1680367, z: 0.13279304}
-  m_Center: {x: 0.00000041723263, y: 0.00000014901164, z: 0.040498793}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b979e53a65cf2e34485c9a6b64e7f6a5, type: 3}

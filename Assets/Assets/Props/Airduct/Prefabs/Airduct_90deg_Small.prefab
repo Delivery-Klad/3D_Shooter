@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 477872}
   - component: {fileID: 3300410}
   - component: {fileID: 2397250}
-  - component: {fileID: 6538632}
-  - component: {fileID: 6599788}
+  - component: {fileID: 3700877363646459598}
   m_Layer: 0
   m_Name: Airduct_90deg_Small
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -79,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6538632
-BoxCollider:
+--- !u!64 &3700877363646459598
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,19 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.51, y: 0.4500001, z: 0.42}
-  m_Center: {x: -0.02, y: 0.0016151298, z: 0.17}
---- !u!65 &6599788
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.62, y: 0.4500001, z: 0.45}
-  m_Center: {x: -0.21, y: 0.0016151298, z: 0.5}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: cd0a94bbce448f84fb72817974b042f6, type: 3}

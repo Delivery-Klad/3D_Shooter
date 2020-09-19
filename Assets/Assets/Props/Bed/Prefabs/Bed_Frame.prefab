@@ -11,12 +11,10 @@ GameObject:
   - component: {fileID: 429926}
   - component: {fileID: 3370606}
   - component: {fileID: 2355264}
-  - component: {fileID: 6523886}
-  - component: {fileID: 6536924}
-  - component: {fileID: 6531092}
+  - component: {fileID: 1174248759939645095}
   m_Layer: 0
   m_Name: Bed_Frame
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -80,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6523886
-BoxCollider:
+--- !u!64 &1174248759939645095
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,32 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0542324, y: 0.86830336, z: 0.15}
-  m_Center: {x: 0.000009536743, y: 0.012888554, z: 0.38732946}
---- !u!65 &6536924
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07, y: 0.86830336, z: 0.76801777}
-  m_Center: {x: -1, y: 0.012888554, z: 0.38732946}
---- !u!65 &6531092
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07, y: 0.86830336, z: 0.76801777}
-  m_Center: {x: 1, y: 0.012888554, z: 0.38732946}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 17e10843737ea0f45a2b6e06809db604, type: 3}

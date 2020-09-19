@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 478764}
   - component: {fileID: 3335360}
   - component: {fileID: 2376408}
-  - component: {fileID: 6577874}
+  - component: {fileID: 2710152672189424557}
   m_Layer: 0
   m_Name: Pipe_Set_B
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6577874
-BoxCollider:
+--- !u!64 &2710152672189424557
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35699463, y: 1.059126, z: 2.8893366}
-  m_Center: {x: 0.15921623, y: -0.39530227, z: -1.0930452}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 93d518ce75184e54ebebf96b8731f3ab, type: 3}

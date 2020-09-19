@@ -403,7 +403,10 @@ public class InGameUI : MonoBehaviour
     #region Hitmarker & Hitscreen
     public void DoHitMarker()
     {
-        StartCoroutine(ShowTimedImageFadeOut(Hitmarker, 0.5f, 0.1f));
+        if (!(Hitmarker.color.a > 0))
+        {
+            StartCoroutine(ShowTimedImageFadeOut(Hitmarker, 0.5f, 0.1f));
+        }
     }
 
     public void DoHitscreen(float TimeToShow)

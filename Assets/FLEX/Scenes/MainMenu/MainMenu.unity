@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1612dc54605b67947bed7b6e6b4f48c4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1611975480}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.46169513, g: 0.5124164, b: 0.58993304, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -680,6 +680,11 @@ MonoBehaviour:
     AllowMines: 1
     AllowLoot: 1
   - MapName: Polygon
+    MapLoadImage: {fileID: 21300000, guid: 25f29bbe155f96a48b156a580ef03489, type: 3}
+    AllowVehicles: 0
+    AllowMines: 0
+    AllowLoot: 0
+  - MapName: NightStreet
     MapLoadImage: {fileID: 21300000, guid: 25f29bbe155f96a48b156a580ef03489, type: 3}
     AllowVehicles: 0
     AllowMines: 0

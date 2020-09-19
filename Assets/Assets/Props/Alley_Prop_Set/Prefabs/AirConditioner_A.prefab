@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 470510}
   - component: {fileID: 3394412}
   - component: {fileID: 2359120}
-  - component: {fileID: 6515462}
+  - component: {fileID: 5588353744891627596}
   m_Layer: 0
   m_Name: AirConditioner_A
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6515462
-BoxCollider:
+--- !u!64 &5588353744891627596
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8621403, y: 0.38, z: 0.8453493}
-  m_Center: {x: 0.000000029802322, y: -0.19, z: 0.1324032}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: 2fe621bf6df945a4d946e1e297fe5c5c, type: 3}

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 457564}
   - component: {fileID: 3322008}
   - component: {fileID: 2300016}
-  - component: {fileID: 6578552}
+  - component: {fileID: 3551189266082196342}
   m_Layer: 0
   m_Name: Bed_Frame_Small
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6578552
-BoxCollider:
+--- !u!64 &3551189266082196342
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,6 +88,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.041017454, y: 0.8401912, z: 0.76801777}
-  m_Center: {x: 0, y: 0, z: 0.38732946}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 4d8b954921713d84a8894c73b53253b4, type: 3}

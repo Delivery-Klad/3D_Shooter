@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 486616}
   - component: {fileID: 3354024}
   - component: {fileID: 2383226}
-  - component: {fileID: 6544816}
+  - component: {fileID: 3559981970288606890}
   m_Layer: 0
   m_Name: Sign_Hotel_B
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -79,8 +79,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6544816
-BoxCollider:
+--- !u!64 &3559981970288606890
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -89,9 +89,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6448153, y: 3.5605786, z: 0.15861383}
-  m_Center: {x: 0.0000001937151, y: 0, z: 0.0000000037252903}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 85e7836725438764ca0838ba482591cd, type: 3}
 --- !u!1 &192550
 GameObject:
   m_ObjectHideFlags: 0
