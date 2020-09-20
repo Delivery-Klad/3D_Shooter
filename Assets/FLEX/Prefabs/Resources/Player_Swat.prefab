@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.8
 --- !u!136 &1727043600428837825
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.55
 --- !u!136 &8292913187043013613
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.8
 --- !u!136 &4850403561211026495
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1953,7 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 2
+  DamageModifier: 10
 --- !u!135 &6136409112103382508
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3070,7 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.5
 --- !u!136 &2467744484960245921
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.5
 --- !u!136 &4181310215416543833
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3705,6 +3705,7 @@ GameObject:
   - component: {fileID: 1775967885805536043}
   - component: {fileID: 8224946784272470792}
   - component: {fileID: 8725562929170944211}
+  - component: {fileID: 3110522159514429073}
   m_Layer: 11
   m_Name: swat:Spine1
   m_TagString: Untagged
@@ -3801,6 +3802,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3110522159514429073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489567647497154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageModifier: 1
 --- !u!1 &1498189590857478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,7 +3957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.8
 --- !u!136 &4950165898806818155
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5385,7 +5399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.8
 --- !u!136 &6877261400566295867
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7254,8 +7268,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
@@ -7654,7 +7666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b30a0d38dbe4448d48850f80cb17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageModifier: 1
+  DamageModifier: 0.55
 --- !u!136 &504521071761957184
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8094,8 +8106,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -8248,8 +8258,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 16
@@ -8836,16 +8844,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4932025970309734}
     m_Modifications:
-    - target: {fileID: 8469919711605352269, guid: 8504c35a0b1d3ed46ac628f407308694,
-        type: 3}
-      propertyPath: m_Name
-      value: Rain
-      objectReference: {fileID: 0}
-    - target: {fileID: 8469919711605352269, guid: 8504c35a0b1d3ed46ac628f407308694,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8469919711605352258, guid: 8504c35a0b1d3ed46ac628f407308694,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8910,6 +8908,16 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionModule.type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469919711605352269, guid: 8504c35a0b1d3ed46ac628f407308694,
+        type: 3}
+      propertyPath: m_Name
+      value: Rain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469919711605352269, guid: 8504c35a0b1d3ed46ac628f407308694,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8504c35a0b1d3ed46ac628f407308694, type: 3}

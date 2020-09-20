@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FLEX/Scenes/Maps/City/DaylightStreet.unity
     guid: 3ad53838dc2559e4e9b16ad68c0b1609
+  - enabled: 1
+    path: Assets/FLEX/Scenes/Maps/Winter/Winter.unity
+    guid: 6900a00cf86d7524ab61e116d03b8e5f
   m_configObjects: {}
