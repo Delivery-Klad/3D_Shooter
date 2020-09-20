@@ -2342,6 +2342,7 @@ GameObject:
   - component: {fileID: 360343304}
   - component: {fileID: 360343305}
   - component: {fileID: 360343306}
+  - component: {fileID: 360343307}
   m_Layer: 12
   m_Name: SceneManager
   m_TagString: Untagged
@@ -2419,6 +2420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BotSpawns: []
+  Players: []
 --- !u!114 &360343306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,6 +2438,19 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &360343307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360343300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9116c673cc036424a90992ef98f494d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainLight: {fileID: 1891750107}
 --- !u!1001 &361902640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15336,7 +15351,7 @@ GameObject:
   - component: {fileID: 1891750108}
   - component: {fileID: 1891750107}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: MainLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
