@@ -4960,6 +4960,7 @@ MonoBehaviour:
     type: 2}
   WeaponReloadSecondaryAnimation: {fileID: 7400000, guid: 7cf313aaeaaf42c4ebac0d04fd5b04a6,
     type: 2}
+  ThrowGrenade: {fileID: 0}
   PlayerMovementController: {fileID: 0}
   PlayerCharacterController: {fileID: 0}
   PlayerWeaponManager: {fileID: 0}
@@ -4981,6 +4982,7 @@ Animation:
   - {fileID: 7400000, guid: ac79c332d97c65844912bc59007df429, type: 2}
   - {fileID: 7400000, guid: 7cf313aaeaaf42c4ebac0d04fd5b04a6, type: 2}
   - {fileID: 7400000, guid: 05d6777054e92df409a0a80a7232f3e2, type: 2}
+  - {fileID: 7400000, guid: 611d6086d80019b4eabc3fd63fa81b18, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -5122,7 +5124,7 @@ Transform:
   - {fileID: 4065238712669536}
   m_Father: {fileID: 4192456197428192}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: -0.0019675929, z: 0}
 --- !u!1 &1194566165028254
 GameObject:
   m_ObjectHideFlags: 0

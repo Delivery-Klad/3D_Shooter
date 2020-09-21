@@ -5,11 +5,11 @@ public class boom1 : MonoBehaviour
 {
     [SerializeField] Transform deton;
     [Range(0, 15)] public float time = 5f;
-    [SerializeField] bool enter = false;
     [SerializeField] GameObject[] Players;
     [SerializeField] float[] Distances;
     [SerializeField] AudioSource _audio;
     [SerializeField] AudioClip Collision;
+    int counter = 0;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class boom1 : MonoBehaviour
             }
             ApplyDamage();
             Destroy(gameObject);
-        }     
+        }
     }
 
     public void ApplyDamage()
@@ -52,6 +52,11 @@ public class boom1 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        _audio.PlayOneShot(Collision);
+        counter++;
+        if (counter > 0)
+        {
+            _audio.PlayOneShot(Collision);
+        }
+        counter++;
     }
 }

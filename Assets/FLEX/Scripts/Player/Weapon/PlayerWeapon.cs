@@ -132,6 +132,7 @@ public class PlayerWeapon : MonoBehaviour
     public AnimationClip WeaponSecondaryIdleAnimation;
     public AnimationClip WeaponFireSecondaryAnimation;
     public AnimationClip WeaponReloadSecondaryAnimation;
+    public AnimationClip ThrowGrenade;
 
     [Header("Компоненты игрока")]
     public PlayerMovementController PlayerMovementController;
@@ -219,6 +220,15 @@ public class PlayerWeapon : MonoBehaviour
         else
         {
             CurrentAmmo = PlayerStats.PistolAmmo;
+        }
+        if (Input.GetKeyDown(PlayerInputManager.instance.ThrowButton))
+        {
+            Debug.Log("1");
+            if (ThrowGrenade != null)
+            {
+                Debug.Log("2");
+                WeaponAnimationComponent.CrossFadeQueued(ThrowGrenade.name, 0.01f, QueueMode.PlayNow);
+            }
         }
     }
 
