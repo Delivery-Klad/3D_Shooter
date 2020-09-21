@@ -91,6 +91,7 @@ MonoBehaviour:
   Acog: {fileID: 3440390938006121609}
   Red_Dot: {fileID: 1518974998736065772}
   Fore_Grip: {fileID: 0}
+  Clip: {fileID: 3440101720391507277}
 --- !u!82 &82398093558636500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5152,6 +5153,12 @@ Transform:
 --- !u!1 &3440390938006121609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1663105401320402, guid: 7b58aba0c5c733b4b879d35634a94283,
+    type: 3}
+  m_PrefabInstance: {fileID: 3439432631458504539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3440101720391507277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1939025965203990, guid: 7b58aba0c5c733b4b879d35634a94283,
     type: 3}
   m_PrefabInstance: {fileID: 3439432631458504539}
   m_PrefabAsset: {fileID: 0}

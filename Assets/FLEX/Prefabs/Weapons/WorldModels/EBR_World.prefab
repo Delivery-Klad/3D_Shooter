@@ -85,10 +85,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 1028976998219560050}
   Sil: {fileID: 7356254269105056128}
   Acog: {fileID: 7050315320147664059}
   Red_Dot: {fileID: 700196279704395131}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 8187484802964369894}
 --- !u!82 &82398093558636500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4795,7 +4798,7 @@ ParticleSystem:
 --- !u!199 &199165817339225882
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5051,6 +5054,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1037150498847203592}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8187484802964369894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9222097628302512366, guid: 0e904c89daed39047b2ed80bc9a434f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1037150498847203592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8187484802964663756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9222097628302806212, guid: 0e904c89daed39047b2ed80bc9a434f8,
@@ -5159,16 +5168,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8187484802964663748}
     m_Modifications:
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_Name
-      value: ACOG_TP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5239,6 +5238,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6961831
       objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: ACOG_TP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be61f341b6735f43831976b7a48f6ba, type: 3}
 --- !u!1 &7050315320147664059 stripped
@@ -5254,21 +5263,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8187484802964663756}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5340,6 +5334,21 @@ PrefabInstance:
       value: 0.019590244
       objectReference: {fileID: 0}
     - target: {fileID: 9138217871528511488, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_Layer
       value: 0

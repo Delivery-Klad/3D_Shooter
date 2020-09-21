@@ -85,10 +85,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 7877672934372085697}
   Sil: {fileID: 4710394124736367902}
   Acog: {fileID: 2405003846396276043}
   Red_Dot: {fileID: 4204067381136996415}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 2948794727004236804}
 --- !u!82 &82398093558636500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4795,7 +4798,7 @@ ParticleSystem:
 --- !u!199 &199165817339225882
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4968,21 +4971,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2948794727004532770}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5058,6 +5046,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14790bf7226ab3246b499bdc9b92c323, type: 3}
 --- !u!1 &7877672934372085697 stripped
@@ -5073,11 +5076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4819156132090412}
     m_Modifications:
-    - target: {fileID: 3846677001789767091, guid: fde6fa19833e4654d8cc1ba7305f8772,
-        type: 3}
-      propertyPath: m_Name
-      value: Bizon Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 3846677001789268371, guid: fde6fa19833e4654d8cc1ba7305f8772,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5148,11 +5146,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01018028
       objectReference: {fileID: 0}
+    - target: {fileID: 3846677001789767091, guid: fde6fa19833e4654d8cc1ba7305f8772,
+        type: 3}
+      propertyPath: m_Name
+      value: Bizon Variant
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fde6fa19833e4654d8cc1ba7305f8772, type: 3}
 --- !u!4 &2948794727004532778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3846677001789268371, guid: fde6fa19833e4654d8cc1ba7305f8772,
+    type: 3}
+  m_PrefabInstance: {fileID: 2129672058046910905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2948794727004236804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3846677001789767101, guid: fde6fa19833e4654d8cc1ba7305f8772,
     type: 3}
   m_PrefabInstance: {fileID: 2129672058046910905}
   m_PrefabAsset: {fileID: 0}
@@ -5169,16 +5178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2948794727004532778}
     m_Modifications:
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_Name
-      value: ACOG_TP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5248,6 +5247,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: ACOG_TP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be61f341b6735f43831976b7a48f6ba, type: 3}

@@ -4970,7 +4970,7 @@ ParticleSystem:
 --- !u!199 &199682017066578498
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5217,6 +5217,17 @@ MonoBehaviour:
   GlassImpact: {fileID: 1619005896843622, guid: 905c61d795bd5cf45a90654d6956d3ff,
     type: 3}
   flashlight: {fileID: 0}
+  Muzzle_break: 0
+  Silencer: 0
+  ACOG: 0
+  Red_dot: 0
+  ForeGrip: 0
+  Muzzle_br: {fileID: 0}
+  Sil: {fileID: 0}
+  Acog: {fileID: 0}
+  Red_Dot: {fileID: 0}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 1877567234734716}
 --- !u!82 &82756642018268832
 AudioSource:
   m_ObjectHideFlags: 0

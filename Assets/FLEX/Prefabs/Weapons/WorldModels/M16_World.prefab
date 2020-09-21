@@ -4580,7 +4580,7 @@ ParticleSystem:
 --- !u!199 &199801991833052644
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5095,13 +5095,16 @@ MonoBehaviour:
     type: 3}
   flashlight: {fileID: 0}
   Muzzle_break: 0
-  Muzzle_br: {fileID: 6915369418116016488}
   Silencer: 0
-  Sil: {fileID: 0}
   ACOG: 0
-  Acog: {fileID: 0}
   Red_dot: 0
+  ForeGrip: 0
+  Muzzle_br: {fileID: 6915369418116016488}
+  Sil: {fileID: 0}
+  Acog: {fileID: 0}
   Red_Dot: {fileID: 0}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 1797876672608570}
 --- !u!82 &82808684931657126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5312,21 +5315,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4340415690857518}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5398,6 +5386,21 @@ PrefabInstance:
       value: 0.008552529
       objectReference: {fileID: 0}
     - target: {fileID: 9138217871528511488, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_Layer
       value: 0

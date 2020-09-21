@@ -91,6 +91,7 @@ MonoBehaviour:
   Acog: {fileID: 8256159056159837666}
   Red_Dot: {fileID: 5669650532288605113}
   Fore_Grip: {fileID: 0}
+  Clip: {fileID: 8395221217710287421}
 --- !u!82 &82398093558636500
 AudioSource:
   m_ObjectHideFlags: 0
