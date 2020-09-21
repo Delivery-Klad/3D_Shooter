@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4957531952245309723}
   - component: {fileID: 5532794577616017668}
   - component: {fileID: 1722382932039748120}
+  - component: {fileID: 4007872296669711184}
   m_Layer: 0
   m_Name: Lsat_LootPrefab
   m_TagString: DropWeapon
@@ -88,6 +89,8 @@ MonoBehaviour:
   id: 27
   WeaponName: Lsat
   PV: {fileID: 7504930748309825584}
+  _audio: {fileID: 4007872296669711184}
+  Collision: {fileID: 8300000, guid: 437ab7d0d786d4c4ebcc5163d3214b78, type: 3}
 --- !u!205 &4272023753466127802
 LODGroup:
   m_ObjectHideFlags: 0
@@ -174,6 +177,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09322223, y: 0.087479144, z: 0.22760062}
   m_Center: {x: -0.11210044, y: -0.14060003, z: 0.015046063}
+--- !u!82 &4007872296669711184
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504930748309825550}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.7959595
+  MaxDistance: 23.93158
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8966279492862376094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,31 +280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7504930748309825589}
     m_Modifications:
-    - target: {fileID: 6822321266967232919, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
-        type: 3}
-      propertyPath: m_Name
-      value: Isat Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822321266967232919, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822321266967232919, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
-        type: 3}
-      propertyPath: m_TagString
-      value: DropWeapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822321266967232995, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6822321266967232995, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
-        type: 3}
-      propertyPath: m_TagString
-      value: DropWeapon
-      objectReference: {fileID: 0}
     - target: {fileID: 6822321266967141879, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -376,12 +450,37 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DropWeapon
       objectReference: {fileID: 0}
+    - target: {fileID: 6822321266967232919, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Isat Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822321266967232919, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822321266967232919, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: DropWeapon
+      objectReference: {fileID: 0}
     - target: {fileID: 6822321266967232993, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6822321266967232993, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
+        type: 3}
+      propertyPath: m_TagString
+      value: DropWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822321266967232995, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822321266967232995, guid: cdf6a9a5cef473f4eb0ec92bb4bd8d1f,
         type: 3}
       propertyPath: m_TagString
       value: DropWeapon

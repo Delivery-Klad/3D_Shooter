@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 7444176249757247205}
   - component: {fileID: 1626520675119981480}
   - component: {fileID: 9013028717811231435}
+  - component: {fileID: 6872451172617237263}
   m_Layer: 0
-  m_Name: M39 EMR
+  m_Name: M39_LootPrefab
   m_TagString: DropWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,6 +115,8 @@ MonoBehaviour:
   id: 16
   WeaponName: M39 EMR
   PV: {fileID: 7504930748309825584}
+  _audio: {fileID: 6872451172617237263}
+  Collision: {fileID: 8300000, guid: 437ab7d0d786d4c4ebcc5163d3214b78, type: 3}
 --- !u!205 &1626520675119981480
 LODGroup:
   m_ObjectHideFlags: 0
@@ -152,6 +155,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &6872451172617237263
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504930748309825550}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.7959595
+  MaxDistance: 23.93158
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &7504930747521326136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,20 +258,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7504930748309825589}
     m_Modifications:
-    - target: {fileID: 5862149731066559424, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: m_Name
-      value: EBR Variant Variant
+      propertyPath: m_Size.x
+      value: 0.21717288
       objectReference: {fileID: 0}
-    - target: {fileID: 5862149731066559424, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: m_Layer
+      propertyPath: m_Center.x
+      value: -0.011794454
+      objectReference: {fileID: 0}
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.021468025
+      objectReference: {fileID: 0}
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.02195816
+      objectReference: {fileID: 0}
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.61085314
+      objectReference: {fileID: 0}
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.1432238
+      objectReference: {fileID: 0}
+    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5862149731066559424, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 1788389561862817715, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: m_TagString
-      value: DropWeapon
+      propertyPath: viewIdField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788389561862817715, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: instantiationId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309813933126297217, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: id
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5862149731066062816, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
@@ -244,12 +378,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2278665
       objectReference: {fileID: 0}
-    - target: {fileID: 5862149731066559432, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 5862149731066559424, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+        type: 3}
+      propertyPath: m_Name
+      value: EBR Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862149731066559424, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5862149731066559432, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 5862149731066559424, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
       propertyPath: m_TagString
       value: DropWeapon
@@ -264,16 +403,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DropWeapon
       objectReference: {fileID: 0}
-    - target: {fileID: 5862149731066559430, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862149731066559430, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_TagString
-      value: DropWeapon
-      objectReference: {fileID: 0}
     - target: {fileID: 5862149731066559428, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
       propertyPath: m_Layer
@@ -284,55 +413,25 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DropWeapon
       objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 5862149731066559430, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: m_Size.x
-      value: 0.21717288
-      objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.011794454
-      objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.021468025
-      objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.02195816
-      objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.61085314
-      objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 3.1432238
-      objectReference: {fileID: 0}
-    - target: {fileID: 16804548639429986, guid: 667b938808e5ccb48b8b3d1581fa02bc,
-        type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1788389561862817715, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 5862149731066559430, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: viewIdField
-      value: 5
+      propertyPath: m_TagString
+      value: DropWeapon
       objectReference: {fileID: 0}
-    - target: {fileID: 1788389561862817715, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 5862149731066559432, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: instantiationId
-      value: 5
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4309813933126297217, guid: 667b938808e5ccb48b8b3d1581fa02bc,
+    - target: {fileID: 5862149731066559432, guid: 667b938808e5ccb48b8b3d1581fa02bc,
         type: 3}
-      propertyPath: id
-      value: 16
+      propertyPath: m_TagString
+      value: DropWeapon
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2609642902615237001, guid: 667b938808e5ccb48b8b3d1581fa02bc, type: 3}

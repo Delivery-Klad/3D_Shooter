@@ -102,6 +102,8 @@ MonoBehaviour:
   id: 18
   WeaponName: AK-12
   PV: {fileID: 7504930748309825584}
+  _audio: {fileID: 3305447594531273427}
+  Collision: {fileID: 8300000, guid: 437ab7d0d786d4c4ebcc5163d3214b78, type: 3}
 --- !u!205 &7326819548348987747
 LODGroup:
   m_ObjectHideFlags: 0

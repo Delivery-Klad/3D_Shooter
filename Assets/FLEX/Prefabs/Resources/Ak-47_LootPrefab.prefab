@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2332378677953706485}
   - component: {fileID: 377156856016083733}
   - component: {fileID: 5120833899192248220}
+  - component: {fileID: 1705781954215116277}
   m_Layer: 0
   m_Name: Ak-47_LootPrefab
   m_TagString: DropWeapon
@@ -88,6 +89,8 @@ MonoBehaviour:
   id: 11
   WeaponName: AK-47
   PV: {fileID: 7504930748309825584}
+  _audio: {fileID: 1705781954215116277}
+  Collision: {fileID: 8300000, guid: 437ab7d0d786d4c4ebcc5163d3214b78, type: 3}
 --- !u!205 &3395381217225581681
 LODGroup:
   m_ObjectHideFlags: 0
@@ -153,6 +156,102 @@ CapsuleCollider:
   m_Height: 0.26914728
   m_Direction: 0
   m_Center: {x: -0.12787952, y: -0.21009448, z: 4.1608058e-16}
+--- !u!82 &1705781954215116277
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7504930748309825550}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.7959595
+  MaxDistance: 23.93158
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &8996994579025403677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,13 +259,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7504930748309825589}
     m_Modifications:
-    - target: {fileID: 100054, guid: 2e68f309edba0384bac2abe369ba05d1, type: 3}
-      propertyPath: m_Name
-      value: model
-      objectReference: {fileID: 0}
     - target: {fileID: 100032, guid: 2e68f309edba0384bac2abe369ba05d1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100054, guid: 2e68f309edba0384bac2abe369ba05d1, type: 3}
+      propertyPath: m_Name
+      value: model
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 2e68f309edba0384bac2abe369ba05d1, type: 3}
       propertyPath: m_LocalPosition.x
