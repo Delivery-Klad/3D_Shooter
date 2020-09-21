@@ -4760,6 +4760,7 @@ MonoBehaviour:
   Acog: {fileID: 7386749195857125569}
   Red_Dot: {fileID: 8520539417198587762}
   Fore_Grip: {fileID: 0}
+  Clip: {fileID: 8624786279142542659}
 --- !u!82 &82949165127986114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5270,6 +5271,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1448004367332543605, guid: 634dc58779639dd4abdc8e60fc55f5aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1448004367332543611, guid: 634dc58779639dd4abdc8e60fc55f5aa,
         type: 3}
       propertyPath: m_IsActive
@@ -5355,6 +5361,12 @@ PrefabInstance:
 --- !u!4 &8624786279142510953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1448004367332773983, guid: 634dc58779639dd4abdc8e60fc55f5aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7181338290143248694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8624786279142542659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1448004367332543605, guid: 634dc58779639dd4abdc8e60fc55f5aa,
     type: 3}
   m_PrefabInstance: {fileID: 7181338290143248694}
   m_PrefabAsset: {fileID: 0}

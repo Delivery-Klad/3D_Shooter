@@ -4580,7 +4580,7 @@ ParticleSystem:
 --- !u!199 &199801991833052644
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4754,10 +4754,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 6337736402542218170}
   Sil: {fileID: 5128259296785444554}
   Acog: {fileID: 7968697548522107529}
   Red_Dot: {fileID: 7488118882049723956}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 3113283011906078376}
 --- !u!82 &82808684931657126
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4968,21 +4971,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3113283011906116234}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5058,6 +5046,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14790bf7226ab3246b499bdc9b92c323, type: 3}
 --- !u!1 &6337736402542218170 stripped
@@ -5073,16 +5076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3113283011906116226}
     m_Modifications:
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_Name
-      value: ACOG_TP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5153,6 +5146,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 77.09204
       objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: ACOG_TP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be61f341b6735f43831976b7a48f6ba, type: 3}
 --- !u!1 &7968697548522107529 stripped
@@ -5168,11 +5171,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4395589484158346}
     m_Modifications:
-    - target: {fileID: 4783068094547667436, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
-        type: 3}
-      propertyPath: m_Name
-      value: CZ-805 Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 4783068094547572172, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5248,11 +5246,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4783068094547667436, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
+        type: 3}
+      propertyPath: m_Name
+      value: CZ-805 Variant
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db78a6a4caaa21e4ebf7384c3b65a1d9, type: 3}
 --- !u!4 &3113283011906116226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4783068094547572172, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7589767621813153614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3113283011906078376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4783068094547667430, guid: db78a6a4caaa21e4ebf7384c3b65a1d9,
     type: 3}
   m_PrefabInstance: {fileID: 7589767621813153614}
   m_PrefabAsset: {fileID: 0}

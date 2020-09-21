@@ -4580,7 +4580,7 @@ ParticleSystem:
 --- !u!199 &199578628374033078
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4651,7 +4651,7 @@ GameObject:
   - component: {fileID: 114977692460986812}
   - component: {fileID: 82672444270058070}
   m_Layer: 8
-  m_Name: MP443_World
+  m_Name: USP_World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4720,6 +4720,17 @@ MonoBehaviour:
   GlassImpact: {fileID: 1619005896843622, guid: 905c61d795bd5cf45a90654d6956d3ff,
     type: 3}
   flashlight: {fileID: 0}
+  Muzzle_break: 0
+  Silencer: 0
+  ACOG: 0
+  Red_dot: 0
+  ForeGrip: 0
+  Muzzle_br: {fileID: 0}
+  Sil: {fileID: 0}
+  Acog: {fileID: 0}
+  Red_Dot: {fileID: 0}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 6793679471346990798}
 --- !u!82 &82672444270058070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5045,11 +5056,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3482657568818829627}
     m_Modifications:
-    - target: {fileID: 871124316849056366, guid: dbc24ca6759b9fe48bd7c75613be884f,
-        type: 3}
-      propertyPath: m_Name
-      value: MP443 Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 871124316848764494, guid: dbc24ca6759b9fe48bd7c75613be884f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5125,8 +5131,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 871124316849056366, guid: dbc24ca6759b9fe48bd7c75613be884f,
+        type: 3}
+      propertyPath: m_Name
+      value: MP443 Variant
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbc24ca6759b9fe48bd7c75613be884f, type: 3}
+--- !u!1 &6793679471346990798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 871124316849056352, guid: dbc24ca6759b9fe48bd7c75613be884f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5931563482271847598}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5995253001671622709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5134,11 +5151,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4031074671136978}
     m_Modifications:
-    - target: {fileID: 7164249227514482202, guid: bea0c456d47e70a47b69d993b2d74a78,
-        type: 3}
-      propertyPath: m_Name
-      value: Glock_17
-      objectReference: {fileID: 0}
     - target: {fileID: 7162843593982269710, guid: bea0c456d47e70a47b69d993b2d74a78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5208,6 +5220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164249227514482202, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Name
+      value: Glock_17
       objectReference: {fileID: 0}
     - target: {fileID: 7427001611739972544, guid: bea0c456d47e70a47b69d993b2d74a78,
         type: 3}

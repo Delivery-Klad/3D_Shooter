@@ -85,10 +85,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 4719832634941206281}
   Sil: {fileID: 7560946776348778761}
   Acog: {fileID: 640596512796763816}
   Red_Dot: {fileID: 6566395064987195390}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 3212672764015275901}
 --- !u!82 &82398093558636500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4795,7 +4798,7 @@ ParticleSystem:
 --- !u!199 &199165817339225882
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4968,16 +4971,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3212672764015309673}
     m_Modifications:
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_Name
-      value: ACOG_TP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5048,6 +5041,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 69.31353
       objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: ACOG_TP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be61f341b6735f43831976b7a48f6ba, type: 3}
 --- !u!1 &640596512796763816 stripped
@@ -5063,21 +5066,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3212672764015309679}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5149,6 +5137,21 @@ PrefabInstance:
       value: 0.8860392
       objectReference: {fileID: 0}
     - target: {fileID: 9138217871528511488, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_Layer
       value: 0
@@ -5263,6 +5266,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4819156132090412}
     m_Modifications:
+    - target: {fileID: 5203449476020788612, guid: cba3ea9079062074cbe2c942b03a7ca6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203449476020788638, guid: cba3ea9079062074cbe2c942b03a7ca6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5203449476020788732, guid: cba3ea9079062074cbe2c942b03a7ca6,
         type: 3}
       propertyPath: m_Name
@@ -5338,16 +5351,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.009546752
       objectReference: {fileID: 0}
-    - target: {fileID: 5203449476020788638, guid: cba3ea9079062074cbe2c942b03a7ca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5203449476020788612, guid: cba3ea9079062074cbe2c942b03a7ca6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba3ea9079062074cbe2c942b03a7ca6, type: 3}
 --- !u!4 &3212672764015309673 stripped
@@ -5359,6 +5362,12 @@ Transform:
 --- !u!4 &3212672764015309679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5203449476021141914, guid: cba3ea9079062074cbe2c942b03a7ca6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7251896431145562869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3212672764015275901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5203449476020788616, guid: cba3ea9079062074cbe2c942b03a7ca6,
     type: 3}
   m_PrefabInstance: {fileID: 7251896431145562869}
   m_PrefabAsset: {fileID: 0}

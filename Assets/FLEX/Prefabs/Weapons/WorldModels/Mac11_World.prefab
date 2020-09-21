@@ -162,10 +162,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 459542239188854325}
   Acog: {fileID: 0}
   Red_Dot: {fileID: 0}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 1600369488667644}
 --- !u!82 &82720812548201512
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5073,7 +5076,7 @@ ParticleSystem:
 --- !u!199 &199461335890212668
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

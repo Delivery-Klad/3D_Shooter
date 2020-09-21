@@ -85,10 +85,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 9167639222263523855}
   Sil: {fileID: 32354643518295221}
   Acog: {fileID: 955980269435291228}
   Red_Dot: {fileID: 6845040267825765883}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 755523065555141265}
 --- !u!82 &82398093558636500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4795,7 +4798,7 @@ ParticleSystem:
 --- !u!199 &199165817339225882
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4968,21 +4971,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 755523065554722495}
     m_Modifications:
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Name
-      value: muzzle_break
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9138217871528350754, guid: 14790bf7226ab3246b499bdc9b92c323,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5058,6 +5046,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Name
+      value: muzzle_break
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9138217871528511490, guid: 14790bf7226ab3246b499bdc9b92c323,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14790bf7226ab3246b499bdc9b92c323, type: 3}
 --- !u!1 &9167639222263523855 stripped
@@ -5073,16 +5076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 755523065554722479}
     m_Modifications:
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_Name
-      value: ACOG_TP
-      objectReference: {fileID: 0}
-    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5153,6 +5146,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 78.12192
       objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: ACOG_TP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556906641280685884, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be61f341b6735f43831976b7a48f6ba, type: 3}
 --- !u!1 &955980269435291228 stripped
@@ -5168,11 +5171,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4819156132090412}
     m_Modifications:
-    - target: {fileID: 3732674341837364404, guid: f88e3ba8139dbc74f96cb32420da7360,
-        type: 3}
-      propertyPath: m_Name
-      value: ameli Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 3732674341837062292, guid: f88e3ba8139dbc74f96cb32420da7360,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5243,6 +5241,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.00738375
       objectReference: {fileID: 0}
+    - target: {fileID: 3732674341837364404, guid: f88e3ba8139dbc74f96cb32420da7360,
+        type: 3}
+      propertyPath: m_Name
+      value: ameli Variant
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f88e3ba8139dbc74f96cb32420da7360, type: 3}
 --- !u!4 &755523065554722479 stripped
@@ -5254,6 +5257,12 @@ Transform:
 --- !u!4 &755523065554722495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3732674341837062276, guid: f88e3ba8139dbc74f96cb32420da7360,
+    type: 3}
+  m_PrefabInstance: {fileID: 4157165160788205115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &755523065555141265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3732674341837364394, guid: f88e3ba8139dbc74f96cb32420da7360,
     type: 3}
   m_PrefabInstance: {fileID: 4157165160788205115}
   m_PrefabAsset: {fileID: 0}

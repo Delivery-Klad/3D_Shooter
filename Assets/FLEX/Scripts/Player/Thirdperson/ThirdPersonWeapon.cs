@@ -41,4 +41,5 @@ public class ThirdPersonWeapon : MonoBehaviour
     public GameObject Acog;
     public GameObject Red_Dot;
     public GameObject Fore_Grip;
+    public GameObject Clip;
 }

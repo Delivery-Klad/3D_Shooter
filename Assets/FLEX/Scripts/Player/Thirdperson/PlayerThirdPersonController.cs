@@ -258,11 +258,19 @@ public class PlayerThirdPersonController : MonoBehaviour
     {
         ThirdPersonWeapon TpWeapon = ThirdPersonWorldWeapon.GetComponent<ThirdPersonWeapon>();
         PlayerThirdPersonAnimator.SetBool("Reloading", true);
+        TpWeapon.Clip.SetActive(false);
+        StartCoroutine(HideMag(TpWeapon));
         if (TpWeapon.WeaponReloadSound.Length != 0)
         {
             TpWeapon.ThirdPersonAudioSource.PlayOneShot(TpWeapon.WeaponReloadSound[0]);
         }
         EnableWeaponIK(false);
+    }
+
+    IEnumerator HideMag(ThirdPersonWeapon TpWeapon)
+    {
+        yield return new WaitForSeconds(1);
+        TpWeapon.Clip.SetActive(true);
     }
 
     [PunRPC]

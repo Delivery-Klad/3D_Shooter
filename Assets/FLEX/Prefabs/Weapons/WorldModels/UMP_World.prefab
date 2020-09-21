@@ -4610,7 +4610,7 @@ ParticleSystem:
 --- !u!199 &199162840484402926
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4754,10 +4754,13 @@ MonoBehaviour:
   Silencer: 0
   ACOG: 0
   Red_dot: 0
+  ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 4287828965171960641}
   Acog: {fileID: 0}
   Red_Dot: {fileID: 1846671992392171774}
+  Fore_Grip: {fileID: 0}
+  Clip: {fileID: 736037556350276178}
 --- !u!82 &82949165127986114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5140,6 +5143,12 @@ PrefabInstance:
 --- !u!4 &736037556350439030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5112e6444b23577429168ceb76476ae4,
+    type: 3}
+  m_PrefabInstance: {fileID: 736037556350309622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &736037556350276178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 5112e6444b23577429168ceb76476ae4,
     type: 3}
   m_PrefabInstance: {fileID: 736037556350309622}
   m_PrefabAsset: {fileID: 0}
