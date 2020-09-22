@@ -694,6 +694,11 @@ MonoBehaviour:
     AllowVehicles: 0
     AllowMines: 0
     AllowLoot: 0
+  - MapName: Winter
+    MapLoadImage: {fileID: 21300000, guid: 25f29bbe155f96a48b156a580ef03489, type: 3}
+    AllowVehicles: 0
+    AllowMines: 0
+    AllowLoot: 0
   ServerRotation:
   - DeadCity
   AllGameWeapons:
