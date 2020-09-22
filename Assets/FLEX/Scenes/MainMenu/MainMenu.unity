@@ -1050,6 +1050,8 @@ MonoBehaviour:
   - {fileID: 5723806970164092595, guid: 213e8d92b03eb704b9187217eacdfca0, type: 3}
   - {fileID: 6049905777826962602, guid: fd2b7bc57f7ae304d85d6adf85bad9a9, type: 3}
   - {fileID: 6838982773632500277, guid: 1b9341d9fbe9c11449de6a5afca719ed, type: 3}
+  - {fileID: 3202465109757728409, guid: 7e692d6d412cffa478cddacc8fccc9a4, type: 3}
+  - {fileID: 6049905777826962602, guid: 11741cc06065e7d48ab14b3a98e1497a, type: 3}
   BotPrefabs:
   - {fileID: 6262710029891400486, guid: 90e53a83231250042878997ba42fa00c, type: 3}
   LoadingPanel: {fileID: 1493584652}

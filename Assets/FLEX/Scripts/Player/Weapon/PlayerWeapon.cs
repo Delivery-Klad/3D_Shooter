@@ -16,14 +16,17 @@ public class PlayerWeapon : MonoBehaviour
     public bool Muzzle_break = false;
     public bool Silencer = false;
     public bool ACOG = false;
+    public bool Sniper = false;
     public bool Red_dot = false;
     public bool ForeGrip = false;
     public GameObject Muzzle_br;
     public GameObject Sil;
     public GameObject Acog;
+    public GameObject Sniper_;
     public GameObject Red_Dot;
     public GameObject Fore_Grip;
     public Vector3 ACOGAimPosition;
+    public Vector3 SniperAimPosition;
     public Vector3 RedDotAimPosition;
     public string WeaponName;
     public int WeaponID;
@@ -938,6 +941,11 @@ public class PlayerWeapon : MonoBehaviour
         {
             Acog.GetComponent<ScopeCamera>().ACOG_FP.SetActive(toggle);
             Acog.GetComponent<ScopeCamera>().ACOG_TP.SetActive(!toggle);
+        }
+        if (Sniper)
+        {
+            Sniper_.GetComponent<ScopeCamera>().ACOG_FP.SetActive(toggle);
+            Sniper_.GetComponent<ScopeCamera>().ACOG_TP.SetActive(!toggle);
         }
     }
 
