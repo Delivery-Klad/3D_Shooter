@@ -7,6 +7,7 @@ public class Take_Modules : MonoBehaviour
     public bool Muzzle_break = false;
     public bool Silencer = false;
     public bool ACOG = false;
+    public bool Sniper = false;
     public bool Red_dot = false;
 
     [PunRPC]
