@@ -1,3 +1,5 @@
 # 3D_Shooter
  
-тут должны быть скрины
+![alt text](https://github.com/Delivery-Klad/3D_Shooter/blob/master/Images/1.png)
+
+![alt text](https://github.com/Delivery-Klad/3D_Shooter/blob/master/Images/2.png)
