@@ -51,7 +51,7 @@ public class Ray2Take : MonoBehaviour
                     {
                         CurrentGunId = PlayerStatistics.CurrentGunId;
                         id = RayHit.transform.root.GetComponent<LootWeapon>().id;
-                        if(weapon.GetComponent<PlayerWeapon>().bulletType == PlayerWeapon.BulletType.Nato)
+                        if (weapon.GetComponent<PlayerWeapon>().bulletType == PlayerWeapon.BulletType.Nato)
                         {
                             PlayerStatistics.NatoAmmo += weapon.GetComponent<PlayerWeapon>().Ammoleft;
                         }
@@ -135,7 +135,7 @@ public class Ray2Take : MonoBehaviour
                         {
                             if (!weapon.GetComponent<PlayerWeapon>().Muzzle_break && !weapon.GetComponent<PlayerWeapon>().Silencer)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(true, false, false, false);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(true, false, false, false, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("Дульный тормоз установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -145,7 +145,7 @@ public class Ray2Take : MonoBehaviour
                             }
                             else if (weapon.GetComponent<PlayerWeapon>().Silencer)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(true, false, false, false);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(true, false, false, false, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("Дульный тормоз установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -159,9 +159,9 @@ public class Ray2Take : MonoBehaviour
                     {
                         if (weapon.GetComponent<PlayerWeapon>().Acog != null)
                         {
-                            if (!weapon.GetComponent<PlayerWeapon>().ACOG && !weapon.GetComponent<PlayerWeapon>().Red_dot)
+                            if (!weapon.GetComponent<PlayerWeapon>().ACOG && !weapon.GetComponent<PlayerWeapon>().Red_dot && !weapon.GetComponent<PlayerWeapon>().Sniper)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("ACOG установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -171,7 +171,13 @@ public class Ray2Take : MonoBehaviour
                             }
                             else if (weapon.GetComponent<PlayerWeapon>().Red_dot)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false, false);
+                                PV.RPC("RemoveModule", PhotonTargets.All, true);
+                                NS.AddMessage("ACOG установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
+                            }
+                            else if (weapon.GetComponent<PlayerWeapon>().Sniper)
+                            {
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("ACOG установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -185,9 +191,9 @@ public class Ray2Take : MonoBehaviour
                     {
                         if (weapon.GetComponent<PlayerWeapon>().Red_Dot != null)
                         {
-                            if (!weapon.GetComponent<PlayerWeapon>().ACOG && !weapon.GetComponent<PlayerWeapon>().Red_dot)
+                            if (!weapon.GetComponent<PlayerWeapon>().ACOG && !weapon.GetComponent<PlayerWeapon>().Red_dot && !weapon.GetComponent<PlayerWeapon>().Sniper)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, true, false);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, true, false, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("RedDot установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -197,7 +203,13 @@ public class Ray2Take : MonoBehaviour
                             }
                             else if (weapon.GetComponent<PlayerWeapon>().ACOG)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, true, false);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, true, false, false);
+                                PV.RPC("RemoveModule", PhotonTargets.All, true);
+                                NS.AddMessage("RedDot установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
+                            }
+                            else if (weapon.GetComponent<PlayerWeapon>().Sniper)
+                            {
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("RedDot установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -213,7 +225,7 @@ public class Ray2Take : MonoBehaviour
                         {
                             if (!weapon.GetComponent<PlayerWeapon>().Muzzle_break && !weapon.GetComponent<PlayerWeapon>().Silencer)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, false, true);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, false, true, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("Глушитель установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -223,7 +235,7 @@ public class Ray2Take : MonoBehaviour
                             }
                             else if (weapon.GetComponent<PlayerWeapon>().Muzzle_break)
                             {
-                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, false, true);
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, false, true, false);
                                 PV.RPC("RemoveModule", PhotonTargets.All, true);
                                 NS.AddMessage("Глушитель установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
                             }
@@ -233,7 +245,40 @@ public class Ray2Take : MonoBehaviour
                             NS.AddMessage("Оружие не поддерживает данную модификацию");
                         }
                     }
+                    if (Module.GetComponent<Take_Modules>().Sniper)
+                    {
+                        if (weapon.GetComponent<PlayerWeapon>().Sniper_ != null)
+                        {
+                            if (!weapon.GetComponent<PlayerWeapon>().ACOG && !weapon.GetComponent<PlayerWeapon>().Red_dot && !weapon.GetComponent<PlayerWeapon>().Sniper)
+                            {
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, false, false, true);
+                                PV.RPC("RemoveModule", PhotonTargets.All, true);
+                                NS.AddMessage("Scope установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
+                            }
+                            else if (weapon.GetComponent<PlayerWeapon>().Sniper)
+                            {
+                                NS.AddMessage("Оружие уже содержит данную модификацию");
+                            }
+                            else if (weapon.GetComponent<PlayerWeapon>().ACOG)
+                            {
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, false, false, false, true);
+                                PV.RPC("RemoveModule", PhotonTargets.All, true);
+                                NS.AddMessage("Scope установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
+                            }
+                            else if (weapon.GetComponent<PlayerWeapon>().Sniper)
+                            {
+                                weapon.GetComponent<PlayerWeapon>().SetModules(false, true, false, false, true);
+                                PV.RPC("RemoveModule", PhotonTargets.All, true);
+                                NS.AddMessage("Scope установлен на ( " + weapon.GetComponent<PlayerWeapon>().WeaponName + " )");
+                            }
+                        }
+                        else
+                        {
+                            NS.AddMessage("Оружие не поддерживает данную модификацию");
+                        }
+                    }
                 }
+
                 if (RayHit.transform.tag == "DropAmmo")
                 {
                     PV = RayHit.transform.root.GetComponent<PhotonView>();

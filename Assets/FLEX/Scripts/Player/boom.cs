@@ -7,7 +7,6 @@ public class boom : MonoBehaviour
     [Range(0, 15)] public float time = 5f;
     [SerializeField] AudioSource _audio;
     [SerializeField] AudioClip Collision;
-    int counter = 0;
 
     void Update()
     {
@@ -27,10 +26,9 @@ public class boom : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (counter > 0)
+        if (collision.collider.gameObject.tag != "Player")
         {
             _audio.PlayOneShot(Collision);
         }
-        counter++;
     }
 }

@@ -33,12 +33,14 @@ public class ThirdPersonWeapon : MonoBehaviour
     public GameObject flashlight;
     public bool Muzzle_break = false;
     public bool Silencer = false;
+    public bool Sniper = false;
     public bool ACOG = false;
     public bool Red_dot = false;
     public bool ForeGrip = false;
     public GameObject Muzzle_br;
     public GameObject Sil;
     public GameObject Acog;
+    public GameObject Sniper_;
     public GameObject Red_Dot;
     public GameObject Fore_Grip;
     public GameObject Clip;

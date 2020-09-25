@@ -51,7 +51,6 @@ public class boom1 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.collider.gameObject.tag);
         if (collision.collider.gameObject.tag != "Player")
         {
             _audio.PlayOneShot(Collision);

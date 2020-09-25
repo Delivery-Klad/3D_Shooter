@@ -207,7 +207,7 @@ public class PlayerThirdPersonController : MonoBehaviour
     }
 
     [PunRPC]
-    public void SetModules(bool muzzle, bool acog, bool reddot, bool sil)
+    public void SetModules(bool muzzle, bool acog, bool reddot, bool sil, bool _sniper)
     {
         ThirdPersonWeapon TpWeapon = ThirdPersonWorldWeapon.GetComponent<ThirdPersonWeapon>();
         if (muzzle)
@@ -230,6 +230,11 @@ public class PlayerThirdPersonController : MonoBehaviour
                 TpWeapon.Red_dot = false;
                 TpWeapon.Red_Dot.SetActive(false);
             }
+            else if (TpWeapon.Sniper)
+            {
+                TpWeapon.Sniper = false;
+                TpWeapon.Sniper_.SetActive(false);
+            }
         }
         if (reddot)
         {
@@ -240,6 +245,11 @@ public class PlayerThirdPersonController : MonoBehaviour
                 TpWeapon.ACOG = false;
                 TpWeapon.Acog.SetActive(false);
             }
+            else if (TpWeapon.Sniper)
+            {
+                TpWeapon.Sniper = false;
+                TpWeapon.Sniper_.SetActive(false);
+            }
         }
         if (sil)
         {
@@ -249,6 +259,21 @@ public class PlayerThirdPersonController : MonoBehaviour
             {
                 TpWeapon.Muzzle_break = false;
                 TpWeapon.Muzzle_br.SetActive(false);
+            }
+        }
+        if (_sniper)
+        {
+            TpWeapon.Sniper = true;
+            TpWeapon.Sniper_.SetActive(true);
+            if (TpWeapon.ACOG)
+            {
+                TpWeapon.ACOG = false;
+                TpWeapon.Acog.SetActive(false);
+            }
+            else if (TpWeapon.Red_dot)
+            {
+                TpWeapon.Red_dot = false;
+                TpWeapon.Red_Dot.SetActive(false);
             }
         }
     }

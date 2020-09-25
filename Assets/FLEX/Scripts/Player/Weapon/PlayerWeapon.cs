@@ -429,7 +429,7 @@ public class PlayerWeapon : MonoBehaviour
         CurrentFiringType = SecondModeFiringType;
     }
 
-    public void SetModules(bool muzzle, bool acog, bool reddot, bool sil)
+    public void SetModules(bool muzzle, bool acog, bool reddot, bool sil, bool _sniper)
     {
         if (muzzle)
         {
@@ -440,7 +440,7 @@ public class PlayerWeapon : MonoBehaviour
                     Muzzle_break = true;
                     Muzzle_br.SetActive(true);
                     WeaponCurrentFireSound = WeaponFirePrimarySound;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, true, false, false, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, true, false, false, false, false);
                     if (Silencer)
                     {
                         Silencer = false;
@@ -449,12 +449,17 @@ public class PlayerWeapon : MonoBehaviour
                 }
             }
         }
-        if (acog)
+        else if (acog)
         {
             if (!ACOG)
             {
                 if (Acog != null)
                 {
+                    if (Sniper)
+                    {
+                        Sniper = false;
+                        Sniper_.SetActive(false);
+                    }
                     if (Red_dot)
                     {
                         Red_dot = false;
@@ -465,7 +470,7 @@ public class PlayerWeapon : MonoBehaviour
                     Weaponbarrel = SecondModeBarrel;
                     AimFov = 25;
                     AimPosition = ACOGAimPosition;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, true, false, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, true, false, false, false);
                     if (NeedToHide && Scope != null && HidenScope != null)
                     {
                         Scope.SetActive(false);
@@ -478,7 +483,7 @@ public class PlayerWeapon : MonoBehaviour
                 }
             }
         }
-        if (reddot)
+        else if (reddot)
         {
             if (!Red_dot)
             {
@@ -489,12 +494,17 @@ public class PlayerWeapon : MonoBehaviour
                         ACOG = false;
                         Acog.SetActive(false);
                     }
+                    if (Sniper)
+                    {
+                        Sniper = false;
+                        Sniper_.SetActive(false);
+                    }
                     Red_dot = true;
                     Red_Dot.SetActive(true);
                     Weaponbarrel = FirstModeBarrel;
                     AimFov = 40;
                     AimPosition = RedDotAimPosition;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, true, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, true, false, false);
                     if (NeedToHide && Scope != null && HidenScope != null)
                     {
                         Scope.SetActive(false);
@@ -507,7 +517,7 @@ public class PlayerWeapon : MonoBehaviour
                 }
             }
         }
-        if (sil)
+        else if (sil)
         {
             if (!Silencer)
             {
@@ -516,11 +526,43 @@ public class PlayerWeapon : MonoBehaviour
                     Silencer = true;
                     Sil.SetActive(true);
                     WeaponCurrentFireSound = GameManager.instance.SilSound;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, false, true);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, false, true, false);
                     if (Muzzle_break)
                     {
                         Muzzle_break = false;
                         Muzzle_br.SetActive(false);
+                    }
+                }
+            }
+        }
+        else if (_sniper)
+        {
+            if (!Sniper)
+            {
+                if (Sniper_ != null)
+                {
+                    Sniper = true;
+                    Sniper_.SetActive(true);
+                    AimFov = 30;
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, false, false, true);
+                    if (ACOG)
+                    {
+                        ACOG = false;
+                        Acog.SetActive(false);
+                    }
+                    if (Red_dot)
+                    {
+                        Red_dot = false;
+                        Red_Dot.SetActive(false);
+                    }
+                    if (NeedToHide && Scope != null && HidenScope != null)
+                    {
+                        Scope.SetActive(false);
+                        HidenScope.SetActive(true);
+                    }
+                    if (NeedToHide && Scope == null && HidenScope != null)
+                    {
+                        Scope.SetActive(false);
                     }
                 }
             }
