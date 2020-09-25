@@ -9,7 +9,6 @@ public class boom1 : MonoBehaviour
     [SerializeField] float[] Distances;
     [SerializeField] AudioSource _audio;
     [SerializeField] AudioClip Collision;
-    int counter = 0;
 
     void Start()
     {
@@ -52,11 +51,10 @@ public class boom1 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        counter++;
-        if (counter > 0)
+        Debug.Log(collision.collider.gameObject.tag);
+        if (collision.collider.gameObject.tag != "Player")
         {
             _audio.PlayOneShot(Collision);
         }
-        counter++;
     }
 }
