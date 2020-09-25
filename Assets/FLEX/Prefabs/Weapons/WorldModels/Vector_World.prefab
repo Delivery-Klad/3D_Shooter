@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4055581693806074}
   - component: {fileID: 198522767810637778}
   - component: {fileID: 199578628374033078}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4650,7 +4650,7 @@ GameObject:
   - component: {fileID: 4031074671136978}
   - component: {fileID: 114977692460986812}
   - component: {fileID: 82672444270058070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Vector_World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4722,12 +4722,14 @@ MonoBehaviour:
   flashlight: {fileID: 1946339861956807170}
   Muzzle_break: 0
   Silencer: 0
+  Sniper: 0
   ACOG: 0
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 5231752515832150963}
   Acog: {fileID: 0}
+  Sniper_: {fileID: 0}
   Red_Dot: {fileID: 6944425476609038641}
   Fore_Grip: {fileID: 0}
   Clip: {fileID: 1993659575077744742}
@@ -4836,7 +4838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444829249723866}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftHandTargetIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4866,7 +4868,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619043122165170207}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4979,6 +4981,11 @@ PrefabInstance:
     - target: {fileID: 206138578074526779, guid: 11f66f4b278c3a843a71f879e70b0cd7,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 206138578074526779, guid: 11f66f4b278c3a843a71f879e70b0cd7,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5027431863411842287, guid: 11f66f4b278c3a843a71f879e70b0cd7,
@@ -5183,6 +5190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677448460683087150, guid: 8507f559e5dc87148b13adf1c28ee794,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9014691366878067518, guid: 8507f559e5dc87148b13adf1c28ee794,
         type: 3}

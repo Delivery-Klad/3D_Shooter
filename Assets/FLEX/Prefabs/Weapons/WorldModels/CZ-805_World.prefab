@@ -4752,12 +4752,14 @@ MonoBehaviour:
   flashlight: {fileID: 0}
   Muzzle_break: 0
   Silencer: 0
+  Sniper: 0
   ACOG: 0
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 6337736402542218170}
   Sil: {fileID: 5128259296785444554}
   Acog: {fileID: 7968697548522107529}
+  Sniper_: {fileID: 0}
   Red_Dot: {fileID: 7488118882049723956}
   Fore_Grip: {fileID: 0}
   Clip: {fileID: 3113283011906078376}
@@ -5076,6 +5078,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3113283011906116226}
     m_Modifications:
+    - target: {fileID: 4035300858988050350, guid: 7be61f341b6735f43831976b7a48f6ba,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4556906641280256796, guid: 7be61f341b6735f43831976b7a48f6ba,
         type: 3}
       propertyPath: m_LocalPosition.x

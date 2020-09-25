@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4055581693806074}
   - component: {fileID: 198522767810637778}
   - component: {fileID: 199578628374033078}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4650,7 +4650,7 @@ GameObject:
   - component: {fileID: 4031074671136978}
   - component: {fileID: 114977692460986812}
   - component: {fileID: 82672444270058070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: P226_World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4722,12 +4722,14 @@ MonoBehaviour:
   flashlight: {fileID: 0}
   Muzzle_break: 0
   Silencer: 0
+  Sniper: 0
   ACOG: 0
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 0}
   Acog: {fileID: 0}
+  Sniper_: {fileID: 0}
   Red_Dot: {fileID: 0}
   Fore_Grip: {fileID: 0}
   Clip: {fileID: 1642671674524781533}
@@ -4836,7 +4838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444829249723866}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftHandTargetIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4866,7 +4868,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472584571613666815}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

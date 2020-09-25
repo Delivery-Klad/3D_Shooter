@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4639874948045448}
   - component: {fileID: 33448820083464184}
   - component: {fileID: 23830145246380430}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bullet_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4366473211711842}
   - component: {fileID: 33413151108537260}
   - component: {fileID: 23233124112482108}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4439337145949680}
   - component: {fileID: 33676997431250526}
   - component: {fileID: 23923410121263156}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4055581693806074}
   - component: {fileID: 198522767810637778}
   - component: {fileID: 199578628374033078}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4881,7 +4881,7 @@ GameObject:
   - component: {fileID: 4319387659415798}
   - component: {fileID: 33386154121395228}
   - component: {fileID: 23559589279119406}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bullet_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4958,7 +4958,7 @@ GameObject:
   - component: {fileID: 4911448952435746}
   - component: {fileID: 33559470390710462}
   - component: {fileID: 23005325774306262}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5035,7 +5035,7 @@ GameObject:
   - component: {fileID: 4143185826721866}
   - component: {fileID: 33792621436101752}
   - component: {fileID: 23518644324114330}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5112,7 +5112,7 @@ GameObject:
   - component: {fileID: 4142559079865194}
   - component: {fileID: 33592979560829082}
   - component: {fileID: 23242952130915866}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5189,7 +5189,7 @@ GameObject:
   - component: {fileID: 4031074671136978}
   - component: {fileID: 114977692460986812}
   - component: {fileID: 82672444270058070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Glock_World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5262,12 +5262,14 @@ MonoBehaviour:
   flashlight: {fileID: 0}
   Muzzle_break: 0
   Silencer: 0
+  Sniper: 0
   ACOG: 0
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 4372534867605541038}
   Acog: {fileID: 0}
+  Sniper_: {fileID: 0}
   Red_Dot: {fileID: 0}
   Fore_Grip: {fileID: 0}
   Clip: {fileID: 1161517104203348}
@@ -5377,7 +5379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4045780258663638}
   - component: {fileID: 95723026988274818}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Glock_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444829249723866}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftHandTargetIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5464,7 +5466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6543426406322421859}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

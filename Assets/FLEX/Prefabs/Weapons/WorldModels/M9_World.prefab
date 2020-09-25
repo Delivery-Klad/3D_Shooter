@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4055581693806074}
   - component: {fileID: 198522767810637778}
   - component: {fileID: 199578628374033078}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MuzzleFlashEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4650,7 +4650,7 @@ GameObject:
   - component: {fileID: 4031074671136978}
   - component: {fileID: 114977692460986812}
   - component: {fileID: 82672444270058070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: M9_World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4723,12 +4723,14 @@ MonoBehaviour:
   flashlight: {fileID: 0}
   Muzzle_break: 0
   Silencer: 0
+  Sniper: 0
   ACOG: 0
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 0}
   Sil: {fileID: 4552258998532701043}
   Acog: {fileID: 0}
+  Sniper_: {fileID: 0}
   Red_Dot: {fileID: 0}
   Fore_Grip: {fileID: 0}
   Clip: {fileID: 3483732131166070069}
@@ -4837,7 +4839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444829249723866}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeftHandTargetIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4867,7 +4869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3409792116804954299}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5065,10 +5067,50 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7164058489721971968, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164121224694789970, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164164711005980720, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7164249227514482202, guid: bea0c456d47e70a47b69d993b2d74a78,
         type: 3}
       propertyPath: m_Name
       value: Glock_17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164249227514482202, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164624346587889026, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164817275618833518, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164830937530957294, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164862432479777610, guid: bea0c456d47e70a47b69d993b2d74a78,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7167653801610414766, guid: bea0c456d47e70a47b69d993b2d74a78,
         type: 3}
