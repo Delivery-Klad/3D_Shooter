@@ -13,6 +13,7 @@ public class ThirdPersonWeapon : MonoBehaviour
     public ParticleSystem MuzzleFlash;
     public AudioSource ThirdPersonAudioSource;
     public AudioClip[] WeaponFireSound;
+    public AudioClip[] WeaponFireSilencerSound;
     public AudioClip[] WeaponReloadSound;
     public AudioClip[] WeaponEmptySound;
     public AudioClip[] WeaponSwitchSound;

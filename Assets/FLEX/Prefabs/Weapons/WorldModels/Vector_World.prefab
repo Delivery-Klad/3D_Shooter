@@ -4698,6 +4698,8 @@ MonoBehaviour:
   ThirdPersonAudioSource: {fileID: 82672444270058070}
   WeaponFireSound:
   - {fileID: 8300000, guid: b90537c1889257443b0450aac092e226, type: 3}
+  WeaponFireSilencerSound:
+  - {fileID: 8300000, guid: a38896b330424c946bedb2c163accc8d, type: 3}
   WeaponReloadSound:
   - {fileID: 8300000, guid: f2ae3e789a8ab2143a72d97f20cececc, type: 3}
   WeaponEmptySound:

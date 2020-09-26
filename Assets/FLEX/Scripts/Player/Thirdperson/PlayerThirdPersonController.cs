@@ -212,7 +212,6 @@ public class PlayerThirdPersonController : MonoBehaviour
         ThirdPersonWeapon TpWeapon = ThirdPersonWorldWeapon.GetComponent<ThirdPersonWeapon>();
         if (muzzle)
         {
-            Debug.Log("zaletelo");
             TpWeapon.Muzzle_break = true;
             TpWeapon.Muzzle_br.SetActive(true);
             if (TpWeapon.Silencer)
@@ -321,10 +320,21 @@ public class PlayerThirdPersonController : MonoBehaviour
     {
         ThirdPersonWeapon TpWeapon = ThirdPersonWorldWeapon.GetComponent<ThirdPersonWeapon>();
         PlayerThirdPersonAnimator.SetTrigger("Shoot");
-        if (TpWeapon.WeaponFireSound.Length != 0)
+        if (!TpWeapon.Silencer)
         {
-            TpWeapon.MuzzleFlash.Play();
-            TpWeapon.ThirdPersonAudioSource.PlayOneShot(TpWeapon.WeaponFireSound[0]);
+            if (TpWeapon.WeaponFireSound.Length != 0)
+            {
+                TpWeapon.MuzzleFlash.Play();
+                TpWeapon.ThirdPersonAudioSource.PlayOneShot(TpWeapon.WeaponFireSound[0]);
+            }
+        }
+        else
+        {
+            if (TpWeapon.WeaponFireSilencerSound.Length != 0)
+            {
+                TpWeapon.MuzzleFlash.Play();
+                TpWeapon.ThirdPersonAudioSource.PlayOneShot(TpWeapon.WeaponFireSilencerSound[0]);
+            }
         }
         if (TpWeapon.WeaponFireLoopSound != null)
         {

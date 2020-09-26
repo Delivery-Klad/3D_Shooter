@@ -4730,6 +4730,8 @@ MonoBehaviour:
   ThirdPersonAudioSource: {fileID: 82949165127986114}
   WeaponFireSound:
   - {fileID: 8300000, guid: 289fbb1d624f9064a939ad2d33cbca49, type: 3}
+  WeaponFireSilencerSound:
+  - {fileID: 8300000, guid: e46deddf79777ea409625d5564865a74, type: 3}
   WeaponReloadSound:
   - {fileID: 8300000, guid: add0dbd933aaa4b4e9c96b6c37659963, type: 3}
   WeaponEmptySound:
@@ -4754,12 +4756,14 @@ MonoBehaviour:
   flashlight: {fileID: 0}
   Muzzle_break: 0
   Silencer: 0
+  Sniper: 0
   ACOG: 0
   Red_dot: 0
   ForeGrip: 0
   Muzzle_br: {fileID: 8504112071889888454}
   Sil: {fileID: 2534263441765497935}
   Acog: {fileID: 0}
+  Sniper_: {fileID: 0}
   Red_Dot: {fileID: 0}
   Fore_Grip: {fileID: 0}
   Clip: {fileID: 1796238450187132246}

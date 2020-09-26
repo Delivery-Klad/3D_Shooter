@@ -220,7 +220,14 @@ public class DeveloperConsole : MonoBehaviour
 
     public void AddConsoleMessage(string message, string color)
     {
-        ConsoleText.text = ConsoleText.text + string.Format("\n<color={0}>{1}</color>", color, message);
+        try
+        {
+            ConsoleText.text = ConsoleText.text + string.Format("\n<color={0}>{1}</color>", color, message);
+        }
+        catch
+        {
+            clear();
+        }
     }
 
     void HandleLog(string logString, string stackTrace, LogType type)

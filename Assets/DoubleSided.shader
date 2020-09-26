@@ -1,4 +1,4 @@
-Shader "Ciconia Studio/Double Sided/Standard/Diffuse Bump" {
+Shader "Delivery Klad/Double Sided" {
     Properties {
         _Color ("Diffuse Color", Color) = (1,1,1,1)
         _SpecColor ("Specular Color", Color) = (1,1,1,1)

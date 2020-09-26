@@ -10173,11 +10173,11 @@ MonoBehaviour:
   WeaponShellEject: {fileID: 198925671957732896}
   WeaponAudiosource: {fileID: 0}
   WeaponDrawSound: {fileID: 8300000, guid: 20aef59f920b82745ae2ceb53932e3be, type: 3}
-  WeaponCurrentFireSound: {fileID: 8300000, guid: 30ebdd077491a8d4997c0b54132fd7fb,
+  WeaponCurrentFireSound: {fileID: 8300000, guid: 59ca7213c6f6e3846a60e8495494db71,
     type: 3}
-  WeaponFirePrimarySound: {fileID: 8300000, guid: 30ebdd077491a8d4997c0b54132fd7fb,
+  WeaponFirePrimarySound: {fileID: 8300000, guid: 59ca7213c6f6e3846a60e8495494db71,
     type: 3}
-  WeaponFireSecondarySound: {fileID: 8300000, guid: 30ebdd077491a8d4997c0b54132fd7fb,
+  WeaponFireSecondarySound: {fileID: 8300000, guid: 59ca7213c6f6e3846a60e8495494db71,
     type: 3}
   WeaponReloadSound: {fileID: 8300000, guid: 0cd8cca744beac240aae9a6cc44c4cc4, type: 3}
   WeaponEmptySound: {fileID: 8300000, guid: d3591642628792446a598ef8c9975fa8, type: 3}
