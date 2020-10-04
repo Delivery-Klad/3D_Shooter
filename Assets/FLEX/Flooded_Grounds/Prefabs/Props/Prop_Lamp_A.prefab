@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3357468}
   - component: {fileID: 2361322}
   - component: {fileID: 6587490}
+  - component: {fileID: 8084679504181828308}
+  - component: {fileID: 6795063394314157635}
   m_Layer: 2
   m_Name: lo_Prop_Lamp_A_LOD0
   m_TagString: Wood
@@ -89,8 +91,34 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.49502593, y: 0.7328258, z: 0.49502593}
-  m_Center: {x: 0.0014277399, y: 0.36909375, z: 0.0003267601}
+  m_Size: {x: 0.2746582, y: 0.051359855, z: 0.27529907}
+  m_Center: {x: 0.0037231445, y: 0.02836077, z: -0.0011146367}
+--- !u!135 &8084679504181828308
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.19917202
+  m_Center: {x: 0.0014277399, y: 0.5468414, z: 0.00032675266}
+--- !u!65 &6795063394314157635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.034454346, y: 0.30678558, z: 0.078674324}
+  m_Center: {x: -0.023757935, y: 0.20841005, z: -0.009796884}
 --- !u!1 &166050
 GameObject:
   m_ObjectHideFlags: 0
