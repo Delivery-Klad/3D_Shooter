@@ -49,7 +49,7 @@ namespace MirzaBeig
 
                 void Awake()
                 {
-
+                    Debug.Log(this.gameObject);
                 }
 
                 // ...

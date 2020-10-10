@@ -18,12 +18,14 @@ public class PlayerWeapon : MonoBehaviour
     public bool ACOG = false;
     public bool Sniper = false;
     public bool Red_dot = false;
+    public bool collim = false;
     public bool ForeGrip = false;
     public GameObject Muzzle_br;
     public GameObject Sil;
     public GameObject Acog;
     public GameObject Sniper_;
     public GameObject Red_Dot;
+    public GameObject Collimator;
     public GameObject Fore_Grip;
     public Vector3 ACOGAimPosition;
     public Vector3 SniperAimPosition;
