@@ -37,8 +37,13 @@ public class boom1 : MonoBehaviour
         {
             if (Distances[i] < 20f)
             {
-                Players[i].GetComponent<PhotonView>().RPC("ApplyPlayerDamage", PhotonTargets.All, (100 - ((int)Distances[i] * 3)), "Grenade", PhotonNetwork.player, 1.0f, false);
-                Debug.Log(Distances[i]);
+                Ray ray = new Ray(gameObject.transform.position, (Players[i].transform.position - gameObject.transform.position).normalized);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit) && hit.collider.name == Players[i].name)
+                {
+                    Players[i].GetComponent<PhotonView>().RPC("ApplyPlayerDamage", PhotonTargets.All, (100 - ((int)Distances[i] * 3)), "Grenade", PhotonNetwork.player, 1.0f, false);
+                    Debug.Log(Distances[i]);
+                }
             }
         }
     }
