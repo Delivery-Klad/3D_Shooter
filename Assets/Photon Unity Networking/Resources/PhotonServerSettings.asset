@@ -88,4 +88,6 @@ MonoBehaviour:
   - SetModules
   - RemoveModule
   - AddForce
+  - EnterDriver
+  - ExitDriver
   DisableAutoOpenWizard: 1

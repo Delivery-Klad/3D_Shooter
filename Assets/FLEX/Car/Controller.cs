@@ -15,6 +15,22 @@ public class Controller : MonoBehaviour
     public float maxSteerAngle = 30;
     public float motorForce = 50;
 
+    public bool inTrigger = false;
+    public Transform Driver;
+    public Transform Passenger;
+    public GameObject[] inCar;
+
+    private void Update()
+    {
+        if (inTrigger)
+        {
+            if (inCar[0] == null)
+            {
+
+            }
+        }
+    }
+
     public void GetInput()
     {
         m_horizontalInput = Input.GetAxis("Horizontal");
@@ -59,5 +75,35 @@ public class Controller : MonoBehaviour
         Steer();
         Accelerate();
         UpdateWheelPoses();
+    }
+
+    [PunRPC]
+    public void EnterDriver()
+    {
+
+    }
+
+    [PunRPC]
+    public void ExitDriver()
+    {
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        inTrigger = true;
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (inCar[0] == null)
+            {
+                inCar[0] = other.gameObject;
+                EnterDriver();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        inTrigger = false;
     }
 }
