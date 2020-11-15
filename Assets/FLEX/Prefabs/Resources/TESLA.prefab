@@ -14825,6 +14825,14 @@ MonoBehaviour:
   rearPassengerT: {fileID: 4143677680345968}
   maxSteerAngle: 45
   motorForce: 500
+  inTrigger: 0
+  Driver: {fileID: 0}
+  Passenger: {fileID: 0}
+  DriverExit: {fileID: 0}
+  PassengerExit: {fileID: 0}
+  inCar:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1348591422240344
 GameObject:
   m_ObjectHideFlags: 0

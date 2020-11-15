@@ -20,13 +20,13 @@ public class Door : MonoBehaviour
             {
                 Open = true;
                 PhotonView PV = GetComponent<PhotonView>();
-                PV.RPC("syncTrue", PhotonTargets.All, true);
+                PV.RPC("syncTrue", PhotonTargets.AllBuffered, true);
             }
             else if (Input.GetKeyDown(PlayerInputManager.instance.Use_Button) && _animator.GetBool("isOpen") == true)
             {
                 Open = false;
                 PhotonView PV = GetComponent<PhotonView>();
-                PV.RPC("syncTrue", PhotonTargets.All, false);
+                PV.RPC("syncTrue", PhotonTargets.AllBuffered, false);
             }
         }
         if (Open == true)

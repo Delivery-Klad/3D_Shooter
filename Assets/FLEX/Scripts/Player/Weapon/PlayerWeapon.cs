@@ -205,13 +205,13 @@ public class PlayerWeapon : MonoBehaviour
             {
                 flashlight.SetActive(true);
                 flashon = true;
-                PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("FlashOn", PhotonTargets.All, null);
+                PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("FlashOn", PhotonTargets.AllBuffered, null);
             }
             else if (Input.GetKeyDown(KeyCode.O) && flashon)
             {
                 flashlight.SetActive(false);
                 flashon = false;
-                PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("FlashOff", PhotonTargets.All, null);
+                PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("FlashOff", PhotonTargets.AllBuffered, null);
             }
         }
         if (bulletType == BulletType.Nato)
@@ -442,7 +442,7 @@ public class PlayerWeapon : MonoBehaviour
                     Muzzle_break = true;
                     Muzzle_br.SetActive(true);
                     WeaponCurrentFireSound = WeaponFirePrimarySound;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, true, false, false, false, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.AllBuffered, true, false, false, false, false);
                     if (Silencer)
                     {
                         Silencer = false;
@@ -472,7 +472,7 @@ public class PlayerWeapon : MonoBehaviour
                     Weaponbarrel = SecondModeBarrel;
                     AimFov = 25;
                     AimPosition = ACOGAimPosition;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, true, false, false, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.AllBuffered, false, true, false, false, false);
                     if (NeedToHide && Scope != null && HidenScope != null)
                     {
                         Scope.SetActive(false);
@@ -506,7 +506,7 @@ public class PlayerWeapon : MonoBehaviour
                     Weaponbarrel = FirstModeBarrel;
                     AimFov = 40;
                     AimPosition = RedDotAimPosition;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, true, false, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.AllBuffered, false, false, true, false, false);
                     if (NeedToHide && Scope != null && HidenScope != null)
                     {
                         Scope.SetActive(false);
@@ -528,7 +528,7 @@ public class PlayerWeapon : MonoBehaviour
                     Silencer = true;
                     Sil.SetActive(true);
                     WeaponCurrentFireSound = GameManager.instance.SilSound;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, false, true, false);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.AllBuffered, false, false, false, true, false);
                     if (Muzzle_break)
                     {
                         Muzzle_break = false;
@@ -546,7 +546,7 @@ public class PlayerWeapon : MonoBehaviour
                     Sniper = true;
                     Sniper_.SetActive(true);
                     AimFov = 30;
-                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.All, false, false, false, false, true);
+                    PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("SetModules", PhotonTargets.AllBuffered, false, false, false, false, true);
                     if (ACOG)
                     {
                         ACOG = false;
@@ -792,7 +792,7 @@ public class PlayerWeapon : MonoBehaviour
             {
                 GameObject GlassHole = Instantiate(GlassImpact, WeaponHit.point, Quaternion.FromToRotation(Vector3.forward, WeaponHit.normal));
                 GlassHole.transform.parent = WeaponHit.transform;
-                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.All, CurrentDamage, PhotonNetwork.player);
+                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.AllBuffered, CurrentDamage, PhotonNetwork.player);
                 PlayerMovementController.PlayerThirdPersonController.ThirdPersonPhotonView.RPC("ThirdPersonImpacts", PhotonTargets.Others, Spread, Direction, Weaponbarrel.position);
             }
             if (WeaponHit.collider.tag == "BreakedGlass")
@@ -815,14 +815,14 @@ public class PlayerWeapon : MonoBehaviour
             //}
             if (WeaponHit.collider.tag == "DestroyableObject")
             {
-                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.All, CurrentDamage);
+                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.AllBuffered, CurrentDamage);
             }
             if (WeaponHit.collider.tag == "Bot")
             {
                 GameObject FleshHole = Instantiate(FleshImpact, WeaponHit.point, Quaternion.FromToRotation(Vector3.forward, WeaponHit.normal));
                 FleshHole.transform.parent = WeaponHit.transform;
                 InGameUI.instance.DoHitMarker();
-                WeaponHit.transform.root.GetComponent<PhotonView>().RPC("ApplyBotDamage", PhotonTargets.All, CurrentDamage, WeaponName, PhotonNetwork.player, 1.0f, false);
+                WeaponHit.transform.root.GetComponent<PhotonView>().RPC("ApplyBotDamage", PhotonTargets.AllBuffered, CurrentDamage, WeaponName, PhotonNetwork.player, 1.0f, false);
             }
             if (WeaponHit.collider.tag == "PlayerHitbox")
             {
@@ -923,7 +923,7 @@ public class PlayerWeapon : MonoBehaviour
             {
                 GameObject GlassHole = Instantiate(GlassImpact, WeaponHit.point, Quaternion.FromToRotation(Vector3.forward, WeaponHit.normal));
                 GlassHole.transform.parent = WeaponHit.transform;
-                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.All, Damage, PhotonNetwork.player);
+                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.AllBuffered, Damage, PhotonNetwork.player);
             }
             if (WeaponHit.collider.tag == "BreakedGlass")
             {
@@ -938,14 +938,14 @@ public class PlayerWeapon : MonoBehaviour
             //}
             if (WeaponHit.collider.tag == "DestroyableObject")
             {
-                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.All, Damage);
+                WeaponHit.transform.GetComponent<PhotonView>().RPC("ApplyDamage", PhotonTargets.AllBuffered, Damage);
             }
             if (WeaponHit.collider.tag == "Bot")
             {
                 GameObject FleshHole = Instantiate(FleshImpact, WeaponHit.point, Quaternion.FromToRotation(Vector3.forward, WeaponHit.normal));
                 FleshHole.transform.parent = WeaponHit.transform;
                 InGameUI.instance.DoHitMarker();
-                WeaponHit.transform.root.GetComponent<PhotonView>().RPC("ApplyBotDamage", PhotonTargets.All, Damage, WeaponName, PhotonNetwork.player, 1.0f, false);
+                WeaponHit.transform.root.GetComponent<PhotonView>().RPC("ApplyBotDamage", PhotonTargets.AllBuffered, Damage, WeaponName, PhotonNetwork.player, 1.0f, false);
             }
             if (WeaponHit.collider.tag == "PlayerHitbox")
             {

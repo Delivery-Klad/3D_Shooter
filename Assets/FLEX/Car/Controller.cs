@@ -18,7 +18,16 @@ public class Controller : MonoBehaviour
     public bool inTrigger = false;
     public Transform Driver;
     public Transform Passenger;
+    public Transform DriverExit;
+    public Transform PassengerExit;
     public GameObject[] inCar;
+    PhotonView PV;
+
+
+    private void Start()
+    {
+        PV = gameObject.GetComponent<PhotonView>();
+    }
 
     private void Update()
     {
@@ -71,22 +80,28 @@ public class Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        GetInput();
-        Steer();
-        Accelerate();
-        UpdateWheelPoses();
+        if (inCar[0] != null)
+        {
+            GetInput();
+            Steer();
+            Accelerate();
+            UpdateWheelPoses();
+        }
     }
 
     [PunRPC]
     public void EnterDriver()
     {
-
+        inCar[0].transform.position = Driver.transform.position;
+        inCar[0].transform.rotation = Driver.transform.rotation;
+        inCar[0].transform.parent = Driver.transform;
     }
 
     [PunRPC]
     public void ExitDriver()
     {
-
+        inCar[0].transform.parent = null;
+        inCar[0] = null;
     }
 
     private void OnTriggerStay(Collider other)
@@ -97,7 +112,7 @@ public class Controller : MonoBehaviour
             if (inCar[0] == null)
             {
                 inCar[0] = other.gameObject;
-                EnterDriver();
+                PV.RPC("EnterDriver", PhotonTargets.AllBuffered);
             }
         }
     }
