@@ -22,6 +22,7 @@ public class Controller : MonoBehaviour
     public Transform PassengerExit;
     public GameObject[] inCar;
     PhotonView PV;
+    public GameObject Camera;
 
 
     private void Start()
@@ -31,13 +32,7 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
-        if (inTrigger)
-        {
-            if (inCar[0] == null)
-            {
 
-            }
-        }
     }
 
     public void GetInput()
@@ -80,7 +75,7 @@ public class Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (inCar[0] != null)
+        if (inCar[0] == GameManager.instance.LocalPlayer)
         {
             GetInput();
             Steer();
@@ -107,11 +102,15 @@ public class Controller : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         inTrigger = true;
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && other.tag == "Player")
         {
+            GameObject go = GameManager.instance.LocalPlayer;
             if (inCar[0] == null)
             {
-                inCar[0] = other.gameObject;
+                go.GetComponent<Ray2Take>().RayPoint.SetActive(false);
+                Camera.SetActive(true);
+                GameManager.instance.InVehicle = true;
+                inCar[0] = go;
                 PV.RPC("EnterDriver", PhotonTargets.AllBuffered);
             }
         }
