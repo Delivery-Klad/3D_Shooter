@@ -10,6 +10,10 @@ public class FPSDisplay : MonoBehaviour
 
     public int AverageFPS { get; private set; }
 
+    private void Start()
+    {
+        StartCoroutine("TimeCounter");
+    }
 
     void Update()
     {
@@ -67,5 +71,20 @@ public class FPSDisplay : MonoBehaviour
             sum += fps;
         }
         AverageFPS = sum / _frameRange;
+    }
+
+    IEnumerator TimeCounter()
+    {
+        yield return new WaitForSeconds(60);
+        if (PlayerPrefs.HasKey("TimePlaying"))
+        {
+            int temp = PlayerPrefs.GetInt("TimePlaying");
+            PlayerPrefs.SetInt("TimePlaying", temp + 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("TimePlaying", 1);
+        }
+        StartCoroutine("TimeCounter");
     }
 }

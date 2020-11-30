@@ -9,6 +9,7 @@ public class AccountStats : MonoBehaviour
     public Text Wins;
     public Text Items;
     public Text Windows;
+    public Text Time;
     public Text Distance;
 
     void Start()
@@ -36,6 +37,10 @@ public class AccountStats : MonoBehaviour
         if (PlayerPrefs.HasKey("TotalWindows"))
         {
             Windows.text = PlayerPrefs.GetInt("TotalWindows").ToString();
+        }
+        if (PlayerPrefs.HasKey("TimePlaying"))
+        {
+            Time.text = PlayerPrefs.GetInt("TimePlaying").ToString() + " min";
         }
         if (PlayerPrefs.HasKey("TotalDistance"))
         {
