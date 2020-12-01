@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -41,7 +42,12 @@ public class MainMenuUI : MonoBehaviour
     public InputField PlayerNameInputfield;
     public Dropdown ResolutionDropDown;
     private Resolution[] Resolutions;
-    public Slider GlobalVolume;
+    [SerializeField] AudioMixerGroup mixer;
+    public Slider MasterVolume;
+    public Slider MusicVolume;
+    public Slider EffectsVolume;
+    public Slider EnvVolume;
+    public Slider UIVolume;
     private float volume;
     public Slider BloomSetting;
     public Slider ShutterAngleSetting;
@@ -122,11 +128,35 @@ public class MainMenuUI : MonoBehaviour
 
     void LoadGraphicSettings()
     {
-        if (PlayerPrefs.HasKey("GlobalVolume"))
+        if (PlayerPrefs.HasKey("MasterVolume"))
         {
-            volume = PlayerPrefs.GetFloat("GlobalVolume");
-            GlobalVolume.value = volume;
-            AudioListener.volume = volume;
+            volume = PlayerPrefs.GetFloat("MasterVolume");
+            MasterVolume.value = volume;
+            mixer.audioMixer.SetFloat("Master", volume);
+        }
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("MusicVolume");
+            MusicVolume.value = volume;
+            mixer.audioMixer.SetFloat("Music", volume);
+        }
+        if (PlayerPrefs.HasKey("EffectsVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("EffectsVolume");
+            EffectsVolume.value = volume;
+            mixer.audioMixer.SetFloat("Effects", volume);
+        }
+        if (PlayerPrefs.HasKey("EnvVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("EnvVolume");
+            EnvVolume.value = volume;
+            mixer.audioMixer.SetFloat("Env", volume);
+        }
+        if (PlayerPrefs.HasKey("UIVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("UIVolume");
+            UIVolume.value = volume;
+            mixer.audioMixer.SetFloat("UI", volume);
         }
         if (PlayerPrefs.HasKey("BloomSetting"))
         {
@@ -192,8 +222,32 @@ public class MainMenuUI : MonoBehaviour
 
     public void SaveGlobalVolume(Slider slider)
     {
-        AudioListener.volume = slider.value;
-        PlayerPrefs.SetFloat("GlobalVolume", slider.value);
+        mixer.audioMixer.SetFloat("Master", slider.value);
+        PlayerPrefs.SetFloat("MasterVolume", slider.value);
+    }
+
+    public void SaveMusicVolume(Slider slider)
+    {
+        mixer.audioMixer.SetFloat("Music", slider.value);
+        PlayerPrefs.SetFloat("MusicVolume", slider.value);
+    }
+
+    public void SaveEffectsVolume(Slider slider)
+    {
+        mixer.audioMixer.SetFloat("Effects", slider.value);
+        PlayerPrefs.SetFloat("EffectsVolume", slider.value);
+    }
+
+    public void SaveEnvVolume(Slider slider)
+    {
+        mixer.audioMixer.SetFloat("Env", slider.value);
+        PlayerPrefs.SetFloat("EnvVolume", slider.value);
+    }
+
+    public void SaveUIVolume(Slider slider)
+    {
+        mixer.audioMixer.SetFloat("UI", slider.value);
+        PlayerPrefs.SetFloat("UIVolume", slider.value);
     }
 
     public void SaveBloom(Slider slider)
@@ -228,9 +282,21 @@ public class MainMenuUI : MonoBehaviour
 
     public void ResetAudioSettings(Slider slider)
     {
-        AudioListener.volume = 1f;
-        PlayerPrefs.SetFloat("GlobalVolume", 1f);
-        slider.value = 1f;
+        mixer.audioMixer.SetFloat("Master", 0);
+        mixer.audioMixer.SetFloat("Music", 0);
+        mixer.audioMixer.SetFloat("Effects", 0);
+        mixer.audioMixer.SetFloat("Env", 0);
+        mixer.audioMixer.SetFloat("UI", 0);
+        PlayerPrefs.SetFloat("MasterVolume", 0);
+        PlayerPrefs.SetFloat("MusicVolume", 0);
+        PlayerPrefs.SetFloat("EffectsVolume", 0);
+        PlayerPrefs.SetFloat("EnvVolume", 0);
+        PlayerPrefs.SetFloat("UIVolume", 0);
+        MasterVolume.value = 1f;
+        MusicVolume.value = 1f;
+        EffectsVolume.value = 1f;
+        EnvVolume.value = 1f;
+        UIVolume.value = 1f;
     }
 
     public void ResetBloomSettings(Slider _bloom)
