@@ -6,9 +6,14 @@ public class Door : MonoBehaviour
     private Animator _animator = null;
     public bool on = false;
     public bool Open = false;
-    
+    [SerializeField] AudioSource AU;
+    AudioClip Open_Clip;
+    AudioClip Close_Clip;
+
+
     void Start()
     {
+        AU = gameObject.GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
     }
 
