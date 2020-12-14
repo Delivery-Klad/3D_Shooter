@@ -22,72 +22,64 @@ MonoBehaviour:
   ServerAddress: 
   ServerPort: 5055
   VoiceServerPort: 5055
-  JoinLobby: 1
+  JoinLobby: 0
   EnableLobbyStatistics: 0
   PunLogging: 0
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - AddChatMessage
+  - AddForce
+  - AddKillFeedEntry
+  - ApplyBotDamage
+  - ApplyDamage
+  - ApplyPlayerDamage
   - Chat
   - ColorRpc
   - DestroyRpc
   - DoJump
-  - Flash
-  - InstantiateRpc
-  - Marco
-  - PickupItemInit
-  - Polo
-  - PunPickup
-  - PunPickupSimple
-  - PunRespawn
-  - RequestForPickupItems
-  - RequestForPickupTimes
-  - TaggedPlayer
-  - AddChatMessage
-  - AddKillFeedEntry
-  - ApplyDamage
-  - ApplyPlayerDamage
   - EndGame
+  - EnterDriver
+  - ExitDriver
   - FinishReload
+  - Flash
+  - FlashOff
+  - FlashOn
+  - InstantiateRpc
   - LoadNextMap
+  - Marco
   - OnPlayerEnter
   - OnPlayerExit
   - OnPlayerKilled
   - OnPlayerSeatChange
   - OnThirdPersonDeath
+  - PickupItemInit
   - PlayFootstepSoundNetwork
   - PlayFXAtPosition
-  - SetThirdPersonWeapon
-  - Stryker_Main_Gun_Visuals
-  - SyncAmbientSoundNetwork
-  - SyncInteractableState
-  - SyncPlayerTeam
-  - ThirdPersonEnableWeaponIK
-  - ThirdPersonFireWeapon
-  - ThirdPersonReload
-  - Update
-  - ThirdPersonEmpty
-  - ThirdPersonSwitch
-  - FireBullet
-  - ThirdPersonImpacts
-  - FlashOff
-  - FlashOn
-  - BotMove
-  - ApplyBotDamage
-  - ChangeVehicleDamageState
-  - FinishVehicleDamage
-  - OnVehicleKilled
-  - SyncVehicleDamage
-  - SpawnGun
+  - Polo
+  - PunPickup
+  - PunPickupSimple
+  - PunRespawn
   - RemoveAmmo
   - RemoveGun
   - RemoveHP
-  - syncTrue
+  - RemoveModule
+  - RequestForPickupItems
+  - RequestForPickupTimes
   - RpcSendRotation
   - RpcSendTransform
   - SetModules
-  - RemoveModule
-  - AddForce
-  - EnterDriver
-  - ExitDriver
+  - SetThirdPersonWeapon
+  - SpawnGun
+  - SyncAmbientSoundNetwork
+  - SyncInteractableState
+  - SyncPlayerTeam
+  - syncTrue
+  - TaggedPlayer
+  - ThirdPersonEmpty
+  - ThirdPersonEnableWeaponIK
+  - ThirdPersonFireWeapon
+  - ThirdPersonImpacts
+  - ThirdPersonReload
+  - ThirdPersonSwitch
   DisableAutoOpenWizard: 1
