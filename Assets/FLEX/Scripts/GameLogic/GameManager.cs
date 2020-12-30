@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Rendering.PostProcessing;
+//using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : MonoBehaviour
 {
@@ -82,11 +82,11 @@ public class GameManager : MonoBehaviour
     public string[] PhotonAppKeys;
 
     [Header("Настройки PostProcess")]
-    private PostProcessVolume PPV;
-    private Bloom _bloom;
-    private AutoExposure _autoExposure;
-    private MotionBlur _motionBloor;
-    private ColorGrading _colorGrading;
+    //private PostProcessVolume PPV;
+    //private Bloom _bloom;
+    //private AutoExposure _autoExposure;
+    //private MotionBlur _motionBloor;
+    //private ColorGrading _colorGrading;
 
     [Header("Настройки PostProcess")]
     public AudioClip SilSound;
@@ -149,52 +149,52 @@ public class GameManager : MonoBehaviour
             DeathMatchSpawns = GameObject.FindGameObjectsWithTag("DeathMatchSpawn");
             RedTeamSpawns = GameObject.FindGameObjectsWithTag("RedTeamSpawn");
             BlueTeamSpawns = GameObject.FindGameObjectsWithTag("BlueTeamSpawn");
-            PPV = GameObject.Find("SceneManager").GetComponent<PostProcessVolume>();
+            //PPV = GameObject.Find("SceneManager").GetComponent<PostProcessVolume>();
             if (MapChanged == true && PhotonNetwork.inRoom)
             {
                 InitGameType();
                 MapChanged = false;
             }
-            PostProcessingChange();
+            //PostProcessingChange();
         }
     }
 
     void PostProcessingChange()
     {
-        PPV.profile.TryGetSettings(out _bloom);
-        PPV.profile.TryGetSettings(out _motionBloor);
-        PPV.profile.TryGetSettings(out _colorGrading);
+        //PPV.profile.TryGetSettings(out _bloom);
+        //PPV.profile.TryGetSettings(out _motionBloor);
+        //PPV.profile.TryGetSettings(out _colorGrading);
         if (PlayerPrefs.HasKey("BloomSetting"))
         {
-            _bloom.intensity.value = PlayerPrefs.GetFloat("BloomSetting");
+            //_bloom.intensity.value = PlayerPrefs.GetFloat("BloomSetting");
         }
         else
         {
-            _bloom.intensity.value = 1.0f;
+            //_bloom.intensity.value = 1.0f;
         }
         if (PlayerPrefs.HasKey("ShutterAngleSetting"))
         {
-            _motionBloor.shutterAngle.value = PlayerPrefs.GetFloat("ShutterAngleSetting");
+            //_motionBloor.shutterAngle.value = PlayerPrefs.GetFloat("ShutterAngleSetting");
         }
         else
         {
-            _motionBloor.shutterAngle.value = 250.0f;
+            //_motionBloor.shutterAngle.value = 250.0f;
         }
         if (PlayerPrefs.HasKey("SaturationSetting"))
         {
-            _colorGrading.saturation.value = PlayerPrefs.GetFloat("SaturationSetting");
+            //_colorGrading.saturation.value = PlayerPrefs.GetFloat("SaturationSetting");
         }
         else
         {
-            _colorGrading.saturation.value = 20.0f;
+            //_colorGrading.saturation.value = 20.0f;
         }
         if (PlayerPrefs.HasKey("ContrastSetting"))
         {
-            _colorGrading.contrast.value = PlayerPrefs.GetFloat("ContrastSetting");
+            //_colorGrading.contrast.value = PlayerPrefs.GetFloat("ContrastSetting");
         }
         else
         {
-            _colorGrading.contrast.value = -5.0f;
+            //_colorGrading.contrast.value = -5.0f;
         }
     }
 
