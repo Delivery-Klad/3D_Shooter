@@ -65,6 +65,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -77,6 +79,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -89,6 +92,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &3140537152853644330
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -111,44 +115,265 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Leaf Material
-  m_Shader: {fileID: 4800000, guid: 56e01684409c0f740b8acfe62e330a33, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_ShaderKeywords: _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING _DOUBLESIDED_ON
+    _ENABLE_FOG_ON_TRANSPARENT _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap: {}
-  disabledShaderPasses: []
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - DistortionVectors
+  - MOTIONVECTORS
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AnisotropyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColorMap:
+        m_Texture: {fileID: 2800000, guid: c987d1c2e16f99941b95186a978b55be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BentNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BentNormalMapOS:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 722390a243113914db49b2085843bea6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CoatMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IridescenceMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IridescenceThicknessMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: c987d1c2e16f99941b95186a978b55be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: b774524c308cdbb40be62e8b2806f0e7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 722390a243113914db49b2085843bea6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMapOS:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowTex:
         m_Texture: {fileID: 2800000, guid: b774524c308cdbb40be62e8b2806f0e7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubsurfaceMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TangentMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TangentMapOS:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
         m_Texture: {fileID: 2800000, guid: 04f2c1f076e4bdc458bdb08eea9b7911, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TransmittanceColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Cutoff: 0.4
+    - _AORemapMax: 1
+    - _AORemapMin: 0
+    - _ATDistance: 1
+    - _AddPrecomputedVelocity: 0
+    - _AlbedoAffectEmissive: 0
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _AlphaCutoffPostpass: 0.5
+    - _AlphaCutoffPrepass: 0.5
+    - _AlphaCutoffShadow: 0.5
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _Anisotropy: 0
+    - _BlendMode: 0
+    - _CoatMask: 0
+    - _CullMode: 0
+    - _CullModeForward: 0
+    - _Cutoff: 0.5
+    - _DepthOffsetEnable: 0
+    - _DetailAlbedoScale: 1
+    - _DetailNormalScale: 1
+    - _DetailSmoothnessScale: 1
+    - _DiffusionProfile: 0
+    - _DiffusionProfileHash: 0
+    - _DisplacementLockObjectScale: 1
+    - _DisplacementLockTilingScale: 1
+    - _DisplacementMode: 0
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 1
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 1
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 1
+    - _DistortionEnable: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 1
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedNormalMode: 1
+    - _DstBlend: 10
+    - _EmissiveColorMode: 1
+    - _EmissiveExposureWeight: 1
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensityUnit: 0
+    - _EnableBlendModePreserveSpecularLighting: 1
+    - _EnableFogOnTransparent: 1
+    - _EnableGeometricSpecularAA: 0
+    - _EnergyConservingSpecularColor: 1
+    - _HeightAmplitude: 0.02
+    - _HeightCenter: 0.5
+    - _HeightMapParametrization: 0
+    - _HeightMax: 1
+    - _HeightMin: -1
+    - _HeightOffset: 0
+    - _HeightPoMAmplitude: 2
+    - _HeightTessAmplitude: 2
+    - _HeightTessCenter: 0.5
+    - _InvTilingScale: 1
+    - _Ior: 1.5
+    - _IridescenceMask: 1
+    - _IridescenceThickness: 1
+    - _LinkDetailsWithBase: 1
+    - _MaterialID: 1
+    - _Metallic: 0
+    - _NormalMapSpace: 0
+    - _NormalScale: 1
+    - _PPDLodThreshold: 5
+    - _PPDMaxSamples: 15
+    - _PPDMinSamples: 5
+    - _PPDPrimitiveLength: 1
+    - _PPDPrimitiveWidth: 1
+    - _ReceivesSSR: 1
+    - _RefractionModel: 0
+    - _SSRefractionProjectionModel: 0
     - _ShadowOffsetScale: 1
     - _ShadowStrength: 0.9
+    - _Smoothness: 0.5
+    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMin: 0
+    - _SpecularAAScreenSpaceVariance: 0.1
+    - _SpecularAAThreshold: 0.2
+    - _SpecularOcclusionMode: 1
     - _SquashAmount: 1
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 8
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SubsurfaceMask: 1
+    - _SupportDecals: 1
+    - _SurfaceType: 1
+    - _TexWorldScale: 1
+    - _TexWorldScaleEmissive: 1
+    - _Thickness: 1
     - _TranslucencyViewDependency: 0.7
+    - _TransmissionEnable: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 0
+    - _TransparentZWrite: 0
+    - _UVBase: 0
+    - _UVDetail: 0
+    - _UVEmissive: 0
+    - _UseEmissiveIntensity: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestModeDistortion: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
+    - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
+    - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TranslucencyColor: {r: 0.5294407, g: 0.5882353, b: 0.24221453, a: 1}
+    - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
+    - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
+    - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!21 &2180264
 Material:
   serializedVersion: 6
@@ -157,36 +382,256 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Bark Material
-  m_Shader: {fileID: 4800000, guid: db6aa165e16df4c468e10d58b72a89b0, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_ShaderKeywords: _NORMALMAP _NORMALMAP_TANGENT_SPACE
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - DistortionVectors
+  - MOTIONVECTORS
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AnisotropyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColorMap:
+        m_Texture: {fileID: 2800000, guid: c987d1c2e16f99941b95186a978b55be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BentNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BentNormalMapOS:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 722390a243113914db49b2085843bea6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CoatMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionVectorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IridescenceMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _IridescenceThicknessMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: c987d1c2e16f99941b95186a978b55be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 722390a243113914db49b2085843bea6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMapOS:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SubsurfaceMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TangentMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TangentMapOS:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThicknessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
         m_Texture: {fileID: 2800000, guid: 04f2c1f076e4bdc458bdb08eea9b7911, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TransmittanceColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AORemapMax: 1
+    - _AORemapMin: 0
+    - _ATDistance: 1
+    - _AddPrecomputedVelocity: 0
+    - _AlbedoAffectEmissive: 0
+    - _AlphaCutoff: 0.5
+    - _AlphaCutoffEnable: 0
+    - _AlphaCutoffPostpass: 0.5
+    - _AlphaCutoffPrepass: 0.5
+    - _AlphaCutoffShadow: 0.5
+    - _AlphaDstBlend: 0
+    - _AlphaSrcBlend: 1
+    - _Anisotropy: 0
+    - _BlendMode: 0
+    - _CoatMask: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _Cutoff: 0.5
+    - _DepthOffsetEnable: 0
+    - _DetailAlbedoScale: 1
+    - _DetailNormalScale: 1
+    - _DetailSmoothnessScale: 1
+    - _DiffusionProfile: 0
+    - _DiffusionProfileHash: 0
+    - _DisplacementLockObjectScale: 1
+    - _DisplacementLockTilingScale: 1
+    - _DisplacementMode: 0
+    - _DistortionBlendMode: 0
+    - _DistortionBlurBlendMode: 0
+    - _DistortionBlurDstBlend: 1
+    - _DistortionBlurRemapMax: 1
+    - _DistortionBlurRemapMin: 0
+    - _DistortionBlurScale: 1
+    - _DistortionBlurSrcBlend: 1
+    - _DistortionDepthTest: 1
+    - _DistortionDstBlend: 1
+    - _DistortionEnable: 0
+    - _DistortionScale: 1
+    - _DistortionSrcBlend: 1
+    - _DistortionVectorBias: -1
+    - _DistortionVectorScale: 2
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedNormalMode: 1
+    - _DstBlend: 0
+    - _EmissiveColorMode: 1
+    - _EmissiveExposureWeight: 1
+    - _EmissiveIntensity: 1
+    - _EmissiveIntensityUnit: 0
+    - _EnableBlendModePreserveSpecularLighting: 1
+    - _EnableFogOnTransparent: 1
+    - _EnableGeometricSpecularAA: 0
+    - _EnergyConservingSpecularColor: 1
+    - _HeightAmplitude: 0.02
+    - _HeightCenter: 0.5
+    - _HeightMapParametrization: 0
+    - _HeightMax: 1
+    - _HeightMin: -1
+    - _HeightOffset: 0
+    - _HeightPoMAmplitude: 2
+    - _HeightTessAmplitude: 2
+    - _HeightTessCenter: 0.5
+    - _InvTilingScale: 1
+    - _Ior: 1.5
+    - _IridescenceMask: 1
+    - _IridescenceThickness: 1
+    - _LinkDetailsWithBase: 1
+    - _MaterialID: 1
+    - _Metallic: 0
+    - _NormalMapSpace: 0
+    - _NormalScale: 1
+    - _PPDLodThreshold: 5
+    - _PPDMaxSamples: 15
+    - _PPDMinSamples: 5
+    - _PPDPrimitiveLength: 1
+    - _PPDPrimitiveWidth: 1
+    - _ReceivesSSR: 1
+    - _RefractionModel: 0
+    - _SSRefractionProjectionModel: 0
+    - _Smoothness: 0.5
+    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMin: 0
+    - _SpecularAAScreenSpaceVariance: 0.1
+    - _SpecularAAThreshold: 0.2
+    - _SpecularOcclusionMode: 1
     - _SquashAmount: 1
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 8
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SubsurfaceMask: 1
+    - _SupportDecals: 1
+    - _SurfaceType: 0
+    - _TexWorldScale: 1
+    - _TexWorldScaleEmissive: 1
+    - _Thickness: 1
+    - _TransmissionEnable: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 0
+    - _TransparentZWrite: 0
+    - _UVBase: 0
+    - _UVDetail: 0
+    - _UVEmissive: 0
+    - _UseEmissiveIntensity: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 3
+    - _ZTestGBuffer: 4
+    - _ZTestModeDistortion: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 1
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
+    - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
+    - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
+    - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
+    - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
+    - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!43 &4329908
 Mesh:
   m_ObjectHideFlags: 0
@@ -194,7 +639,7 @@ Mesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mesh
-  serializedVersion: 9
+  serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
@@ -224,6 +669,9 @@ Mesh:
   m_BindPose: []
   m_BoneNameHashes: 
   m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 1
   m_KeepVertices: 0
@@ -231,7 +679,7 @@ Mesh:
   m_IndexFormat: 0
   m_IndexBuffer: 0500000006000000010006000600010007000100020007000700020008000200030008000800030009000300040009000a0005000b00050006000b000b0006000c00060007000c000c0007000d00070008000d000d0008000e00080009000e000f000a0010000a000b00100010000b0011000b000c00110011000c0012000c000d00120012000d0013000d000e00130014000f0015000f0010001500150010001600100011001600160011001700110012001700170012001800120013001800190014001a00140015001a001a0015001b00150016001b001b0016001c00160017001c001c0017001d00170018001d001e0019001f0019001a001f001f001a0020001a001b00200020001b0021001b001c00210021001c0022001c001d00220023001e0024001e001f00240024001f0025001f0020002500250020002600200021002600260021002700210022002700280023002900230024002900290024002a00240025002a002a0025002b00250026002b002b0026002c00260027002c002d0028002e00280029002e002e0029002f0029002a002f002f002a0030002a002b00300030002b0031002b002c003100370032003800320033003800380033003900330034003900390034003a00340035003a003a0035003b00350036003b003c0037003d00370038003d003d0038003e00380039003e003e0039003f0039003a003f003f003a0040003a003b00400041003c0042003c003d00420042003d0043003d003e00430043003e0044003e003f00440044003f0045003f0040004500460041004700410042004700470042004800420043004800480043004900430044004900490044004a00440045004a004b0046004c00460047004c004c0047004d00470048004d004d0048004e00480049004e004e0049004f0049004a004f005500500056005000510056005600510057005100520057005700520058005200530058005800530059005300540059005a0055005b00550056005b005b0056005c00560057005c005c0057005d00570058005d005d0058005e00580059005e005f005a0060005a005b00600060005b0061005b005c00610061005c0062005c005d00620062005d0063005d005e00630064005f0065005f0060006500650060006600600061006600660061006700610062006700670062006800620063006800690064006a00640065006a006a0065006b00650066006b006b0066006c00660067006c006c0067006d00670068006d006e0069006f0069006a006f006f006a0070006a006b00700070006b0071006b006c00710071006c0072006c006d007200780073007900730074007900790074007a00740075007a007a0075007b00750076007b007b0076007c00760077007c007d0078007e00780079007e007e0079007f0079007a007f007f007a0080007a007b00800080007b0081007b007c00810082007d0083007d007e00830083007e0084007e007f00840084007f0085007f0080008500850080008600800081008600870082008800820083008800880083008900830084008900890084008a00840085008a008a0085008b00850086008b008c0087008d00870088008d008d0088008e00880089008e008e0089008f0089008a008f008f008a0090008a008b00900091008c0092008c008d00920092008d0093008d008e00930093008e0094008e008f00940094008f0095008f00900095009b0096009c00960097009c009c0097009d00970098009d009d0098009e00980099009e009e0099009f0099009a009f00a0009b00a1009b009c00a100a1009c00a2009c009d00a200a2009d00a3009d009e00a300a3009e00a4009e009f00a400a500a000a600a000a100a600a600a100a700a100a200a700a700a200a800a200a300a800a800a300a900a300a400a900aa00a500ab00a500a600ab00ab00a600ac00a600a700ac00ac00a700ad00a700a800ad00ad00a800ae00a800a900ae00af00aa00b000aa00ab00b000b000ab00b100ab00ac00b100b100ac00b200ac00ad00b200b200ad00b300ad00ae00b300b400af00b500af00b000b500b500b000b600b000b100b600b600b100b700b100b200b700b700b200b800b200b300b800b900b400ba00b400b500ba00ba00b500bb00b500b600bb00bb00b600bc00b600b700bc00bc00b700bd00b700b800bd00c300be00c400be00bf00c400c400bf00c500bf00c000c500c500c000c600c000c100c600c600c100c700c100c200c700c800c300c900c300c400c900c900c400ca00c400c500ca00ca00c500cb00c500c600cb00cb00c600cc00c600c700cc00cd00c800ce00c800c900ce00ce00c900cf00c900ca00cf00cf00ca00d000ca00cb00d000d000cb00d100cb00cc00d100d200cd00d300cd00ce00d300d300ce00d400ce00cf00d400d400cf00d500cf00d000d500d500d000d600d000d100d600dc00d700dd00d700d800dd00dd00d800de00d800d900de00de00d900df00d900da00df00df00da00e000da00db00e000e100dc00e200dc00dd00e200e200dd00e300dd00de00e300e300de00e400de00df00e400e400df00e500df00e000e500e600e100e700e100e200e700e700e200e800e200e300e800e800e300e900e300e400e900e900e400ea00e400e500ea00eb00e600ec00e600e700ec00ec00e700ed00e700e800ed00ed00e800ee00e800e900ee00ee00e900ef00e900ea00ef00f000eb00f100eb00ec00f100f100ec00f200ec00ed00f200f200ed00f300ed00ee00f300f300ee00f400ee00ef00f400fa00f500fb00f500f600fb00fb00f600fc00f600f700fc00fc00f700fd00f700f800fd00fd00f800fe00f800f900fe00ff00fa000001fa00fb0000010001fb000101fb00fc0001010101fc000201fc00fd0002010201fd000301fd00fe0003010401ff000501ff0000010501050100010601000101010601060101010701010102010701070102010801020103010801090104010a01040105010a010a0105010b01050106010b010b0106010c01060107010c010c0107010d01070108010d010e0109010f0109010a010f010f010a0110010a010b01100110010b0111010b010c01110111010c0112010c010d01120113010e0114010e010f01140114010f0115010f01100115011501100116011001110116011601110117011101120117011d0118011e01180119011e011e0119011f0119011a011f011f011a0120011a011b01200120011b0121011b011c01210122011d0123011d011e01230123011e0124011e011f01240124011f0125011f0120012501250120012601200121012601270122012801220123012801280123012901230124012901290124012a01240125012a012a0125012b01250126012b012c0127012d01270128012d012d0128012e01280129012e012e0129012f0129012a012f012f012a0130012a012b01300131012c0132012c012d01320132012d0133012d012e01330133012e0134012e012f01340134012f0135012f01300135013b0136013c01360137013c013c0137013d01370138013d013d0138013e01380139013e013e0139013f0139013a013f0140013b0141013b013c01410141013c0142013c013d01420142013d0143013d013e01430143013e0144013e013f0144014501400146014001410146014601410147014101420147014701420148014201430148014801430149014301440149014a0145014b01450146014b014b0146014c01460147014c014c0147014d01470148014d014d0148014e01480149014e014f014a0150014a014b01500150014b0151014b014c01510151014c0152014c014d01520152014d0153014d014e015301590154015a01540155015a015a0155015b01550156015b015b0156015c01560157015c015c0157015d01570158015d015e0159015f0159015a015f015f015a0160015a015b01600160015b0161015b015c01610161015c0162015c015d01620163015e0164015e015f01640164015f0165015f0160016501650160016601600161016601660161016701610162016701680163016901630164016901690164016a01640165016a016a0165016b01650166016b016b0166016c01660167016c016d0168016e01680169016e016e0169016f0169016a016f016f016a0170016a016b01700170016b0171016b016c01710172016d0173016d016e01730173016e0174016e016f01740174016f0175016f017001750175017001760170017101760177017801790178017a0179017b01770179017a017b0179017c017d017e017f017c017e0180017d017c017f0180017c018101820183018201840183018501810183018401850183018601870188018901860188018a018701860189018a0186018b018c018d018c018e018d018f018b018d018e018f018d019001910192019301900192019401910190019301940190019501960197019601980197019901950197019801990197019a019b019c019d019a019c019e019b019a019d019e019a019f01a001a101a001a201a101a3019f01a101a201a301a101a401a501a601a701a401a601a801a501a401a701a801a401a901aa01ab01aa01ac01ab01ad01a901ab01ac01ad01ab01ae01af01b001b101ae01b001b201af01ae01b101b201ae01b301b401b501b401b601b501b701b301b501b601b701b501b801b901ba01bb01b801ba01bc01b901b801bb01bc01b801bd01be01bf01be01c001bf01c101bd01bf01c001c101bf01c201c301c401c501c201c401c601c301c201c501c601c201c701c801c901c801ca01c901cb01c701c901ca01cb01c901cc01cd01ce01cf01cc01ce01d001cd01cc01cf01d001cc01d101d201d301d201d401d301d501d101d301d401d501d301d601d701d801d901d601d801da01d701d601d901da01d601db01dc01dd01dc01de01dd01df01db01dd01de01df01dd01e001e101e201e301e001e201e401e101e001e301e401e001e501e601e701e601e801e701e901e501e701e801e901e701ea01eb01ec01ed01ea01ec01ee01eb01ea01ed01ee01ea01ef01f001f101f001f201f101f301ef01f101f201f301f101f401f501f601f701f401f601f801f501f401f701f801f401f901fa01fb01fa01fc01fb01fd01f901fb01fc01fd01fb01fe01ff0100020102fe0100020202ff01fe0101020202fe01030204020502040206020502070203020502060207020502080209020a020b0208020a020c02090208020b020c0208020d020e020f020e0210020f0211020d020f02100211020f0212021302140215021202140216021302120215021602120217021802190218021a0219021b02170219021a021b0219021c021d021e021f021c021e0220021d021c021f0220021c022102220223022202240223022502210223022402250223022602270228022902260228022a022702260229022a0226022b022c022d022c022e022d022f022b022d022e022f022d023002310232023302300232023402310230023302340230023502360237023602380237023902350237023802390237023a023b023c023d023a023c023e023b023a023d023e023a023f024002410240024202410243023f02410242024302410244024502460247024402460248024502440247024802440249024a024b024a024c024b024d0249024b024c024d024b024e024f02500251024e02500252024f024e02510252024e02530254025502540256025502570253025502560257025502580259025a025b0258025a025c02590258025b025c0258025d025e025f025e0260025f0261025d025f02600261025f0262026302640265026202640266026302620265026602620267026802690268026a0269026b02670269026a026b0269026c026d026e026f026c026e0270026d026c026f0270026c027102720273027202740273027502710273027402750273027602770278027902760278027a027702760279027a0276027b027c027d027c027e027d027f027b027d027e027f027d028002810282028302800282028402810280028302840280028502860287028602880287028902850287028802890287028a028b028c028d028a028c028e028b028a028d028e028a028f029002910290029202910293028f02910292029302910294029502960297029402960298029502940297029802940299029a029b029a029c029b029d0299029b029c029d029b029e029f02a002a1029e02a002a2029f029e02a102a2029e02a302a402a502a402a602a502a702a302a502a602a702a502a802a902aa02ab02a802aa02ac02a902a802ab02ac02a802ad02ae02af02ae02b002af02b102ad02af02b002b102af02b202b302b402b502b202b402b602b302b202b502b602b202b702b802b902b802ba02b902bb02b702b902ba02bb02b902bc02bd02be02bf02bc02be02c002bd02bc02bf02c002bc02c102c202c302c202c402c302c502c102c302c402c502c302c602c702c802c902c602c802ca02c702c602c902ca02c602cb02cc02cd02cc02ce02cd02cf02cb02cd02ce02cf02cd02d002d102d202d302d002d202d402d102d002d302d402d002d502d602d702d602d802d702d902d502d702d802d902d702da02db02dc02dd02da02dc02de02db02da02dd02de02da02df02e002e102e002e202e102e302df02e102e202e302e102e402e502e602e702e402e602e802e502e402e702e802e402e902ea02eb02ea02ec02eb02ed02e902eb02ec02ed02eb02ee02ef02f002f102ee02f002f202ef02ee02f102f202ee02f302f402f502f402f602f502f702f302f502f602f702f502f802f902fa02fb02f802fa02fc02f902f802fb02fc02f802fd02fe02ff02fe020003ff020103fd02ff0200030103ff0202030303040305030203040306030303020305030603020307030803090308030a0309030b03070309030a030b0309030c030d030e030f030c030e0310030d030c030f0310030c031103120313031203140313031503110313031403150313031603170318031903160318031a031703160319031a0316031b031c031d031c031e031d031f031b031d031e031f031d032003210322032303200322032403210320032303240320032503260327032603280327032903250327032803290327032a032b032c032d032a032c032e032b032a032d032e032a032f033003310330033203310333032f03310332033303310334033503360337033403360338033503340337033803340339033a033b033a033c033b033d0339033b033c033d033b033e033f03400341033e03400342033f033e03410342033e03430344034503440346034503470343034503460347034503480349034a034b0348034a034c03490348034b034c0348034d034e034f034e0350034f0351034d034f03500351034f0352035303540355035203540356035303520355035603520357035803590358035a0359035b03570359035a035b0359035c035d035e035f035c035e0360035d035c035f0360035c036103620363036203640363036503610363036403650363036603670368036903660368036a036703660369036a0366036b036c036d036c036e036d036f036b036d036e036f036d037003710372037303700372037403710370037303740370037503760377037603780377037903750377037803790377037a037b037c037d037a037c037e037b037a037d037e037a037f038003810380038203810383037f03810382038303810384038503860387038403860388038503840387038803840389038a038b038a038c038b038d0389038b038c038d038b038e038f03900391038e03900392038f038e03910392038e03930394039503940396039503970393039503960397039503980399039a039b0398039a039c03990398039b039c0398039d039e039f039e03a0039f03a1039d039f03a003a1039f03a203a303a403a503a203a403a603a303a203a503a603a203a703a803a903a803aa03a903ab03a703a903aa03ab03a903ac03ad03ae03af03ac03ae03b003ad03ac03af03b003ac03b103b203b303b203b403b303b503b103b303b403b503b303b603b703b803b903b603b803ba03b703b603b903ba03b603bb03bc03bd03bc03be03bd03bf03bb03bd03be03bf03bd03c003c103c203c303c003c203c403c103c003c303c403c003c503c603c703c603c803c703c903c503c703c803c903c703ca03cb03cc03cd03ca03cc03ce03cb03ca03cd03ce03ca03cf03d003d103d003d203d103d303cf03d103d203d303d103d403d503d603d703d403d603d803d503d403d703d803d403d903da03db03da03dc03db03dd03d903db03dc03dd03db03de03df03e003e103de03e003e203df03de03e103e203de03e303e403e503e403e603e503e703e303e503e603e703e503e803e903ea03eb03e803ea03ec03e903e803eb03ec03e803ed03ee03ef03ee03f003ef03f103ed03ef03f003f103ef03f203f303f403f503f203f403f603f303f203f503f603f203f703f803f903f803fa03f903fb03f703f903fa03fb03f903fc03fd03fe03ff03fc03fe030004fd03fc03ff030004fc030104020403040204040403040504010403040404050403040604070408040904060408040a040704060409040a0406040b040c040d040e040c040b040f04100411040f04120410040f04110413041104140413041004140411040f041304150416040f041504160417040f04170412040f041704180412041904170416041904180417041a041b041c041d041b041a041e041f0420041e0421041f041e04200422042004230422041f04230420041e042204240425041e042404250426041e04260421041e0426042704210428042604250428042704260429042a042b042c042a0429042d042e042f042d0430042e042d042f0431042f04320431042e0432042f042d043104330434042d043304340435042d04350430042d04350436043004370435043404370436043504380439043a043b04390438043c043d043e043c043f043d043c043e0440043e04410440043d0441043e043c044004420443043c044204430444043c0444043f043c04440445043f044604440443044604450444044704480449044a04480447044b044c044d044b044e044c044b044d044f044d0450044f044c0450044d044b044f04510452044b045104520453044b0453044e044b04530454044e045504530452045504540453045604570458045904570456045a045b045c045a045d045b045a045c045e045c045f045e045b045f045c045a045e04600461045a046004610462045a0462045d045a04620463045d0464046204610464046304620465046604670468046604650469046a046b0469046c046a0469046b046d046b046e046d046a046e046b0469046d046f04700469046f0470047104690471046c046904710472046c04730471047004730472047104740475047604770475047404780479047a0478047b04790478047a047c047a047d047c0479047d047a0478047c047e047f0478047e047f048004780480047b047804800481047b04820480047f0482048104800483048404850486048404830487048804890487048a048804870489048b0489048c048b0488048c04890487048b048d048e0487048d048e048f0487048f048a0487048f0490048a0491048f048e04910490048f04920493049404950493049204960497049804960499049704960498049a0498049b049a0497049b04980496049a049c049d0496049c049d049e0496049e04990496049e049f049904a0049e049d04a0049f049e04
   m_VertexData:
-    serializedVersion: 2
+    serializedVersion: 3
     m_VertexCount: 1185
     m_Channels:
     - stream: 0
@@ -352,8 +800,9 @@ Mesh:
   m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
-  m_MeshOptimized: 0
+  m_MeshOptimizationFlags: -1
   m_StreamData:
+    serializedVersion: 2
     offset: 0
     size: 0
     path: 
