@@ -158,3 +158,4 @@ Material:
     - _WaveSpeed: {r: 19, g: 9, b: -16, a: -7}
     - _WorldLightDir: {r: 0, g: 0.1, b: -0.5, a: 0}
     - _fogColor: {r: 0.29211843, g: 0.4276772, b: 0.5686275, a: 1}
+  m_BuildTextureStacks: []

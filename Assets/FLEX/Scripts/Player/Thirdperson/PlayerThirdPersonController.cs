@@ -82,9 +82,16 @@ public class PlayerThirdPersonController : MonoBehaviour
 
     public void ShowPlayerModel(bool Toggle)
     {
-        foreach (Renderer ThirdPersonRenderer in ThirdPersonRenderers)
+        for(int i = 0; i < ThirdPersonRenderers.Length; i++)
         {
-            ThirdPersonRenderer.enabled = Toggle;
+            if (i > 1)
+            {
+                ThirdPersonRenderers[i].enabled = Toggle;
+            }
+            else
+            {
+                ThirdPersonRenderers[i].shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            }
         }
         if (ThirdPersonWorldWeapon != null)
         {
