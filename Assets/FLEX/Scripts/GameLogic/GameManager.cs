@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
     private AutoExposure _autoExposure;
     private MotionBlur _motionBloor;
     private ColorGrading _colorGrading;
+    private AmbientOcclusion _ambientOcclusion;
 
     [Header("Настройки PostProcess")]
     public AudioClip SilSound;
@@ -164,6 +165,7 @@ public class GameManager : MonoBehaviour
         PPV.profile.TryGetSettings(out _bloom);
         PPV.profile.TryGetSettings(out _motionBloor);
         PPV.profile.TryGetSettings(out _colorGrading);
+        PPV.profile.TryGetSettings(out _ambientOcclusion);
         if (PlayerPrefs.HasKey("BloomSetting"))
         {
             _bloom.intensity.value = PlayerPrefs.GetFloat("BloomSetting");
@@ -195,6 +197,21 @@ public class GameManager : MonoBehaviour
         else
         {
             _colorGrading.contrast.value = -5.0f;
+        }
+        if (PlayerPrefs.HasKey("AmbientSetting"))
+        {
+            if (PlayerPrefs.GetInt("AmbientSetting") == 1)
+            {
+                _ambientOcclusion.active = true;
+            }
+            else
+            {
+                _ambientOcclusion.active = false;
+            }
+        }
+        else
+        {
+            _ambientOcclusion.active = true;
         }
     }
 

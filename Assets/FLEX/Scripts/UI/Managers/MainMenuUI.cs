@@ -50,6 +50,7 @@ public class MainMenuUI : MonoBehaviour
     public Slider UIVolume;
     private float volume;
     public Slider BloomSetting;
+    public Toggle AmbientSetting;
     public Slider ShutterAngleSetting;
     public Slider SaturationSetting;
     public Slider ContrastSetting;
@@ -162,6 +163,17 @@ public class MainMenuUI : MonoBehaviour
         {
             BloomSetting.value = PlayerPrefs.GetFloat("BloomSetting");
         }
+        if (PlayerPrefs.HasKey("AmbientSetting"))
+        {
+            if (PlayerPrefs.GetInt("AmbientSetting") == 1)
+            {
+                AmbientSetting.isOn = true;
+            }
+            else
+            {
+                AmbientSetting.isOn = false;
+            }
+        }
         if (PlayerPrefs.HasKey("ShutterAngleSetting"))
         {
             ShutterAngleSetting.value = PlayerPrefs.GetFloat("ShutterAngleSetting");
@@ -256,6 +268,19 @@ public class MainMenuUI : MonoBehaviour
         LoadGraphicSettings();
     }
 
+    public void SaveAmbient(Toggle _ambient)
+    {
+        if (_ambient.isOn == true)
+        {
+            PlayerPrefs.SetInt("AmbientSetting", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("AmbientSetting", 0);
+        }
+        LoadGraphicSettings();
+    }
+
     public void SaveMotionBloor(Slider slider)
     {
         PlayerPrefs.SetFloat("ShutterAngleSetting", slider.value);
@@ -303,6 +328,12 @@ public class MainMenuUI : MonoBehaviour
     {
         PlayerPrefs.SetFloat("BloomSetting", 1f);
         _bloom.value = 1f;
+    }
+
+    public void ResetAmbientSettings(Toggle _ambient)
+    {
+        PlayerPrefs.SetInt("AmbientSetting", 1);
+        _ambient.isOn = true;
     }
 
     public void ResetMotionBloorSettings(Slider _motion)
