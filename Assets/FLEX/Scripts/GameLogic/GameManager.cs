@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     public bool CanSpawnMines = true;
     public bool CanSpawnLoot = true;
     System.Random RndCause = new System.Random();
-    [Header("Настройки PostProcess")]
+    [Header("Настройки Photon")]
     public string[] PhotonAppKeys;
 
     [Header("Настройки PostProcess")]
@@ -102,6 +102,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public GameObject SceneCamera;
     [HideInInspector] public string EndGameReason;
     [HideInInspector] public GameObject LocalPlayer;
+
+    [Header("Настройки отображения статистики")]
+    public FPSDisplay disp_1;
+    public GameObject disp_2;
 
     void Awake()
     {

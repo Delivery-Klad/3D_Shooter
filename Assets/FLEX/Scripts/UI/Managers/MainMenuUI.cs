@@ -50,6 +50,7 @@ public class MainMenuUI : MonoBehaviour
     public Slider UIVolume;
     private float volume;
     public Slider BloomSetting;
+    public Dropdown StatsSetting;
     public Toggle AmbientSetting;
     public Slider ShutterAngleSetting;
     public Slider SaturationSetting;
@@ -163,6 +164,10 @@ public class MainMenuUI : MonoBehaviour
         {
             BloomSetting.value = PlayerPrefs.GetFloat("BloomSetting");
         }
+        if (PlayerPrefs.HasKey("StatsSetting"))
+        {
+            StatsSetting.value = PlayerPrefs.GetInt("StatsSetting");;
+        }
         if (PlayerPrefs.HasKey("AmbientSetting"))
         {
             if (PlayerPrefs.GetInt("AmbientSetting") == 1)
@@ -268,6 +273,27 @@ public class MainMenuUI : MonoBehaviour
         LoadGraphicSettings();
     }
 
+    public void SaveStats(Dropdown _stats)
+    {
+        int temp = _stats.value;
+        PlayerPrefs.SetInt("StatsSetting", _stats.value);
+        if (temp == 0)
+        {
+            GameManager.instance.disp_1.enabled = false;
+            GameManager.instance.disp_2.SetActive(false);
+        }
+        else if (temp == 1)
+        {
+            GameManager.instance.disp_1.enabled = true;
+            GameManager.instance.disp_2.SetActive(false);
+        }
+        else if (temp == 2)
+        {
+            GameManager.instance.disp_1.enabled = false;
+            GameManager.instance.disp_2.SetActive(true);
+        }
+    }
+
     public void SaveAmbient(Toggle _ambient)
     {
         if (_ambient.isOn == true)
@@ -328,6 +354,12 @@ public class MainMenuUI : MonoBehaviour
     {
         PlayerPrefs.SetFloat("BloomSetting", 1f);
         _bloom.value = 1f;
+    }
+    
+    public void ResetStatsSettings(Dropdown _stats)
+    {
+        PlayerPrefs.SetInt("StatsSetting", 0);
+        _stats.value = 0;
     }
 
     public void ResetAmbientSettings(Toggle _ambient)
