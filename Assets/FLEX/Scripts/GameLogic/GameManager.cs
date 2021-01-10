@@ -103,9 +103,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public string EndGameReason;
     [HideInInspector] public GameObject LocalPlayer;
 
-    [Header("Настройки отображения статистики")]
+    [Header("Настройки отображения статистики и пр")]
     public FPSDisplay disp_1;
     public GameObject disp_2;
+    [Range(-1, 240)]public int FrameRate = -1;
 
     void Awake()
     {
@@ -118,6 +119,12 @@ public class GameManager : MonoBehaviour
         {
             DestroyImmediate(this.gameObject);
         }
+        FrameRateChange(FrameRate);
+    }
+
+    public void FrameRateChange(int _frameRate)
+    {
+        Application.targetFrameRate = _frameRate;
     }
 
     public void Reconnect(int AppID)
