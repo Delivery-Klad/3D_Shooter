@@ -51,6 +51,7 @@ public class MainMenuUI : MonoBehaviour
     private float volume;
     public Slider BloomSetting;
     public Dropdown StatsSetting;
+    public Dropdown FrameRateSetting;
     public Toggle AmbientSetting;
     public Slider ShutterAngleSetting;
     public Slider SaturationSetting;
@@ -167,6 +168,10 @@ public class MainMenuUI : MonoBehaviour
         if (PlayerPrefs.HasKey("StatsSetting"))
         {
             StatsSetting.value = PlayerPrefs.GetInt("StatsSetting");;
+        }
+        if (PlayerPrefs.HasKey("FrameRateLimit"))
+        {
+            FrameRateSetting.value = PlayerPrefs.GetInt("FrameRateLimit");
         }
         if (PlayerPrefs.HasKey("AmbientSetting"))
         {
@@ -291,6 +296,37 @@ public class MainMenuUI : MonoBehaviour
         {
             GameManager.instance.disp_1.enabled = false;
             GameManager.instance.disp_2.SetActive(true);
+        }
+    }
+
+    public void SaveFrameRate(Dropdown _frameRate)
+    {
+        PlayerPrefs.SetInt("FrameRateLimit", _frameRate.value);
+        int temp = _frameRate.value;
+        if (temp == 0)
+        {
+            GameManager.instance.FrameRate = -1;
+            GameManager.instance.FrameRateChange(-1);
+        }
+        else if (temp == 1)
+        {
+            GameManager.instance.FrameRate = 30;
+            GameManager.instance.FrameRateChange(30);
+        }
+        else if (temp == 2)
+        {
+            GameManager.instance.FrameRate = 60;
+            GameManager.instance.FrameRateChange(60);
+        }
+        else if (temp == 3)
+        {
+            GameManager.instance.FrameRate = 120;
+            GameManager.instance.FrameRateChange(120);
+        }
+        else if (temp == 4)
+        {
+            GameManager.instance.FrameRate = 240;
+            GameManager.instance.FrameRateChange(240);
         }
     }
 
