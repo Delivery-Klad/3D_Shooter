@@ -106,7 +106,6 @@ public class GameManager : MonoBehaviour
     [Header("Настройки отображения статистики и пр")]
     public FPSDisplay disp_1;
     public GameObject disp_2;
-    [Range(-1, 240)]public int FrameRate = -1;
 
     void Awake()
     {
@@ -119,7 +118,6 @@ public class GameManager : MonoBehaviour
         {
             DestroyImmediate(this.gameObject);
         }
-        FrameRateChange(FrameRate);
     }
 
     public void FrameRateChange(int _frameRate)

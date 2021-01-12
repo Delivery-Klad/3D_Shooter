@@ -1201,7 +1201,6 @@ MonoBehaviour:
   LocalPlayer: {fileID: 0}
   disp_1: {fileID: 715462607}
   disp_2: {fileID: 359848640}
-  FrameRate: -1
 --- !u!114 &715462600
 MonoBehaviour:
   m_ObjectHideFlags: 0

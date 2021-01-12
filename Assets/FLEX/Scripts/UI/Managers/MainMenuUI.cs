@@ -51,7 +51,8 @@ public class MainMenuUI : MonoBehaviour
     private float volume;
     public Slider BloomSetting;
     public Dropdown StatsSetting;
-    public Dropdown FrameRateSetting;
+    public Text StatsSettingText;
+    public Text frameRateText;
     public Toggle AmbientSetting;
     public Slider ShutterAngleSetting;
     public Slider SaturationSetting;
@@ -73,6 +74,7 @@ public class MainMenuUI : MonoBehaviour
     public GameObject TAAMotionBlending;
     public GameObject TAASharpness;
 
+    public int[] FrameRates;
 
     void Awake()
     {
@@ -167,11 +169,36 @@ public class MainMenuUI : MonoBehaviour
         }
         if (PlayerPrefs.HasKey("StatsSetting"))
         {
-            StatsSetting.value = PlayerPrefs.GetInt("StatsSetting");;
+            string temp = PlayerPrefs.GetString("StatsSetting");
+            StatsSettingText.text = temp;
+            if (temp == "Off")
+            {
+                GameManager.instance.disp_1.enabled = false;
+                GameManager.instance.disp_2.SetActive(false);
+            }
+            else if (temp == "Simple")
+            {
+                GameManager.instance.disp_1.enabled = true;
+                GameManager.instance.disp_2.SetActive(false);
+            }
+            else if (temp == "Advanced")
+            {
+                GameManager.instance.disp_1.enabled = false;
+                GameManager.instance.disp_2.SetActive(true);
+            }
         }
         if (PlayerPrefs.HasKey("FrameRateLimit"))
         {
-            FrameRateSetting.value = PlayerPrefs.GetInt("FrameRateLimit");
+            int temp = PlayerPrefs.GetInt("FrameRateLimit");
+            if (temp == -1)
+            {
+                frameRateText.text = "unlim";
+            }
+            else
+            {
+                frameRateText.text = temp.ToString();
+            }
+            GameManager.instance.FrameRateChange(temp);
         }
         if (PlayerPrefs.HasKey("AmbientSetting"))
         {
@@ -278,56 +305,31 @@ public class MainMenuUI : MonoBehaviour
         LoadGraphicSettings();
     }
 
-    public void SaveStats(Dropdown _stats)
+    public void SaveStats(string temp)
     {
-        int temp = _stats.value;
-        PlayerPrefs.SetInt("StatsSetting", _stats.value);
-        if (temp == 0)
+        PlayerPrefs.SetString("StatsSetting", temp);
+        StatsSettingText.text = temp;
+        if (temp == "Off")
         {
             GameManager.instance.disp_1.enabled = false;
             GameManager.instance.disp_2.SetActive(false);
         }
-        else if (temp == 1)
+        else if (temp == "Simple")
         {
             GameManager.instance.disp_1.enabled = true;
             GameManager.instance.disp_2.SetActive(false);
         }
-        else if (temp == 2)
+        else if (temp == "Advanced")
         {
             GameManager.instance.disp_1.enabled = false;
             GameManager.instance.disp_2.SetActive(true);
         }
     }
 
-    public void SaveFrameRate(Dropdown _frameRate)
+    public void SaveFrameRate(int _frameRate)
     {
-        PlayerPrefs.SetInt("FrameRateLimit", _frameRate.value);
-        int temp = _frameRate.value;
-        if (temp == 0)
-        {
-            GameManager.instance.FrameRate = -1;
-            GameManager.instance.FrameRateChange(-1);
-        }
-        else if (temp == 1)
-        {
-            GameManager.instance.FrameRate = 30;
-            GameManager.instance.FrameRateChange(30);
-        }
-        else if (temp == 2)
-        {
-            GameManager.instance.FrameRate = 60;
-            GameManager.instance.FrameRateChange(60);
-        }
-        else if (temp == 3)
-        {
-            GameManager.instance.FrameRate = 120;
-            GameManager.instance.FrameRateChange(120);
-        }
-        else if (temp == 4)
-        {
-            GameManager.instance.FrameRate = 240;
-            GameManager.instance.FrameRateChange(240);
-        }
+        PlayerPrefs.SetInt("FrameRateLimit", _frameRate);
+        GameManager.instance.FrameRateChange(_frameRate);
     }
 
     public void SaveAmbient(Toggle _ambient)
@@ -390,12 +392,6 @@ public class MainMenuUI : MonoBehaviour
     {
         PlayerPrefs.SetFloat("BloomSetting", 1f);
         _bloom.value = 1f;
-    }
-    
-    public void ResetStatsSettings(Dropdown _stats)
-    {
-        PlayerPrefs.SetInt("StatsSetting", 0);
-        _stats.value = 0;
     }
 
     public void ResetAmbientSettings(Toggle _ambient)
@@ -611,6 +607,108 @@ public class MainMenuUI : MonoBehaviour
         GameManager.instance.CurrentGameType = GameManager.instance.GameTypeList[SelectedGameTypeInt];      //Set the gamemanger currentgametype to the chosen index of the gametypelist
         SelectedGameTypeText.text = GameManager.instance.GameTypeList[SelectedGameTypeInt].GameTypeLoadName;    //Set the selected gametype text to the chosen gametype
         UpdateGameTypeSettings();
+    }
+    #endregion
+
+    #region GameProcess
+    public void NextFrameRate()
+    {
+        if (frameRateText.text == "unlim")
+        {
+            frameRateText.text = "30";
+            SaveFrameRate(30);
+            GameManager.instance.FrameRateChange(FrameRates[1]);
+            PlayerPrefs.SetInt("FrameRateLimit", FrameRates[1]);
+            return;
+        }
+        int temp = int.Parse(frameRateText.text);
+        for (int i = 0; i < FrameRates.Length; i++)
+        {
+            if (i >= FrameRates.Length - 1)
+            {
+                frameRateText.text = "unlim";
+                SaveFrameRate(FrameRates[0]);
+                GameManager.instance.FrameRateChange(FrameRates[0]);
+                PlayerPrefs.SetInt("FrameRateLimit", FrameRates[0]);
+                break;
+            }
+            else if (temp == FrameRates[i])
+            {
+                frameRateText.text = FrameRates[i + 1].ToString();
+                SaveFrameRate(FrameRates[i + 1]);
+                GameManager.instance.FrameRateChange(FrameRates[i + 1]);
+                PlayerPrefs.SetInt("FrameRateLimit", FrameRates[i + 1]);
+                break;
+            }
+        }
+    }
+
+    public void PrevioustFrameRate()
+    {
+        if (frameRateText.text == "unlim")
+        {
+            frameRateText.text = "240";
+            SaveFrameRate(FrameRates.Length - 1);
+            GameManager.instance.FrameRateChange(FrameRates[FrameRates.Length - 1]);
+            PlayerPrefs.SetInt("FrameRateLimit", FrameRates[FrameRates.Length - 1]);
+            return;
+        }
+        int temp = int.Parse(frameRateText.text);
+        for (int i = FrameRates.Length - 1; i > 0; i--)
+        {
+            if (i == 1)
+            {
+                frameRateText.text = "unlim";
+                SaveFrameRate(FrameRates[0]);
+                GameManager.instance.FrameRateChange(FrameRates[0]);
+                PlayerPrefs.SetInt("FrameRateLimit", FrameRates[0]);
+                break;
+            }
+            else if (temp == FrameRates[i])
+            {
+                frameRateText.text = FrameRates[i - 1].ToString();
+                SaveFrameRate(FrameRates[i - 1]);
+                GameManager.instance.FrameRateChange(FrameRates[i - 1]);
+                PlayerPrefs.SetInt("FrameRateLimit", FrameRates[i - 1]);
+                break;
+            }
+        }
+    }
+
+    public void NextStats()
+    {
+        string temp = StatsSettingText.text;
+        PlayerPrefs.SetString("StatsSetting", temp);
+        if (temp == "Off")
+        {
+            SaveStats("Simple");
+        }
+        else if (temp == "Simple")
+        {
+            SaveStats("Advanced");
+        }
+        else if (temp == "Advanced")
+        {
+            SaveStats("Off");
+        }
+    }
+
+    public void PrevioustStats()
+    {
+        string temp = StatsSettingText.text;
+        PlayerPrefs.SetString("StatsSetting", temp);
+        if (temp == "Off")
+        {
+            SaveStats("Advanced");
+        }
+        else if (temp == "Simple")
+        {
+            SaveStats("Off");
+        }
+        else if (temp == "Advanced")
+        {
+            SaveStats("Simple");
+        }
     }
     #endregion
 
