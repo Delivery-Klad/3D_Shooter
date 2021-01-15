@@ -37,10 +37,18 @@ public class Door : MonoBehaviour
         if (Open == true)
         {
             _animator.SetBool("isOpen", true);
+            if (Open_Clip)
+            {
+                AU.PlayOneShot(Open_Clip);
+            }
         }
         if (Open == false)
         {
             _animator.SetBool("isOpen", false);
+            if (Close_Clip)
+            {
+                AU.PlayOneShot(Close_Clip);
+            }
         }
     }
 
