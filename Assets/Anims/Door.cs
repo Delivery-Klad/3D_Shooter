@@ -3,10 +3,10 @@ using System.Collections;
 [RequireComponent(typeof(PhotonView))]
 public class Door : MonoBehaviour
 {
-    private Animator _animator = null;
+    Animator _animator = null;
     public bool on = false;
     public bool Open = false;
-    [SerializeField] AudioSource AU;
+    [SerializeField] AudioSource AU = null;
     AudioClip Open_Clip;
     AudioClip Close_Clip;
 
@@ -15,6 +15,8 @@ public class Door : MonoBehaviour
     {
         AU = gameObject.GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
+        Open_Clip = GameManager.instance.Open_Clip;
+        Close_Clip = GameManager.instance.Close_Clip;
     }
 
     void Update()

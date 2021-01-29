@@ -89,8 +89,10 @@ public class GameManager : MonoBehaviour
     private ColorGrading _colorGrading;
     private AmbientOcclusion _ambientOcclusion;
 
-    [Header("Настройки PostProcess")]
+    [Header("Настройки звуков")]
     public AudioClip SilSound;
+    public AudioClip Open_Clip;
+    public AudioClip Close_Clip;
 
     [HideInInspector] public GameObject[] DeathMatchSpawns;
     [HideInInspector] public GameObject[] RedTeamSpawns;
