@@ -665,6 +665,7 @@ GameObject:
   - component: {fileID: 715462604}
   - component: {fileID: 715462605}
   - component: {fileID: 715462607}
+  - component: {fileID: 715462608}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1189,6 +1190,8 @@ MonoBehaviour:
   - babdbd9a-7697-4223-9979-a6ff2ceefc65
   - be6923e4-5025-4fe1-a4c9-dcd875a2673a
   SilSound: {fileID: 8300000, guid: e46deddf79777ea409625d5564865a74, type: 3}
+  Open_Clip: {fileID: 0}
+  Close_Clip: {fileID: 0}
   DeathMatchSpawns: []
   RedTeamSpawns: []
   BlueTeamSpawns: []
@@ -1461,6 +1464,18 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54ad3e86c03a17243aeb93461e5fd054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &715462608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715462596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd47dd7ecbcd7ab42b5d71bf446c78f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &820603661
