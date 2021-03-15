@@ -1,4 +1,4 @@
-# 3D Shooter
+# Unity shooter
 
 ![alt text](Images/2.png)
  
