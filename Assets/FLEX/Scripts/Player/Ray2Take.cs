@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Ray2Take : MonoBehaviour
 {
@@ -17,6 +18,18 @@ public class Ray2Take : MonoBehaviour
     public GameObject weapon;
     public GameObject Module;
     public int AmmoLimit = 500;
+
+    RaycastHit hit;
+    float hit_distance = 0;
+    DepthOfField depth;
+    PostProcessVolume vol;
+    [Range(0f, 10f)][SerializeField]float speed = 5f;
+
+    private void Start()
+    {
+        vol = GameObject.Find("SceneManager").GetComponent<PostProcessVolume>();
+        vol.profile.TryGetSettings(out depth);
+    }
 
     void FixedUpdate()
     {
@@ -96,7 +109,7 @@ public class Ray2Take : MonoBehaviour
                     Items += 1;
                     PlayerPrefs.SetInt("TotalItems", Items);
                 }
-                if (RayHit.transform.tag == "DropHP")
+                else if (RayHit.transform.tag == "DropHP")
                 {
                     PV = RayHit.transform.root.GetComponent<PhotonView>();
                     int maxPlayerHP = RayHit.transform.root.GetComponent<Take_HP>().maxPlayerHP;
@@ -117,7 +130,7 @@ public class Ray2Take : MonoBehaviour
                     }
                     PlayerStatistics.ApplyPlayerHealth();
                 }
-                if (RayHit.transform.tag == "Module")
+                else if (RayHit.transform.tag == "Module")
                 {
                     PV = RayHit.transform.root.GetComponent<PhotonView>();
                     Module = RayHit.transform.gameObject;
@@ -155,7 +168,7 @@ public class Ray2Take : MonoBehaviour
                             NS.AddMessage("Оружие не поддерживает данную модификацию");
                         }
                     }
-                    if (Module.GetComponent<Take_Modules>().ACOG)
+                    else if (Module.GetComponent<Take_Modules>().ACOG)
                     {
                         if (weapon.GetComponent<PlayerWeapon>().Acog != null)
                         {
@@ -187,7 +200,7 @@ public class Ray2Take : MonoBehaviour
                             NS.AddMessage("Оружие не поддерживает данную модификацию");
                         }
                     }
-                    if (Module.GetComponent<Take_Modules>().Red_dot)
+                    else if (Module.GetComponent<Take_Modules>().Red_dot)
                     {
                         if (weapon.GetComponent<PlayerWeapon>().Red_Dot != null)
                         {
@@ -219,7 +232,7 @@ public class Ray2Take : MonoBehaviour
                             NS.AddMessage("Оружие не поддерживает данную модификацию");
                         }
                     }
-                    if (Module.GetComponent<Take_Modules>().Silencer)
+                    else if (Module.GetComponent<Take_Modules>().Silencer)
                     {
                         if (weapon.GetComponent<PlayerWeapon>().Sil != null)
                         {
@@ -245,7 +258,7 @@ public class Ray2Take : MonoBehaviour
                             NS.AddMessage("Оружие не поддерживает данную модификацию");
                         }
                     }
-                    if (Module.GetComponent<Take_Modules>().Sniper)
+                    else if (Module.GetComponent<Take_Modules>().Sniper)
                     {
                         if (weapon.GetComponent<PlayerWeapon>().Sniper_ != null)
                         {
@@ -278,8 +291,7 @@ public class Ray2Take : MonoBehaviour
                         }
                     }
                 }
-
-                if (RayHit.transform.tag == "DropAmmo")
+                else if (RayHit.transform.tag == "DropAmmo")
                 {
                     PV = RayHit.transform.root.GetComponent<PhotonView>();
                     weapon = gameObject.GetComponent<PlayerWeaponManager>().PlayerInventory[0];
@@ -351,5 +363,24 @@ public class Ray2Take : MonoBehaviour
         {
             TakePanel.GetComponent<Text>().text = "";
         }
+
+        if (Physics.Raycast(transform.position, transform.forward * 100, out hit, 100f))
+        {
+            hit_distance = Vector3.Distance(transform.position, hit.point);
+        }
+        else
+        {
+            if (hit_distance < 100f)
+            {
+                hit_distance++;
+            }
+        }
+        Focus();
+    }
+
+    void Focus()
+    {
+        depth.focusDistance.value = hit_distance;
+        depth.focusDistance.value = Mathf.Lerp(depth.focusDistance.value, hit_distance, Time.deltaTime * speed);
     }
 }
